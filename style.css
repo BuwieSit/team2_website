@@ -15,12 +15,13 @@
     align-items: center;
     justify-content: center;
     gap: 10%;
+    flex-wrap: wrap;
 }
 
 
 .divSize {
     margin-top: 3%;
-    width: 30%;
+    width: clamp( 300px, 30%, 500px);
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
@@ -63,4 +64,11 @@
 
 img {
     width: 45%;
+}
+
+@media (max-width: 800px) {
+
+    .cont {
+        overflow: scroll;
+    }
 }
