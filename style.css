@@ -1,7 +1,130 @@
-* {
-
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #f2f2f2;
+    --primary: #0dfd494f;
+    --card-bg: rgba(44, 44, 44, 0.95);
+    --border-color: #555;
+    --warning: #ff4d4d;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-    border: 0;
-
-}
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color) url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    color: var(--text-color);
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+  }
+  
+  form, table {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background: #111;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #c60909b9;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+  }
+  
+  table th {
+    background-color: var(--primary);
+    color: #fff;
+  }
+  
+  .warning-row {
+    background-color: var(--warning);
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .slide-in {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 1.2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
