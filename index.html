@@ -2,72 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Market Vendor Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
+  <title>Team 2 Survey System Design</title>
+
 </head>
 <body>
+    <div class="cont">
 
-  <div class="header fade-in">
-    <h2>Public Market Vendor Registration</h2>
-  </div>
+        <div class="left divSize">
+            <h2 class="leftTitle titles">
+                Market Vendor Registration
+            </h2>
+            <img src="resources/placeholder.jpg" alt="placeholder">
 
-  <div class="form-container slide-in">
-    <form id="vendorForm">
-      <div class="form-group">
-        <label for="busName">Business Name:</label>
-        <input type="text" id="busName" required>
-      </div>
+            <p class="leftInfo desc">
+                This is the placeholder text description for the Market Vendor Registration
+            </p>
+        </div>
+    
+        <div class="right divSize">
+            <h2 class="rightTitle titles">
+                Local Tourism Feedback
+            </h2>
+            <img src="resources/placeholder.jpg" alt="placeholder">
 
-      <div class="form-group">
-        <label for="productType">Product Type:</label>
-        <select id="productType" required>
-          <option value="Vegetables">Vegetables</option>
-          <option value="Meat">Meat</option>
-          <option value="Fish">Fish</option>
-        </select>
-      </div>
+            <p class="rightInfo desc">
+                This is the placeholder text description for the Local Tourism Feedback
+            </p>
+        </div>
 
-      <div class="form-group">
-        <label for="permitNumber">Permit Number:</label>
-        <input type="text" id="permitNumber" required>
-      </div>
-
-      <div class="form-group">
-        <label>Sanitary Practices:</label>
-        <label><input type="radio" name="sanitary" value="Good" required> Good</label>
-        <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
-        <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
-      </div>
-
-      <div class="form-group">
-        <label>Stall Cleanliness:</label>
-        <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
-        <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
-      </div>
-
-      <div class="form-group">
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
-
-  <div class="results-section fade-in">
-    <h2 class="surveyResults">Survey Results</h2>
-    <button id="exportBtn">Export to Excel</button>
-
-    <table id="resultsTable">
-      <thead>
-        <tr>
-          <th>Business Name</th>
-          <th>Product Type</th>
-          <th>Permit #</th>
-          <th>Sanitary</th>
-          <th>Cleanliness</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-  
+    </div>
+ 
 </body>
 </html>
