@@ -95,6 +95,15 @@ body {
 
 }
 
+.stall-content-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding-bottom: 125px;
+}
+
 .stall-supp-cont {
     width: 100%;
     height: 100%;
