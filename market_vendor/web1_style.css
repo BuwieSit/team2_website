@@ -39,38 +39,114 @@ body {
     align-items: center;
     perspective: 1000px;
     gap: 5px;
-   
     z-index: 1;
 }
 .roof-red {
-    width: 100px;
+    width: 10%;
     height: 150px;
-    background-color: red;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 3, 3), rgb(153, 2, 2));
     transform: rotateX(40deg);
 }
 
 .roof-white {
-    width: 100px;
+    width: 10%;
     height: 150px;
-    background-color: rgb(233, 233, 233);
+    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(225, 225, 225), rgb(201, 201, 201));
     transform: rotateX(40deg);
 }
 
 .tail-red {
-
-    width: 140px;
+    width: 15%;
     height: 50px;
-    background-color: rgb(212, 3, 3);
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 3, 3), rgb(153, 2, 2));
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    margin-left: -1px;
 
 }
 
 .tail-white {
-    width: 140px;
+    width: 15%;
     height: 50px;
-    background-color: rgb(201, 201, 201);
+    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(225, 225, 225), rgb(201, 201, 201));
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
   
+}
+
+.stall-content {
+    margin-top: -10%;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+}
+
+.stall-supp-cont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50%;
+    
+}
+.stall-supports {
+    width: 50px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(255, 193, 140), rgb(255, 193, 140), rgb(204, 157, 115));
+    box-shadow: 8px 0 0 rgb(114, 87, 64);
+}
+
+.stall-content-texts {
+    overflow: hidden;
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.stall-lower {
+    background-color: red;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lower-body {
+    width: 90%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(255, 193, 140), rgb(224, 171, 124), rgb(160, 123, 91));
+    box-shadow: 8px 0 0 rgb(83, 64, 47);
+}
+
+@media (max-width: 800px) {
+
+    .roof-cont {
+        width: 170%;
+    }
+    .tail-cont {
+        width: 190%;
+        gap: 0px;
+    }
+
+    .stall-content {
+        margin-top: -15%;
+    }
+    .stall-content-texts {
+        margin-top: 5%;
+        height: 65%;
+        
+    }
 }
