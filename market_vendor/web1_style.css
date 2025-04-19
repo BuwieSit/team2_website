@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+@font-face {
+    font-family: SignLetters;
+    src: url(../resources/fonts/WhiteLettersDemoRegular.ttf);
+
+    font-family: Moment;
+    src:url(../resources/fonts/MomentVintage.ttf);
+
+}
+@font-face {
+    font-family: Logger;
+    src: url(../resources/fonts/Logger.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -138,6 +151,39 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 8px 10px black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.body-sign {
+    width: 250px;
+    height: 140px;
+    background-image: url(../resources/darkOak_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+    box-shadow: 0 5px 10px black;
+    transition: 0.5s ease;
+    font-family: "Moment", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    
+}
+
+.bs1 {
+    rotate: -10deg;
+}
+.bs2 {
+    margin-top: 5%;
+    rotate: 7deg;
+}
+.body-sign:hover {
+    rotate: 0deg;
+    transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .lower-middle {
@@ -165,8 +211,11 @@ body {
     z-index: 15;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    
 }
+
+
+
+
 
 @media (max-width: 800px) {
 
@@ -186,5 +235,10 @@ body {
         margin-top: 5%;
         height: 65%;
         
+    }
+    .body-sign {
+        font-size: 20px;
+        width: 150px;
+        height: 60px;
     }
 }
