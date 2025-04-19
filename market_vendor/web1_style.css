@@ -95,8 +95,12 @@ body {
 .stall-supports {
     width: 50px;
     height: 100%;
-    background-image: linear-gradient(to right, rgb(255, 193, 140), rgb(255, 193, 140), rgb(204, 157, 115));
-    box-shadow: 8px 0 0 rgb(114, 87, 64);
+    /* background-image: linear-gradient(to right, rgb(255, 193, 140), rgb(255, 193, 140), rgb(204, 157, 115));
+    box-shadow: 8px 0 0 rgb(114, 87, 64); */
+    background-image: url(../resources/wood_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 10px black;
 }
 
 .stall-content-texts {
@@ -116,19 +120,52 @@ body {
 }
 
 .stall-lower {
-    background-color: red;
     width: 100%;
     height: 400px;
+    margin-top: -5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    perspective: 1000px;
 }
 
 .lower-body {
     width: 90%;
-    height: 100%;
-    background-image: linear-gradient(to right, rgb(255, 193, 140), rgb(224, 171, 124), rgb(160, 123, 91));
-    box-shadow: 8px 0 0 rgb(83, 64, 47);
+    height: 80%;
+    z-index: 10;
+    background-image: url(../resources/wood_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 10px black;
+}
+
+.lower-middle {
+    width: 90%;
+    height: 10%;
+    z-index: 20;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    box-shadow: 0 8px 10px black;
+    background-image: url(../resources/wood_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.lower-table {
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    width: 90%;
+    height: 30%;
+    background-image: url(../resources/wood_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotateX(60deg);
+    z-index: 15;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    
 }
 
 @media (max-width: 800px) {
@@ -143,6 +180,7 @@ body {
 
     .stall-content {
         margin-top: -15%;
+        
     }
     .stall-content-texts {
         margin-top: 5%;
