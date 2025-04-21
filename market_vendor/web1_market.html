@@ -27,14 +27,9 @@
         <div class="form-group-1">
             <label for="busName">Business Name</label>
             <input type="text" id="busName" placeholder="Type here" required>
-        </div>
-
-        <div class="form-group-2">
             <label for="permitNumber">Permit Number:</label>
             <input type="text" id="permitNumber" placeholder="Type here" required>
-        </div>
 
-        <div class="form-group-3">
             <label for="productType">Product Type:</label>
             <select id="productType" required>
             <option value="Vegetables">Vegetables</option>
@@ -44,23 +39,29 @@
             </select>
         </div>
 
-        <div class="form-group-4">
-            <label>Sanitary Practices:</label>
-            <label><input type="radio" name="sanitary" value="Good" required> Good</label>
-            <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
-            <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
-        </div>
-
-        <div class="form-group-5">
-            <label>Stall Cleanliness:</label>
-            <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
-            <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
-        </div>
-
-        <div class="form-group-6">
-            <button type="submit">Submit</button>
+        <div class="form-group-2">
+            <button id="submitBtn" type="submit">Submit</button>
         </div>
         </form>
+    </div>
+
+    <div class="vendorList-cont">
+        <div class="vendor1-placeholder">
+            
+            <div class="form-group-4">
+                <label>Sanitary Practices:</label>
+                <label><input type="radio" name="sanitary" value="Good" required> Good</label>
+                <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
+                <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
+            </div>
+
+            <div class="form-group-5">
+                <label>Stall Cleanliness:</label>
+                <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
+                <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
+            </div>
+
+        </div>
     </div>
 
     <div class="results-section fade-in">
