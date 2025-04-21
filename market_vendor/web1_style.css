@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     background-image: linear-gradient(to top right, rgb(19,15,14) 55%, rgb(234,225,220));
     color: 	rgb(234,225,220);
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #header-title {
@@ -64,13 +65,13 @@ body {
 #vendorForm {
     width: 100%;
     height: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
     font-size: 1em;
-
 }
 
 
@@ -164,24 +165,34 @@ input[type="text"] {
 }
 
 .vendor {
-    width: 300px;
+    padding: 10px;
+    text-align: center;
     aspect-ratio: 1;
+
     background: rgba( 205,154,101, 0.3);
     border-radius: 16px;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
+    box-shadow:  -5px 5px 15px rgba(0, 0, 0, 0.644);
+
     flex-wrap: wrap;
     flex: 0 1 150px; /* grow, shrink, base width */
-    min-width: 100px; 
+    min-width: 100px;
     transition: 0.5s ease;
     cursor: pointer;
-    box-shadow:  -5px 5px 15px rgba(0, 0, 0, 0.644);
-                
+    text-align: center;
+              
+   
 }
 .vendor:hover {
     box-shadow:  -5px 5px 10px rgba(0, 0, 0, 0.644),
     2px -5px 20px #eae1dc;
     transform: translateY(-15px);
+}
+
+.vendor > p {
+    font-size: 1rem;
+    
 }
 
 ::-webkit-scrollbar-track {

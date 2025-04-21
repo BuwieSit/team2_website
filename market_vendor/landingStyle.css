@@ -19,6 +19,7 @@ body {
     border: 0;
     overflow-x: hidden;
     background-color: wheat;
+    overflow-x: hidden;
 }
 
 #header-title {
