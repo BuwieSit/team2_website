@@ -7,53 +7,20 @@
     <title>BVL Public Market</title>
 </head>
 <body>
+    
     <header class="head">
         <h2 id="header-title">BVL Public Market</h2>
     </header>
 
-<<<<<<< HEAD
-    <div class="stall-content">
-        <div class="stall-supp-cont">
-            <div class="stall-supports ss1"></div>
-            <div class="stall-supports ss2"></div>
-        </div>
-        <div class="stall-content-texts">
-            <h2 id="header-title">BVL Public Market</h2>
-            <p id="header-desc">
-                Maintaining a thorough and current vendor list is critical for operational efficiency and transparency in public markets. 
-                BVL Public Market is a consolidated database of all registered vendors, including their business names, product categories, stall cleanliness, sanitary practices, and any applicable permit number or licenses. 
-                By keeping and updating this list on a regular basis, market administrators may assure regulatory compliance, streamline contact with vendors, and encourage equitable stall allocation.
-                It also aids in the planning of market layouts, tracking vendor performance, and improving the entire shopping experience for customers through improved organisation and 
-                vendor responsibility.
-            </p>
-        </div>
-    </div>
-    
-    <div class="stall-lower">
-        <div class="lower-table"></div>
-        <div class="lower-middle"></div>
-        <div class="lower-body">
-            <div class="body-sign bs1">
-                <p id="bs1-text">
-                    LOGIN
-                </p>
-            </div>
-            <div class="body-sign bs2">
-                <p id="bs2-text">
-                    REGISTER
-                </p>
-            </div>
-        </div>
-    </div>
-=======
->>>>>>> 4346124e680621d66031c48ba476dd5645fda38e
-
 
     <div class="form-container slide-in">
-        <h2 id="form-title">Vendor Registration</h2>
+        <h2 id="form-title">Vendor Registration
+        </h2>
+
         <form id="vendorForm" >
         <div class="form-group-1">
             <label for="busName">Business Name</label>
+            <datalist for="busName">Buwie Busienss</datalist>
             <input type="text" id="busName" placeholder="Type here" required>
             <label for="permitNumber">Permit Number:</label>
             <input type="text" id="permitNumber" placeholder="Type here" required>
@@ -94,7 +61,8 @@
     </div>
     <div class="vendorList-cont">
         <div class="vList">
-            <div class="vendor">
+            <div class="vendor vend-warning">
+                <img id="warningSign" src="../resources/warning.png" alt="warning">
                 <p>Placeholder Stall Name Placeholder Stall Name</p>
             </div>
             <div class="vendor">
