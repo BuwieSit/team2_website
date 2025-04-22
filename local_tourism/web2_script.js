@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stars.forEach(star => {
         star.addEventListener('change', function () {
                 if (star.value === '4stars' || star.value === '5stars') {
-                    popupMessage.textContent = "We hope to see you again soon!";
+                    popupMessage.textContent = "We are looking forward to your next visit!";
                     openPopup();
                 }
                 else {
