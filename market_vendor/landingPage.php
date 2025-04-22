@@ -1,3 +1,16 @@
+<?php
+
+  
+$conn = mysqli_connect('localhost', 'buwie', 'vendorReg_admin', 'market_vendor');
+
+if(!$conn) {
+    echo 'Connection Error: ' . mysqli_connect_error();
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

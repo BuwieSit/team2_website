@@ -186,20 +186,31 @@ input[type="text"] {
 }
 .vendor:hover {
     box-shadow:  -5px 5px 10px rgba(0, 0, 0, 0.644),
-    2px -5px 20px #eae1dc;
+    2px -5px 10px #eae1dc;
     transform: translateY(-15px);
 }
+
 .vend-warning {
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644) 20%, rgb(160, 67, 38) 90%);
+    transition: 0.5s ease;
    
 }
+
 #warningSign {
+    width: 50px;
+    opacity: 0.5;
+    aspect-ratio: 1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.5s ease;
 }
-
+.vendor:hover > #warningSign {
+    opacity: 1;
+    transition: 0.5s ease;
+    
+}
 .vendor > p {
     font-size: 1rem;
 }
