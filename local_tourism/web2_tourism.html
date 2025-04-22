@@ -17,7 +17,7 @@
         <div class="visitor-nationality">
             <label for="Nationality">Nationality:</label>
             <select id="Nationality" name="Nationality">
-                <option value="select">Select your Nationality</option>
+                <option value="select" disabled selected hidden>Select your Nationality</option>
                 <option value="Filipino">Filipino</option>
                 <option value="Foreigner">Foreigner</option>
             </select><br>
@@ -28,18 +28,27 @@
     </div><br>
 
 
-    <div class="experience-rating">
-        <label for="Experience">Rate your experience:</label><br>
-        <input type="radio" id="Excellent" name="Experience" value="Excellent">
-        <label for="Excellent">Excellent</label><br>
-        <input type="radio" id="Good" name="Experience" value="Good">
-        <label for="Good">Good</label><br>
-        <input type="radio" id="Average" name="Experience" value="Average">
-        <label for="Average">Average</label><br>
-        <input type="radio" id="Poor" name="Experience" value="Poor">
-        <label for="Poor">Poor</label><br>
+    <div class="rating">
+        <h2>Rate your experience</h2>
+        <input type="radio" id="stars5" name="experience" value="5stars" />
+        <label for="stars5">&#9733;</label>
+        <input type="radio" id="stars4" name="experience" value="4stars" />
+        <label for="stars4">&#9733;</label>
+        <input type="radio" id="stars3" name="experience" value="3stars" />
+        <label for="stars3">&#9733;</label>
+        <input type="radio" id="stars2" name="experience" value="2stars" />
+        <label for="stars2">&#9733;</label>
+        <input type="radio" id="stars1" name="experience" value="1star" />
+        <label for="stars1">&#9733;</label>
     </div>
 
+    <div class="popUp" id="popup">
+        <img src="resources/tourism.png" class="tourism-image">
+        <h2>Thank you for your feedback!</h2>
+\        <p>We are looking forward to your next visit!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
 
+    <script src="web2_script.js"></script>
     </body>
 </html>
