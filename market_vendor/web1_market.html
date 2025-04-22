@@ -9,132 +9,51 @@
 <body>
     
     <header class="head">
-        <div class="roof-cont">
-            <div class="roof-red r1"></div>
-            <div class="roof-white w2"></div>
-            <div class="roof-red r2"></div>
-            <div class="roof-white w2"></div>
-            <div class="roof-red r3"></div>
-            <div class="roof-white w3"></div>
-            <div class="roof-red r4"></div>
-            <div class="roof-white w4"></div>
-            <div class="roof-red r5"></div>
-            <div class="roof-white w5"></div>
-            <div class="roof-red r6"></div>
-            <div class="roof-white w6"></div>
-            <div class="roof-red r7"></div>
-            <div class="roof-white w7"></div>
-        </div>
-        <div class="tail-cont">
-            <div class="tail-red tr1"></div>
-            <div class="tail-white tw1"></div>
-            <div class="tail-red tr2"></div>
-            <div class="tail-white tw2"></div>
-            <div class="tail-red tr3"></div>
-            <div class="tail-white tw3"></div>
-            <div class="tail-red tr4"></div>
-            <div class="tail-white tw4"></div>
-            <div class="tail-red tr5"></div>
-            <div class="tail-white tw5"></div>
-            <div class="tail-red tr6"></div>
-            <div class="tail-white tw6"></div>
-            <div class="tail-red tr7"></div>
-            <div class="tail-white tw7"></div>
-        </div>
+        <h2 id="header-title">BVL Public Market</h2>
     </header>
-
-<<<<<<< HEAD
-    <div class="stall-content">
-        <div class="stall-supp-cont">
-            <div class="stall-supports ss1"></div>
-            <div class="stall-supports ss2"></div>
-        </div>
-        <div class="stall-content-texts">
-            <h2 id="header-title">BVL Public Market</h2>
-            <p id="header-desc">
-                Maintaining a thorough and current vendor list is critical for operational efficiency and transparency in public markets. 
-                BVL Public Market is a consolidated database of all registered vendors, including their business names, product categories, stall cleanliness, sanitary practices, and any applicable permit number or licenses. 
-                By keeping and updating this list on a regular basis, market administrators may assure regulatory compliance, streamline contact with vendors, and encourage equitable stall allocation.
-                It also aids in the planning of market layouts, tracking vendor performance, and improving the entire shopping experience for customers through improved organisation and 
-                vendor responsibility.
-            </p>
-        </div>
-    </div>
-    
-    <div class="stall-lower">
-        <div class="lower-table"></div>
-        <div class="lower-middle"></div>
-        <div class="lower-body">
-            <div class="body-sign bs1">
-                <p id="bs1-text">
-                    LOGIN
-                </p>
-            </div>
-            <div class="body-sign bs2">
-                <p id="bs2-text">
-                    REGISTER
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="form-container slide-in">
-        <form id="vendorForm">
-        <div class="form-group">
-            <label for="busName">Business Name:</label>
-            <input type="text" id="busName" required>
-        </div>
-=======
 
     <div class="form-container slide-in">
         <h2 id="form-title">Vendor Registration
         </h2>
 
         <form id="vendorForm" >
-        <div class="form-group-1">
-            <label for="busName">Business Name</label>
-            <datalist for="busName">Buwie Busienss</datalist>
-            <input type="text" id="busName" placeholder="Type here" required>
-            <label for="permitNumber">Permit Number:</label>
-            <input type="text" id="permitNumber" placeholder="Type here" required>
->>>>>>> d35dfa25340f757867f08ca5497980e6c9a8a52e
+            <div class="form-group-1">
+                <label for="busName">Business Name</label>
+  
+                <input type="text" id="busName" placeholder="Type here" required>
+                <label for="permitNumber">Permit Number:</label>
+                <input type="text" id="permitNumber" placeholder="Type here" required>
 
-        <div class="form-group">
-            <label for="productType">Product Type:</label>
-            <select id="productType" required>
-            <option value="Vegetables">Vegetables</option>
-            <option value="Meat">Meat</option>
-            <option value="Fish">Fish</option>
-            </select>
-        </div>
+                <label for="productType">Product Type:</label>
+                <select id="productType" required>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Meat">Meat</option>
+                <option value="Fish">Fish</option>
+                </select>
 
-        <div class="form-group">
-            <label for="permitNumber">Permit Number:</label>
-            <input type="text" id="permitNumber" required>
-        </div>
-
-        <div class="form-group">
-            <label>Sanitary Practices:</label>
-            <label><input type="radio" name="sanitary" value="Good" required> Good</label>
-            <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
-            <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
-        </div>
-
-        <div class="form-group">
-            <label>Stall Cleanliness:</label>
-            <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
-            <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
-        </div>
-
-<<<<<<< HEAD
-        <div class="form-group">
-            <button type="submit">Submit</button>
-=======
+                <label for="permitNumber">Permit Number:</label>
+                <input type="text" id="permitNumber" required>
+            </div>
+        </form>
     </div>
+
+    <div class="form-group">
+        <label>Sanitary Practices:</label>
+        <label><input type="radio" name="sanitary" value="Good" required> Good</label>
+        <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
+        <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
+    </div>
+
+    <div class="form-group">
+        <label>Stall Cleanliness:</label>
+        <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
+        <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
+    </div>
+    
     <div class="vend-title">
         <h3>Vendors List</h3>
     </div>
+    
     <div class="vendorList-cont">
         <div class="vList">
             <div class="vendor vend-warning">
@@ -151,9 +70,8 @@
                 <p>Placeholder Stall Name Placeholder Stall Name Placeholder Stall Name Placeholder Stall Name</p>
             </div>
 
->>>>>>> d35dfa25340f757867f08ca5497980e6c9a8a52e
         </div>
-        </form>
+       
     </div>
 
     <div class="results-section fade-in">
@@ -173,6 +91,13 @@
         <tbody></tbody>
         </table>
     </div>
-    
+
+    <p id="header-desc">
+        Maintaining a thorough and current vendor list is critical for operational efficiency and transparency in public markets. 
+        BVL Public Market is a consolidated database of all registered vendors, including their business names, product categories, stall cleanliness, sanitary practices, and any applicable permit number or licenses. 
+        By keeping and updating this list on a regular basis, market administrators may assure regulatory compliance, streamline contact with vendors, and encourage equitable stall allocation.
+        It also aids in the planning of market layouts, tracking vendor performance, and improving the entire shopping experience for customers through improved organisation and 
+        vendor responsibility.
+    </p>
 </body>
 </html>
