@@ -181,7 +181,7 @@ input[type="text"] {
     transition: 0.5s ease;
     cursor: pointer;
     text-align: center;
-              
+    
    
 }
 .vendor:hover {
@@ -189,10 +189,19 @@ input[type="text"] {
     2px -5px 20px #eae1dc;
     transform: translateY(-15px);
 }
+.vend-warning {
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644) 20%, rgb(160, 67, 38) 90%);
+   
+}
+#warningSign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .vendor > p {
     font-size: 1rem;
-    
 }
 
 ::-webkit-scrollbar-track {
