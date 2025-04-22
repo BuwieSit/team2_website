@@ -104,7 +104,11 @@ select option:first-child{
     color: black;
     cursor: pointer;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
+}
 
+
+.popUp button:active {
+    transform: translateY(15%);
 }
   .openPopUp {
     display: block;
