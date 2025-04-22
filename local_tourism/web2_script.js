@@ -1,0 +1,34 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('input[name="experience"]');
+    const popup = document.getElementById('popup');
+    const popupHeading = popup.querySelector('h2');
+    const popupMessage = popup.querySelector('p');
+
+    stars.forEach(star => {
+        star.addEventListener('change', function () {
+                if (star.value === '4stars' || star.value === '5stars') {
+                    popupMessage.textContent = "We hope to see you again soon!";
+                    openPopup();
+                }
+                else {
+                    popupMessage.textContent = "We will continue to improve our services.";
+                    openPopup();
+            }
+            popup.classList.add('openPopUp');
+        });
+    });
+});
+
+let popUp = document.querySelector('.popup');
+function openPopup() {
+    const popup = document.querySelector('.popUp');
+    popup.classList.add('openPopUp');
+}
+
+function closePopup() {
+    const popup = document.querySelector('.popUp');
+    popup.classList.remove('openPopUp');
+}
+
+
+

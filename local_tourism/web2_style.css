@@ -19,6 +19,95 @@ body {
     height: 300px;
 }
 
+.rating {
+    direction: rtl;
+    display: inline-block;
+}
+
+.rating input{
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #78909c;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f2b600;
+}
+
+.rating input:checked + label{
+    color: #f2b600;
+}
+
 select{
     color: gray;
 }
+
+.popUp {
+    width: 400px;
+    background: #96ceb4;
+    border-radius: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);  
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0.4s;
+    z-index: -1;
+}
+
+.popUp.openPopUp {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    z-index: 1000;
+}
+
+
+.popUp img {
+    width: 100px; 
+    margin: -20px;
+    border-radius: 50px; 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); 
+}
+.popUp h2 {
+    position: center;
+    height: 50px;
+    color: #333;
+    font-size: 30px;
+    
+}
+ 
+.popUp button{
+    width: 100%;
+    background: #ffffff;
+    margin-top: 50px;
+    border: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
+
+}
+  .openPopUp {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+
+
