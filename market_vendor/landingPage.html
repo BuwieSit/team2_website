@@ -1,16 +1,3 @@
-<?php
-
-  
-$conn = mysqli_connect('localhost', 'buwie', 'vendorReg_admin', 'market_vendor');
-
-if(!$conn) {
-    echo 'Connection Error: ' . mysqli_connect_error();
-}
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,23 +47,37 @@ if(!$conn) {
             <div class="stall-supports ss1"></div>
             <div class="stall-supports ss2"></div>
         </div>
-    </div>
     
-    <div class="stall-lower">
-        <div class="lower-table"></div>
-        <div class="lower-middle"></div>
-        <div class="lower-body">
-            <div class="body-sign bs1">
-                <p id="bs1-text">
-                    LOGIN
-                </p>
-            </div>
-            <div class="body-sign bs2">
-                <p id="bs2-text">
-                    REGISTER
-                </p>
+    
+        <div class="stall-lower">
+         
+            <div class="lower-table"></div>
+            <div class="lower-middle"></div>
+            <div class="lower-body">
+                <div class="body-sign bs1">
+                    <!-- <?php
+                        include "conn.php";
+                        $username = $_POST['username']
+                    ?> -->
+                    <p id="bs1-text">
+                        LOGIN
+                    </p>
+                    
+                </div>
+                <div class="body-sign bs2">
+                    <p id="bs2-text">
+                        REGISTER
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="login-up">
+        
+    </div>
+    <div class="register-up">
+        
     </div>
 </body>
 </html>

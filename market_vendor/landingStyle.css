@@ -94,7 +94,7 @@ body {
 .stall-content {
     margin-top: -10%;
     width: 100%;
-    height: 500px;
+    height: 700px;
     overflow: hidden;
 
 }
@@ -102,12 +102,13 @@ body {
 
 .stall-supp-cont {
     width: 100%;
-    height: 100%;
+    height: 70%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 50%;
+
     
 }
 .stall-supports {
@@ -123,13 +124,14 @@ body {
 .stall-lower {
     width: 100%;
     height: 400px;
-    margin-top: -5%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     perspective: 1000px;
+    margin-top: -10%;
+
 }
 
 .lower-body {
@@ -200,6 +202,20 @@ body {
     z-index: 15;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+}
+
+.login-up {
+    width: 300px;
+    border-radius: 20px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
+
 }
 
 @media (max-width: 800px) {
