@@ -19,6 +19,13 @@ body {
     height: 300px;
 }
 
+select{
+    color: black;
+}
+select option:first-child{
+    color: lightslategray;
+}
+
 .rating {
     direction: rtl;
     display: inline-block;
@@ -43,10 +50,6 @@ body {
 
 .rating input:checked + label{
     color: #f2b600;
-}
-
-select{
-    color: gray;
 }
 
 .popUp {
