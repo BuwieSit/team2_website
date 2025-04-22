@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@font-face {
+    font-family: SignLetters;
+    src: url(../resources/fonts/WhiteLettersDemoRegular.ttf);
+
+    font-family: Moment;
+    src:url(../resources/fonts/MomentVintage.ttf);
+
+}
+@font-face {
+    font-family: Logger;
+    src: url(../resources/fonts/Logger.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+    background-color: wheat;
+    overflow-x: hidden;
+}
+
+#header-title {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    font-size: 4vw;
+}
+#header-desc {
+    font-size: 1vw;
+}
+.head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.roof-cont {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    perspective: 500px;
+    background-color: brown;
+    z-index: 3;
+}
+.tail-cont {
+    width: 110%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    perspective: 1000px;
+    gap: 5px;
+    z-index: 1;
+}
+.roof-red {
+    width: 10%;
+    height: 150px;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 3, 3), rgb(153, 2, 2));
+    transform: rotateX(40deg);
+}
+
+.roof-white {
+    width: 10%;
+    height: 150px;
+    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(225, 225, 225), rgb(201, 201, 201));
+    transform: rotateX(40deg);
+}
+
+.tail-red {
+    width: 15%;
+    height: 50px;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 3, 3), rgb(153, 2, 2));
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin-left: -1px;
+
+}
+
+.tail-white {
+    width: 15%;
+    height: 50px;
+    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(225, 225, 225), rgb(201, 201, 201));
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  
+}
+
+.stall-content {
+    margin-top: -10%;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+}
+
+
+.stall-supp-cont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50%;
+    
+}
+.stall-supports {
+    width: 50px;
+    height: 100%;
+    background-image: url(../resources/wood_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 10px black;
+}
+ 
+
+.stall-lower {
+    width: 100%;
+    height: 400px;
+    margin-top: -5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+.lower-body {
+    width: 90%;
+    height: 80%;
+    z-index: 10;
+    background-image: url(../resources/wood_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 10px black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.body-sign {
+    width: 250px;
+    height: 140px;
+    background-image: url(../resources/darkOak_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+    box-shadow: 0 5px 10px black;
+    transition: 0.5s ease;
+    font-family: "Moment", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    
+}
+
+.bs1 {
+    rotate: -10deg;
+}
+.bs2 {
+    margin-top: 5%;
+    rotate: 7deg;
+}
+.body-sign:hover {
+    rotate: 0deg;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.lower-middle {
+    width: 90%;
+    height: 10%;
+    z-index: 20;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    box-shadow: 0 8px 10px black;
+    background-image: url(../resources/wood_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.lower-table {
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    width: 90%;
+    height: 30%;
+    background-image: url(../resources/wood_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotateX(60deg);
+    z-index: 15;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+@media (max-width: 800px) {
+
+    .roof-cont {
+        width: 170%;
+    }
+    .tail-cont {
+        width: 190%;
+        gap: 0px;
+    }
+
+    .stall-content {
+        margin-top: -15%;
+        
+    }
+    #header-desc {
+        font-size: 2vw;
+    }
+    .body-sign {
+        font-size: 20px;
+        width: 150px;
+        height: 60px;
+    }
+}
