@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-let popUp = document.querySelector('.popup');
-function openPopup() {
+//POP UP NG FEEDBACK//
+function closeFeedbackPopup() {
     const popup = document.querySelector('.popUp');
-    popup.classList.add('openPopUp');
+    popup.classList.remove('openPopUp');
 }
 
 function closePopup() {
@@ -30,5 +30,25 @@ function closePopup() {
     popup.classList.remove('openPopUp');
 }
 
+//POP UP NG LOG IN//
+function closeLoginPopup() {
+    const popup = document.getElementById('popup1');
+    popup.classList.remove('openPopUp');
+}
+function openLoginPopup() {
+    const popup = document.getElementById('popup1');
+    popup.classList.add('openPopUp');
+}
+/////////
+
+//POP UP NG SIGN UP//
+function closeSignPopup() {
+    const popup = document.getElementById('popup1');
+    popup.classList.remove('openPopUp');
+}
+function openLoginPopup() {
+    const popup = document.getElementById('popup1');
+    popup.classList.add('openPopUp');
+}///////
 
 

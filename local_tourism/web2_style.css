@@ -18,7 +18,7 @@ body {
 .logo-container img {
     width: 100px;
     height: 100px;
-    position: justify;
+    position: relative;
     margin-left: 4%;
 }
 
@@ -37,6 +37,31 @@ body {
     transform: translateY(-50%);
     color: lightslategray;
 }
+/*leo-start*/
+.header-right {
+    position: absolute;
+    top: 35px;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ffebc6;
+    color: #000;
+}
+/*leo-end*/
 
 .search-container input {
     padding-left: 30px;
@@ -137,7 +162,6 @@ select option:first-child{
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
 }
 
-
 .popUp button:active {
     transform: translateY(15%);
 }
@@ -145,6 +169,106 @@ select option:first-child{
     display: block;
     transform: translate(-50%, -50%) scale(1);
     visibility: visible;
+}
+
+/*Log-In POP UP*/
+.popUp-logIn {
+    width: 400px;
+    background: rgb(150, 206, 180, 0.5);
+    border-radius: 72% 28% 85% 15% / 27% 88% 12% 73% ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    transform: translate(-50%, -50%) rotateX(-90deg); 
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s;
+    z-index: -1;
+}
+
+.popUp-logIn.openPopUp {
+    transform: translate(-50%, -50%) rotateX(0);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+}
+
+.popUp-logIn input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#closeBTN{
+    background-color: #96ceb4;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px 0 rgba(255, 17, 0, 0.75);
+    background-size: 200% auto;
+    background-image: none;
+    transition: all 0.4s ease-in-out;
+}
+#closeBTN:hover{
+    background-image: linear-gradient(to right, #ff0000, #e09026, #fa8500, #ffe600);
+    background-position: right center;
+    background-color: transparent;
+}
+
+#loginBTN{
+    background-color: #96ceb4;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+    background-size: 200% auto;
+    background-image: none;
+    transition: all 0.4s ease-in-out;
+}
+#loginBTN:hover {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    background-position: right center;
+    background-color: transparent;
+}
+
+.popUp-logIn img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}/*Log-In POP UP*/
+
+/*Sign-Up*/
+.popup-signUp{
+    width: 400px;
+    background: rgb(150, 206, 180, 0.5);
+    border-radius: 72% 28% 85% 15% / 27% 88% 12% 73% ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    transform: translate(-50%, -50%) rotateX(-90deg); 
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s;
+    z-index: -1;
 }
 
 
