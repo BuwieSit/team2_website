@@ -1,23 +1,28 @@
+const formGroups = document.querySelectorAll('.form-grp');
 
-    const labelEl = document.querySelector(".input-label");
-    const inputEl = document.querySelector(".form-input");
-    
-    
-    
-    inputEl.addEventListener("focus", () => {
-        labelEl.style.textAlign = "center";
-     
-    });
-    inputEl.addEventListener("blur", () => {
-        labelEl.style.textAlign = "left";
+formGroups.forEach(group => {
+    const inputEl = group.querySelector('.form-input');
+    const labelEl = group.querySelector('.input-label');
+
+    inputEl.addEventListener('focus', () => {
+        
+        labelEl.style.transform = "translateX(30%)";
+       
     });
 
-    function alignEffect() {
-        
-        labelEl.style.textAlign = "center";
-        labelEl.style.backgroundColor = "red";
-        
-    }
+    inputEl.addEventListener('blur', () => {
+        labelEl.style.transform = "translateX(0%)";
+    });
+});
+
+// inputEl.addEventListener("focus", () => {
+    
+//     labelEl.style.transform = "translateX(0%)";
+// });
+
+// inputEl.addEventListener("blur", () => {
+//     labelEl.style.transform = "translateX(30%)";
+// });
 
 
 

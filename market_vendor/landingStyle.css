@@ -228,11 +228,11 @@ body {
 }
 input {
     padding: 10px;
-    
 }
-label {
+
+.input-label {
     transition: 0.5s ease;
-    transition: text-align 0.5s ease;
+    transform: translateX(0%);
 }
 
 .form-grp {
