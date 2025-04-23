@@ -11,12 +11,12 @@
     <body>
         
         <header class="head">
-        <div class="head-left">
+            
         <div class="logo-container">
             <img src="resources/LOGO2.png" alt="Logo" class="logo">
-        </div>  
-
-        <div class="header-right">
+        </div>
+    <div class="nav-head">
+        <div class="header-left">
             <div class="search-container">
                 <input type="text" placeholder="Search destination or activities">
             
@@ -25,15 +25,17 @@
                          
             </div>
         </div>
+    </div>
         </div>
         <div>
             <nav class="nav-links">
-                <a href="#">Sign In</a>
+                <a href="#" onclick="openSignPopup()">Sign Up</a>
                 <a href="#" onclick="openLoginPopup()">Log In</a>
-                <a href="#">About Us</a>
+                <a href="#" onclick="openAboutusPopup()">About Us</a>
                 <a href="#">Feedback</a>
             </nav>
         </div>
+    </header>
         
         </header>
 
@@ -46,11 +48,11 @@
                 <option value="Foreigner">Foreigner</option>
             </select><br>
         </div>
-            <label for="Date">Visit Date:</label>
-            <input type="date" id="Date" name="Date"><br>
-        </div>
+        <label for="Date">Visit Date:</label>
+        <input type="date" id="Date" name="Date"><br>
+    </div>
+    
     <br>
-
 
     <div class="rating">
         <h2>Rate your experience</h2>
@@ -72,7 +74,8 @@
         <img src="resources/tourism.png" class="tourism-image">
         <h2>Thank you for your feedback!</h2>
         <p>We are looking forward to your next visit!</p>
-        <button onclick="closeFeedbackPopup()">Close</button>    </div>
+        <button onclick="closeFeedbackPopup()">Close</button>    
+    </div>
     
     <div class="popUp-logIn" id="popup1">
         <img src="resources/tourism.png" alt="logo ata eto">
@@ -82,7 +85,6 @@
         <button id="loginBTN" onclick="LoggedIn()">Log In</button>
         <button id="closeBTN" onclick="closeLoginPopup()">Close</button>
     </div>
-
 
     <!--SIGN UP-->
     <div class="popup-signUp" id="popup2">
@@ -96,12 +98,57 @@
         <input type="password" id="Signpass" placeholder="Password" required>
         <br>
         <button id="signUp" onclick="SignedUp()">Sign Up</button>
+        <br>
         <button id="signGoogle" onclick="SignedUp()">Sign Up with Google</button>
+        <br>
         <button id="signCloseBTN" onclick="closeSignPopup()">Close</button>
-        <p>Already have an account? <a href="#" onclick="openLoginPopup()" ><u>Log In</u></a></p>
+        <p>Already have an account? <a href="#" onclick="openLoginPopup()"><u>Log In</u></a></p>
     </div>
 
-   
+    <!--ABOUT US-->
+    <div class="popup-aboutUs" id="popup3">
+        <img src="resources/tourism.png" alt="sure na ba talaga na eto logo??">
+        <h1> About Lyft</h1>
+        <h6>no lube, no protection, all night all day, from the kitchen floor to the toilet seat,
+             from the dining table to the church, from the front porch to the balcony, vertically, 
+             horizontally, quadratic, 
+             while i gasp for air and scream the lord’s prayer, she can top me.
+             <div class="card-wrapper">
+                <div class="flip-card-container">
+                  <div class="flip-card">
+                    <div class="flip-card-front">
+                      <h3>Mission</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>To promote tourism while delivering unforgettable experiences to every visitor.</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="flip-card-container">
+                  <div class="flip-card">
+                    <div class="flip-card-front">
+                      <h3>Vision</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>To become the leading travel destination hub, admired globally for its beauty and culture.</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="flip-card-container">
+                  <div class="flip-card">
+                    <div class="flip-card-front">
+                      <h3>Goal</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Empower local communities through sustainable tourism initiatives and partnerships.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <button id="aboutCloseBTN" onclick="closeAboutPopup()">Close</button>
+    </div>
 
     <footer class="foot">
         <p>&copy; 2023 Local Tourism. All rights reserved.</p>
@@ -113,5 +160,5 @@
 
     <script src="web2_script.js"></script>
     
-    </body>
+</body>
 </html>

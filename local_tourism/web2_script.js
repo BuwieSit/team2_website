@@ -18,15 +18,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-  document.querySelectorAll('.rating input').forEach(function(star) {
-    star.addEventListener('change', function() {
-      document.getElementById('popup').classList.add('openPopUp');
-    });
-  });
 
-  function closePopUp() {
+function closeAllPopups() {
+    document.querySelectorAll('.openPopUp').forEach(popup => {
+        popup.classList.remove('openPopUp');
+    });
+}
+
+document.querySelectorAll('.rating input').forEach(function(star) {
+    star.addEventListener('change', function() {
+        document.getElementById('popup').classList.add('openPopUp');
+    });
+});
+
+function closePopUp() {
     document.getElementById('ratingPopUp').classList.remove('openPopUp');
-  }
+}
+
 
 //POP UP NG FEEDBACK//
 function closeFeedbackPopup() {
@@ -45,6 +53,7 @@ function closeLoginPopup() {
     popup.classList.remove('openPopUp');
 }
 function openLoginPopup() {
+    closeAllPopups();
     const popup = document.getElementById('popup1');
     popup.classList.add('openPopUp');
 }
@@ -52,12 +61,24 @@ function openLoginPopup() {
 
 //POP UP NG SIGN UP//
 function closeSignPopup() {
-    const popup = document.getElementById('popup1');
+    const popup = document.getElementById('popup2');
     popup.classList.remove('openPopUp');
 }
-function openLoginPopup() {
-    const popup = document.getElementById('popup1');
+function openSignPopup() {
+    closeAllPopups();
+    const popup = document.getElementById('popup2');
     popup.classList.add('openPopUp');
 }///////
+
+function openAboutusPopup() {
+    closeAllPopups();
+    const popup = document.getElementById('popup3');
+    popup.classList.add('openPopUp');
+}
+
+function closeAboutPopup() {
+    const popup = document.getElementById('popup3');
+    popup.classList.remove('openPopUp');
+}
 
 
