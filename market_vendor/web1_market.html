@@ -36,24 +36,36 @@
         </form>
     </div>
 
-    <div class="form-group">
-        <label>Sanitary Practices:</label>
-        <label><input type="radio" name="sanitary" value="Good" required> Good</label>
-        <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
-        <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
-    </div>
-
-    <div class="form-group">
-        <label>Stall Cleanliness:</label>
-        <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
-        <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
-    </div>
     
     <div class="vend-title">
         <h3>Vendors List</h3>
     </div>
     
     <div class="vendorList-cont">
+        
+    <div class="vendor-pop V-popup">
+        <div class="vendor-desc">
+            <h3>Placeholder Stall Name</h3>
+            <p>Permit Number Placeholder</p>
+
+        </div>
+
+        <div class="vendor-hygiene">
+            <div class="hygiene-wrap">
+                <label>Sanitary Practices:</label>
+                <label><input type="radio" name="sanitary" value="Good" required> Good</label>
+                <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
+                <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
+    
+            </div>
+            <div class="hygiene-wrap">
+                <label>Stall Cleanliness:</label>
+                <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
+                <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
+            </div>
+        </div>
+    </div>
+
         <div class="vList">
             <div class="vendor vend-warning">
                 <img id="warningSign" src="../resources/warning.png" alt="warning">

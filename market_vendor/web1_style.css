@@ -59,7 +59,6 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
     backdrop-filter: blur(7.1px);
     -webkit-backdrop-filter: blur(7.1px);
-    
 }
 
 #vendorForm {
@@ -98,7 +97,6 @@ select {
     font-size: 1rem;
 }
 select:hover {
-    
     box-shadow: 0px 5px 10px black;
 }
 
@@ -181,7 +179,7 @@ input[type="text"] {
 
 }
 .vList {
-
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -201,8 +199,8 @@ input[type="text"] {
     box-shadow:  -5px 5px 15px rgba(0, 0, 0, 0.644);
 
     flex-wrap: wrap;
-    flex: 0 1 150px; /* grow, shrink, base width */
-    min-width: 100px;
+    flex: 0 1 170px; /* grow, shrink, base width */
+    min-width: 90px;
     transition: 0.5s ease;
     cursor: pointer;
     text-align: center;
@@ -239,6 +237,54 @@ input[type="text"] {
 .vendor > p {
     font-size: 1rem;
 }
+.V-popup {
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+}
+.vendor-pop {
+    width: 20rem;
+    border-radius: 20px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
+    padding: 5%;
+    z-index: 10;
+    transition: 0.5s ease;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+.vendor-desc {
+    background-color: red;
+    width: 100%;
+    height: 20%;
+    color:#130f0e;
+    text-align: center;
+    
+}
+
+.vendor-hygiene {
+    background-color: blue;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.hygiene-wrap {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
 
 ::-webkit-scrollbar-track {
 
