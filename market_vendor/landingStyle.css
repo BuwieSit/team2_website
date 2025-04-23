@@ -18,8 +18,10 @@ body {
     padding: 0;
     border: 0;
     overflow-x: hidden;
-    background-color: wheat;
-    overflow-x: hidden;
+    background-color: rgb(19,15,14);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 #header-title {
@@ -45,7 +47,6 @@ body {
     align-items: center;
     justify-content: center;
     perspective: 500px;
-    background-color: brown;
     z-index: 3;
 }
 .tail-cont {
@@ -61,21 +62,21 @@ body {
 .roof-red {
     width: 10%;
     height: 150px;
-    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 3, 3), rgb(153, 2, 2));
+    background-image: linear-gradient(to right, rgb(205,154,101), rgb(165, 125, 82), rgb(126, 95, 62));
     transform: rotateX(40deg);
 }
 
 .roof-white {
     width: 10%;
     height: 150px;
-    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(225, 225, 225), rgb(201, 201, 201));
+    background-image: linear-gradient( to right, rgb(234,225,220), rgb(214, 204, 199), rgb(179, 169, 165));
     transform: rotateX(40deg);
 }
 
 .tail-red {
     width: 15%;
     height: 50px;
-    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(212, 3, 3), rgb(153, 2, 2));
+    background-image: linear-gradient(to right, rgb(205,154,101), rgb(165, 125, 82), rgb(126, 95, 62));
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     margin-left: -1px;
@@ -85,7 +86,7 @@ body {
 .tail-white {
     width: 15%;
     height: 50px;
-    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(225, 225, 225), rgb(201, 201, 201));
+    background-image: linear-gradient( to right, rgb(234,225,220), rgb(214, 204, 199), rgb(179, 169, 165));
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
   
@@ -204,7 +205,7 @@ body {
     border-bottom-right-radius: 50%;
 }
 
-.login-up {
+.popUp {
     width: 300px;
     border-radius: 20px;
     aspect-ratio: 1;
@@ -212,11 +213,62 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
-
+    padding: 5%;
+    z-index: 10;
 }
+.form-popup {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+input {
+    padding: 10px;
+    
+}
+label {
+    transition: 0.5s ease;
+    transition: text-align 0.5s ease;
+}
+
+.form-grp {
+    display: flex;
+    flex-direction: column;
+}
+.form-button {
+    width: 100px;
+    aspect-ratio: 16/9;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-radius: 15px;
+    transform: translate(0px, 5px);
+    box-shadow: 0px 0px 0px black;
+    background-color: 	#935732;
+    border: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.form-button:hover {
+    box-shadow: 0px 5px 10px black;
+    transform: translate(0px, -5px);
+    background-color: 	white;
+    border: none;
+    
+}
+.form-button:active {
+    transition: 0.1s ease;
+    transform: translate(0px, 2px);
+    box-shadow: 0px 1px 0px black;
+    border-style: none;
+}
+
 
 @media (max-width: 800px) {
 
