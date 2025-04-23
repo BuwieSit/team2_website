@@ -91,15 +91,38 @@ select {
     text-align: center;
     background-color: rgba(0, 0, 0, 0);
     border: none;
+    padding: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+}
+select:hover {
+    
+    box-shadow: 0px 5px 10px black;
 }
 
-    
+select > option {
+    background-color: rgb(153, 98, 68);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    font-weight: 800;
+}
+
+
 input[type="text"] {
     border-radius: 2%;
     border: 0px none;
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 2px solid;
     text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 1rem;
 }
 #submitBtn {
     width: 100px;
@@ -248,3 +271,4 @@ input[type="text"] {
         width: 25%;
     }
 }
+
