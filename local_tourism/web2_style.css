@@ -36,24 +36,48 @@ body {
     width: fit-content;
 }
 
-.search-container i {
+#search-icon {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    color: lightslategray;
+    color: solid transparent;
     font-size: 18px;
-    pointer-events: none;
+   
+
+}
+
+#mic-icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#mic-icon:hover {
+    color: #f2b600;
 }
 
 .search-container input {
     padding: 10px 10px 10px 40px;
-    width: 225px;
+    width: 270px;
     height: 25px;
     border: 1px solid #ccc;
     border-radius: 50px;
     font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.search-container input:hover{
+    border-color: #ff6f69;
+    box-shadow: 0 4px 8px 	#be5855;
+    transition: 0.3s ease;
 }
 
 
