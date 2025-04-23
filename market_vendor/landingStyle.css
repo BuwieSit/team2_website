@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: rgb(19,15,14);
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,6 +71,7 @@ body {
     height: 150px;
     background-image: linear-gradient( to right, rgb(234,225,220), rgb(214, 204, 199), rgb(179, 169, 165));
     transform: rotateX(40deg);
+    
 }
 
 .tail-red {
@@ -80,6 +81,7 @@ body {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     margin-left: -1px;
+    box-shadow: 0 8px 10px black;
 
 }
 
@@ -89,6 +91,7 @@ body {
     background-image: linear-gradient( to right, rgb(234,225,220), rgb(214, 204, 199), rgb(179, 169, 165));
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    box-shadow: 0 8px 10px black;
   
 }
 
@@ -155,7 +158,7 @@ body {
     background-image: url(../resources/darkOak_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 5;
+    z-index: 8;
     box-shadow: 0 5px 10px black;
     transition: 0.5s ease;
     font-family: "Moment", sans-serif;
@@ -204,9 +207,12 @@ body {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
-
+.login-up, .register-up {
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+}
 .popUp {
-    width: 300px;
+    width: 20rem;
     border-radius: 20px;
     aspect-ratio: 1;
     position: absolute;
@@ -217,7 +223,11 @@ body {
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
     padding: 5%;
     z-index: 10;
+    transition: 0.5s ease;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
 }
+
 .form-popup {
     width: 100%;
     aspect-ratio: 1;
@@ -269,7 +279,16 @@ input {
     border-style: none;
 }
 
-
+.black-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.644);
+}
 @media (max-width: 800px) {
 
     .roof-cont {
