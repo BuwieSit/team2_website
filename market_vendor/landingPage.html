@@ -43,8 +43,6 @@
         </div>
     </header>
 
-    
-
     <div class="stall-content">
         <div class="stall-supp-cont">
             <div class="stall-supports ss1"></div>
@@ -58,10 +56,7 @@
             <div class="lower-middle"></div>
             <div class="lower-body">
                 <div class="body-sign bs1">
-                    <!-- <?php
-                        include "conn.php";
-                        $username = $_POST['username']
-                    ?> -->
+            
                     <p id="bs1-text">
                         LOGIN
                     </p>
@@ -82,12 +77,12 @@
         <form action="" class="form-popup">
             <caption>Login</caption>
             <div class="form-grp">
-                <label class="input-label" for="username">Username</label>
+                <label class="input-label" for="username" name="username">Username</label>
                 <input class="form-input" type="text" placeholder="username" required>
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password" placeholder="password" required>
+                <input class="form-input" type="password" name="password" placeholder="password" required>
            </div>
             
             <button type="submit" class="loginBtn form-button">LOGIN</button>
@@ -95,19 +90,19 @@
     </div>
 
     <div class="register-up">
-        <form action="" class="form-popup">
+        <form action="./logReg.php" method="post" class="form-popup">
             <caption>Register</caption>
             <div class="form-grp">
                 <label class="input-label" for="username">Email</label>
-                <input class="form-input" type="email" placeholder="email" required>
+                <input class="form-input" type="email" name="email" placeholder="email" required>
             </div>
             <div class="form-grp">
                 <label class="input-label" for="username">Username</label>
-                <input class="form-input" type="text" placeholder="username" required>
+                <input class="form-input" type="text" name="username" placeholder="username" required>
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password" placeholder="password" required>
+                <input class="form-input" type="password"  name="password" placeholder="password" required>
            </div>
             
             <button type="submit" class="loginBtn form-button">Register</button>
