@@ -18,11 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+// Generic function to close all open popups
 function closeAllPopups() {
     document.querySelectorAll('.openPopUp').forEach(popup => {
         popup.classList.remove('openPopUp');
     });
 }
+
+// Show the feedback popup when a star rating is selected
+document.querySelectorAll('.rating input').forEach(function(star) {
+    star.addEventListener('change', function() {
+        document.getElementById('popup').classList.add('openPopUp');
+    });
+});
+
+// Specific function to close the rating popup
+function closePopUp() {
+    document.getElementById('ratingPopUp').classList.remove('openPopUp');
+}
+
 
 //POP UP NG FEEDBACK//
 function closeFeedbackPopup() {
