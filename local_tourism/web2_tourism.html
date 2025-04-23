@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="web2_style.css">
-    <script src="web2_script.js"></script>
+    
     <title>Local Tourism Feedback</title>
 </head>
     <body>
         
         <header class="head">
-            
+        <div class="head-left">
         <div class="logo-container">
             <img src="resources/LOGO2.png" alt="Logo" class="logo">
         </div>  
 
-        <div class="search-container">
-            <input type="text" placeholder="Search destination or activities">
-            <i class="fas fa-search"></i>            
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" placeholder="Search destination or activities">
+            
+                <i class="fas fa-search"></i>   
+                         
             </div>
-
-        <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="web1_tourism.html">Home</a></li>
-                    <li><a href="web2_tourism.html">Feedback</a></li>
-                    <li><a href="web3_tourism.html">Contact Us</a></li>
-                    <button id="signup"> <a href="#">Sign in </a></button>
-                    <button id="login"> <a href="#"> Log in </a></button>
-
-                </ul>
+        </div>
+        </div>
+        <div>
+            <nav class="nav-links">
+                <a href="#">Sign In</a>
+                <a href="#" onclick="openLoginPopup()">Log In</a>
+                <a href="#">About Us</a>
+                <a href="#">Feedback</a>
             </nav>
+        </div>
+        
         </header>
 
     <div class="visitor-information">
@@ -45,7 +48,7 @@
             <label for="Date">Visit Date:</label>
             <input type="date" id="Date" name="Date"><br>
         </div>
-    </div><br>
+    <br>
 
 
     <div class="rating">
@@ -62,11 +65,39 @@
         <label for="stars1">&#9733;</label>
     </div>
 
+    <!--POP UP KINEME-->
+    <!--LOG-IN-->
     <div class="popUp" id="popup">
         <img src="resources/tourism.png" class="tourism-image">
         <h2>Thank you for your feedback!</h2>
         <p>We are looking forward to your next visit!</p>
-        <button onclick="closePopup()">Close</button>
+        <button onclick="closeFeedbackPopup()">Close</button>    </div>
+    
+    <div class="popUp-logIn" id="popup1">
+        <img src="resources/tourism.png" alt="logo ata eto">
+        <h2>Log In to Lyft</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button id="loginBTN" onclick="LoggedIn()">Log In</button>
+        <button id="closeBTN" onclick="closeLoginPopup()">Close</button>
+    </div>
+
+
+    <!--SIGN UP-->
+    <div class="popup-signUp" id="popup2">
+        <img src="resources/tourism.png" alt="d ko sure kung eto ba talaga ang logo">
+        <h1>Lyft</h1>
+        <h2>Create an account</h2>
+        <input type="text" id="SignUname" placeholder="Username" required>
+        <br>
+        <input type="email" id="Signemail" placeholder="Email" required>
+        <br>
+        <input type="password" id="Signpass" placeholder="Password" required>
+        <br>
+        <button id="signUp" onclick="SignedUp()">Sign Up</button>
+        <button id="signGoogle" onclick="SignedUp()">Sign Up with Google</button>
+        <button id="signCloseBTN" onclick="closeSignPopup()">Close</button>
+        <p>Already have an account? <a href="#" onclick="openLoginPopup()" ><u>Log In</u></a></p>
     </div>
 
    
@@ -79,5 +110,7 @@
         </p>
     </footer>
 
+    <script src="web2_script.js"></script>
+    
     </body>
 </html>
