@@ -264,7 +264,7 @@ select option:first-child{
     margin-bottom: 10px;
 }/*Log-In POP UP*/
 
-/*Sign-Up*/
+/*POP UP NG SIGN UP*/
 .popup-signUp {
     width: 400px;
     background: rgba(150, 206, 180, 0.5);
@@ -289,7 +289,6 @@ select option:first-child{
     visibility: visible;
     z-index: 1000;
 }
-
 .popup-signUp input {
     width: 90%;
     padding: 10px;
@@ -366,7 +365,7 @@ select option:first-child{
 }/*Sign-Up*/
 
 
-/*ABOUT US*/
+/*POP UP NG ABOUT US*/
 .popup-aboutUs {
     width: 1000px;
     max-width: 90%;
