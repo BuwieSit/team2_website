@@ -174,11 +174,6 @@ body {
     height: auto;
 }
 
-.Daku-container:hover .hover-description {
-    opacity: 1;
-}
-
-
 .Daku-container {
     position: relative;
     margin: 30px 15px 15px;
@@ -190,16 +185,7 @@ body {
     object-fit: cover;
 }
 
-.hover-description {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    width: 100%;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+
 
 .image-container:hover .hover-description {
     opacity: 1;
