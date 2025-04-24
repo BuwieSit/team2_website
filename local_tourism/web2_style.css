@@ -8,6 +8,8 @@ body {
 }
 
 .head {
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
     height: 100px;
     background-color: #96ceb4;
@@ -21,6 +23,7 @@ body {
 
 
 .logo-container img {
+    display: flex;
     width: 100px; 
     height: 100px;
     margin-left: 0;
@@ -32,57 +35,60 @@ body {
     gap: 15px;
   }
   
-.search-container {
-    position: relative;
-    margin-left: -450px;
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
 }
 
-.search-container input {
-    padding: 10px 10px 10px 40px;
-    width: 270px;
-    height: 25px;
+.search-cluster {
+    display: flex;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 50px;
-    font-size: 16px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.search-container input:hover{
-    border-color: #ff6f69;
-    box-shadow: 0 4px 8px 	#be5855;
+    padding: 0 10px;
+    width: 100%;
     transition: 0.3s ease;
-    
+    gap: 10px;
 }
 
-#search-icon {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: solid transparent;
-    font-size: 18px;
+.search-cluster:hover {
+    border-color: #ff6f69;
+    box-shadow: 0 4px 8px #be5855;
 }
 
+.search-cluster input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    flex: 1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: transparent;
+}
+
+#search-icon,
 #mic-icon {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    color: black;
     font-size: 18px;
     cursor: pointer;
+    color: #555;
 }
 
 #mic-icon:hover {
     color: #f2b600;
 }
 
+
 /*leo-start*/
 .nav-links {
-    display: flex;
+    display: flex;  
+    flex-wrap: nowrap;
+    flex: 0;
     gap: 20px;
     align-items: center;
 
@@ -145,9 +151,8 @@ select option:first-child{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark and semi-transparent */
-    z-index: 999; /* Make sure it's behind the popups */
-    visibility: hidden; /* Hide the overlay by default */
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden; 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -512,4 +517,45 @@ select option:first-child{
 
 
 
-
+/*SAMPLE CAROUSEL*/
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    display: none;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
