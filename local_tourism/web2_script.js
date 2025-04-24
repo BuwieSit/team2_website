@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     openPopup();
             }
             popup.classList.add('openPopUp');
+            
         });
     });
 });
@@ -81,4 +82,14 @@ function closeAboutPopup() {
     popup.classList.remove('openPopUp');
 }
 
-
+//STARS SA CSS CAROUSEL//
+const dakuImages = document.querySelector('.daku-images');
+document.querySelectorAll('.slider-nav a').forEach(dot => {
+  dot.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetImg = document.getElementById(targetId);
+    dakuImages.scrollTo({ left: targetImg.offsetLeft, behavior: 'smooth' });
+  });
+});
+//CSS CAROUSEL
