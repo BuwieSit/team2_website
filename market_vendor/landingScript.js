@@ -2,11 +2,20 @@
 const reg_form = document.querySelector('.register-up');
 const login_form = document.querySelector('.login-up');
 
+
 const register = e => {
-    let email = document.getElementById('email').value;
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
-    let data = JSON.parse(localStorage.setItem('data')) || [];
+    e.preventDefault();
+    
+    let email = document.getElementById('reg-email').value.trim();
+    let username = document.getElementById('reg-username').value.trim();
+    let password = document.getElementById('reg-password').value;
+    let data = JSON.parse(localStorage.getItem('data')) || [];
+
+  
+    if (!email || !username || !password) {
+        alert('Please fill in all fields');
+        return;
+    }
 
     let exist = data.length && 
         JSON.parse(localStorage.getItem('data')).some(data =>
@@ -17,8 +26,9 @@ const register = e => {
     if(!exist) {
         data.push({ email, username, password});
         localStorage.setItem('data', JSON.stringify(data));
-        document.querySelector('form').reset();
-        document.getElementById('email').focus();
+
+        reg_form.querySelector('form').reset();
+        document.getElementById('reg-email').focus();
         alert('Account created');
 
     }
@@ -26,33 +36,40 @@ const register = e => {
         alert('Account exists');
     }
 
-    e.preventDefault();
+
 
 }
 
 const login = e => {
-    let username = document.getElementById('username').value;
+    
+    e.preventDefault();
+
+    let username = document.getElementById('username').value.trim();
     let password = document.getElementById('password').value;
-    let data = JSON.parse(localStorage.setItem('data')) || [];
+    let data = JSON.parse(localStorage.getItem('data')) || [];
+
+    if (!username || !password) {
+        alert('Please fill in all fields');
+        return;
+    }
 
     let exist = data.length && 
     JSON.parse(localStorage.getItem('data')).some(data => 
-        data.email.toLowerCase() == email &&
-        data.password.toLowerCase() == password
+        data.username.toLowerCase() == username &&
+        data.password == password
     );
 
     if(!exist) {
         alert('Incorrect login credentials');
     }
     else {
-        window.location.href = '../web1_market.html';
+        window.location.href = '../market_vendor/web1_market.html';
     }
-    
-    e.preventDefault();
+
 }
 
-
-
+reg_form.querySelector('form').addEventListener('submit', register);
+login_form.querySelector('form').addEventListener('submit', login);
 
 
 
