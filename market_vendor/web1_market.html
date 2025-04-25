@@ -31,7 +31,7 @@
                 <option value="Frozen Goods">Frozen Goods</option>
                 </select>
 
-                <button type="submit" id="submitBtn">Submit</button>
+                <button type="submit" id="submitBtn" class="button-style">Submit</button>
             
         </form>
     </div>
@@ -43,28 +43,38 @@
     
     <div class="vendorList-cont">
         
-    <div class="vendor-pop V-popup">
-        <div class="vendor-desc">
-            <h3>Placeholder Stall Name</h3>
-            <p>Permit Number Placeholder</p>
+        <div class="vendor-pop V-popup">
+
+            <div class="vendor-desc">
+                    <h2>Placeholder Stall Name</h2> 
+                    <p>Permit Number Placeholder</p>
+            </div>
+        
+
+            <div class="vendor-hygiene">
+                
+                <label for="sanitary" class="hygiene-labels">Sanitary Practices:</label>
+                <div class="hygiene-wrap radio-hygiene">
+                    
+                    <label><input type="radio" name="sanitary" value="Good" required> 
+                        Good
+                        <span class="checkmark"></span>
+                    </label>
+                    <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
+                    <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
+        
+                </div>
+
+                <label for="cleanliness" class="hygiene-labels">Stall Cleanliness:</label>
+                <div class="hygiene-wrap checkbox-hygiene">
+                    
+                    <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
+                    <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
+                </div>
+                <button type="submit" id="hygieneBtn" class="button-style">Update</button>
+            </div>
 
         </div>
-
-        <div class="vendor-hygiene">
-            <div class="hygiene-wrap">
-                <label>Sanitary Practices:</label>
-                <label><input type="radio" name="sanitary" value="Good" required> Good</label>
-                <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
-                <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
-    
-            </div>
-            <div class="hygiene-wrap">
-                <label>Stall Cleanliness:</label>
-                <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
-                <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
-            </div>
-        </div>
-    </div>
 
         <div class="vList">
             <div class="vendor vend-warning">
