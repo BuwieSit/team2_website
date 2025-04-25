@@ -32,6 +32,33 @@ body {
 #header-desc {
     font-size: 1vw;
 }
+.roof-desc {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    position: absolute;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+#roof_title {
+    transform: rotateX(40deg);
+    font-size: 2rem;
+    z-index: 10;
+}
+#bvl_logo {
+
+    aspect-ratio: 1;
+    z-index: 10;
+    transform: rotateX(40deg);
+    flex: 0 1 150px;
+    min-width: 70px;
+    max-width: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
 .head {
     width: 100%;
     display: flex;
@@ -226,6 +253,52 @@ body {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
+.products > img {
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin-top: -5%;
+    filter: drop-shadow(0px 5px 10px black);
+    transition: all 0.5s ease;
+    animation: sway 5s infinite;
+    transform: rotate(-15deg);
+}
+.products > img:nth-child(1) {
+    animation-delay: 1.3s;
+}
+.products > img:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.products > img:nth-child(3) {
+    animation-delay: 1s;
+}
+.products > img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 5px 10px white);
+}
+.products {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    z-index: 50;
+    transform: rotateX(0deg);
+}
+@keyframes sway {
+    0% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}
 .login-up, .register-up {
     transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
@@ -313,6 +386,10 @@ input {
 
 @media (max-width: 800px) {
 
+    .roof-desc {
+        width: 50%;
+    }
+    
     .roof-cont {
         width: 170%;
     }
@@ -326,6 +403,11 @@ input {
         
     }
 
+    .products > img {
+        width: 100px;
+
+        
+    }
     .stall-supp-cont {
         height: 30%;
         gap: 30%;
