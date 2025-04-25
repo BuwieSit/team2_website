@@ -122,5 +122,24 @@ logreg.forEach(logRegs => {
     })
 });
 
+const images = document.querySelectorAll('.products img'); 
+const info = document.querySelector('.product-info');
+const infoTxt = document.getElementById('info-text');
 
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        const type = image.id;
+        
+        infoTxt.innerHTML = type === 'fruit' ? "Fruits"
+                          : type === 'veggies' ? "Vegetables"
+                          : type === 'meat' ? "Meat"
+                          : "Unknown";
 
+   
+        info.classList.add('show');
+
+        setTimeout(() => {
+            info.classList.remove('show');
+        }, 1000);
+    });
+});
