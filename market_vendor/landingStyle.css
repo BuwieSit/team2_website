@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: rgb(19,15,14);
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +106,7 @@ body {
 
 .stall-supp-cont {
     width: 100%;
-    height: 70%;
+    height: 50%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -180,6 +180,8 @@ body {
     font-size: 50px;
     text-align: center;
     color: black;
+    flex: 0 1 250px;
+    min-width: 100px;
     
 }
 
@@ -322,6 +324,11 @@ input {
     .stall-content {
         margin-top: -15%;
         
+    }
+
+    .stall-supp-cont {
+        height: 30%;
+        gap: 30%;
     }
     #header-desc {
         font-size: 2vw;

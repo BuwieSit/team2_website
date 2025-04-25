@@ -76,8 +76,8 @@
     
 
     <div class="login-up popup-group">
-        <form action="" class="form-popup">
-            <img src="../resources/close.png" alt="close" class="closeBtn">
+        <form class="form-popup">
+            <img src="../resources/close.png" alt="close" class="closeBtn" draggable="false">
             <caption>Login</caption>
             <div class="form-grp">
                 <label class="input-label" for="username" name="username">Username</label>
@@ -93,20 +93,20 @@
     </div>
 
     <div class="register-up popup-group">
-        <form action="./register.php" method="post" class="form-popup">
-            <img src="../resources/close.png" alt="close" class="closeBtn">
+        <form class="form-popup">
+            <img src="../resources/close.png" alt="close" class="closeBtn" draggable="false">
             <caption>Register</caption>
             <div class="form-grp">
                 <label class="input-label" for="username">Email</label>
-                <input class="form-input" type="email" name="email" placeholder="email" required>
+                <input class="form-input" type="email" name="email" placeholder="email"  id="email" required>
             </div>
             <div class="form-grp">
                 <label class="input-label" for="username">Username</label>
-                <input class="form-input" type="text" name="username" placeholder="username" required>
+                <input class="form-input" type="text" name="username" placeholder="username" id="username" required>
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password"  name="password" placeholder="password" required>
+                <input class="form-input" type="password"  name="password" placeholder="password"  id="password" required>
            </div>
             
             <button type="submit" class="loginBtn form-button">Register</button>
