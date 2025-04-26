@@ -21,13 +21,6 @@ navOptions.forEach(opt => {
     });
 });
 
-const close = document.querySelectorAll('.closeBtn');
-const vendorPopup = document.querySelectorAll('.vendor-pop');
-
-
-    // close.addEventListener('click', () => {
-    //     vendorPopup.classList.remove('vendor-pop')
-    // });
 
     const vendorForm = document.getElementById('vendorForm');
 
@@ -102,5 +95,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-    vendorForm.addEventListener('submit', vendorDetails);
+vendorForm.addEventListener('submit', vendorDetails);
+
+const close = document.querySelectorAll('.closeBtn');
+const vendorPopup = document.querySelector('.V-popup');
+const popHandler = document.querySelector('.vendor');
+
+popHandler.addEventListener('click', () => {
     
+    vendorPopup.classList.add('vendor-pop');
+})
+
+   
+
