@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: #ffeead;
-    ;
+    background-color: aliceblue;
+    
 }
 
 .head {
@@ -51,7 +51,7 @@ body {
     position: relative;
     margin-left: 0;
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
 }
 
 .search-container input {
@@ -132,7 +132,14 @@ body {
     display: flex;
     overflow: hidden;
     border-radius: 12px;
+    height: 260px;
 }
+
+.daku-images:hover .juskoano{
+    height: 50%;
+    
+}
+
 
 
 .slider-nav{
@@ -148,8 +155,8 @@ body {
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50%;
-    background: #f2b600; 
-    opacity: 0.5;
+    background:  #ff6f69; 
+    opacity: 0.75;
     cursor: pointer;
     
 }
@@ -158,16 +165,47 @@ body {
     opacity: 3;
 }
 
+/*Hover on picture*/
+.juskoano{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: justify;
+    font-size: 11px;
+    height: 0;
+    width: fit-content;
+    left: 0;
+    bottom: 0;
+    padding: 0 10px;
+    background: linear-gradient(transparent, white 45%,#96ceb4 100%);
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+
 /*Css Carousel-start*/
+.survey-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+
 .carousel {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     padding-bottom: 20px;
-    height: fit-content;
 }
 
 .card-Daku {
-    margin: 30px 0 0 30px;
+    margin-top: 40px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
@@ -177,10 +215,13 @@ body {
     transition: transform 0.3s ease;
     width: 450px;
     height: auto;
+    left: 0;
+
 }
 
 .Daku-container {
     position: relative;
+    display: flex;
     margin: 30px 15px 15px;
 }
   
@@ -188,10 +229,6 @@ body {
     max-height: 250px;
     width: 100%;
     object-fit: cover;
-}
-
-#daku-description{
-    text-align: justify;
 }
 
 
@@ -241,9 +278,6 @@ body {
 
 /*Css Carousel-end*/
 
-/*pop up for island -start*/
-
-/*pop up for island -end*/
 
 select{
     color: black;
