@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const stars = document.querySelectorAll('input[name="experience"]');
+    const stars = document.querySelectorAll('input[name=".rating input"]');
     const popup = document.getElementById('popup');
     const popupHeading = popup.querySelector('h2');
     const popupMessage = popup.querySelector('p');
@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
             
         });
     });
+    
 });
+
+
 
 function closeAllPopups() {
     document.querySelectorAll('.openPopUp').forEach(popup => {
@@ -82,30 +85,31 @@ function closeAboutPopup() {
     popup.classList.remove('openPopUp');
 }
 
-//STARS SA CSS CAROUSEL//
-const dakuImages = document.querySelector('.daku-images');
-document.querySelectorAll('.slider-nav a').forEach(dot => {
-  dot.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const targetImg = document.getElementById(targetId);
-    dakuImages.scrollTo({ left: targetImg.offsetLeft, behavior: 'smooth' });
+//para hindi tumalon Daku Island //
+
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const allSliders = document.querySelectorAll
+    ('.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko');
+  
+    allSliders.forEach(slider => {
+      slider.querySelectorAll('a').forEach(dot => {
+        dot.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetImg = document.getElementById(targetId);
+          const dakuImages = this.closest('.card-Daku').querySelector('.daku-images');
+          dakuImages.scrollTo({ left: targetImg.offsetLeft, behavior: 'smooth' });
+        });
+      });
+    });
   });
-});
-//CSS CAROUSEL
+  
 
 
-/*daku popup
 
-function openDakuPopup() {
-    const dakuPopup = document.getElementById('popup-daku');
-    popup.classList.add('openPopUp');
-}
 
-function closeDakuPopup() {
 
-    closeAllPopups();
-    const dakuPopup = document.getElementById('popup-daku');
-    popup.classList.add('openPopUp');
-}
-*/
+
+  
+  
