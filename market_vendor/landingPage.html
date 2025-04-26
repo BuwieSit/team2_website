@@ -102,7 +102,11 @@
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password" name="password" id="password" required>
+                <div class="pass-cont">
+                    <input class="form-input" type="password"  name="password"  id="password" required>
+                    <input class="form-input" type="text"  name="password"  id="logShowPassword" required>
+                    <img src="../landing_resources/eye.png" alt="showpass" class="eyes" id="eye-login">
+                </div>
            </div>
             
             <button type="submit" class="loginBtn form-button">SIGN IN</button>
@@ -123,7 +127,12 @@
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password"  name="password"  id="reg-password" required>
+                <div class="pass-cont">
+                    <input class="form-input" type="password"  name="password"  id="reg-password" required>
+                    <input class="form-input" type="text"  name="password"  id="showPassword" required>
+                    <img src="../landing_resources/eye.png" alt="showpass" class="eyes" id="eye-reg">
+                </div>
+                    
            </div>
             
             <button type="submit" class="loginBtn form-button">SIGN UP</button>

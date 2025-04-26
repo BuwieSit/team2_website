@@ -143,3 +143,48 @@ images.forEach(image => {
         }, 1000);
     });
 });
+
+const eye_reg = document.getElementById('eye-reg');
+const eye_login = document.getElementById('eye-login');
+const LogPassType = document.getElementById('password');
+const RegPassType = document.getElementById('reg-password');
+const showPass = document.getElementById('showPassword');
+const logShow = document.getElementById('logShowPassword');
+
+eye_reg.addEventListener('mousedown', () => {
+        eye_reg.style.filter = "invert(1)";
+        showPass.style.opacity = "1";
+        showPass.style.zIndex = "10";
+        showPass.value = RegPassType.value;
+        RegPassType.style.opacity = "0";
+   
+});
+
+eye_reg.addEventListener('mouseup', () => {
+    eye_reg.style.filter = "invert(0)";
+        showPass.style.opacity = "0";
+        showPass.style.zIndex = "3";
+        RegPassType.value = showPass.value;
+        RegPassType.style.opacity = "1";
+        RegPassType.style.zIndex = "10";
+});
+
+eye_login.addEventListener('mousedown', () => {
+
+    eye_login.style.filter = "invert(1)";
+    logShow.style.opacity = "1";
+    logShow.style.zIndex = "10";
+    logShow.value = LogPassType.value;
+    LogPassType.style.opacity = "0";
+  
+});
+
+eye_login.addEventListener('mouseup', () => {
+
+    eye_login.style.filter = "invert(0)";
+    logShow.style.opacity = "0";
+    logShow.style.zIndex = "3";
+    LogPassType.value = logShow.value;
+    LogPassType.style.opacity = "1";
+  
+});

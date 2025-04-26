@@ -389,9 +389,35 @@ body {
 }
 .form-input {
     background-image: url(../resources/darkOak_1.jpg);
+    color: white;
+    border: none;
+    box-shadow: 0 5px 10px black;
+}
+.form-input:focus {
+    box-shadow: 0 0 0 black;
+    border: none;
+    transition: all 0.5s ease;
+}
+.eyes {
+    width: 30px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 105%;
+    top: 5%;
+    cursor: pointer;
+    filter: invert(0);
+    
 }
 
+.pass-cont {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
 
+    width: 100%;
+    
+}
 input {
     padding: 10px;
 }
@@ -404,6 +430,22 @@ input {
 .form-grp {
     display: flex;
     flex-direction: column;
+}
+#showPassword {
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+}
+#logShowPassword {
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+}
+#reg-password {
+    z-index: 5;
+}
+#password {
+    z-index: 5;
 }
 .form-button {
     width: 100px;
