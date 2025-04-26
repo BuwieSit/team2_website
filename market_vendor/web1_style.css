@@ -18,10 +18,13 @@ body {
     padding: 0;
     border: 0;
     overflow-x: hidden;
-    background-image: linear-gradient(to top right, rgb(19,15,14) 55%, rgb(234,225,220));
+    /* background-image: linear-gradient(to top right, rgb(19,15,14) 55%, rgb(234,225,220)); */
+    background: url('../resources/woodBg_2.jpg') repeat fixed 100%;
+    background-size: cover;
     color: 	rgb(234,225,220);
     font-family: "Plus Jakarta Sans", sans-serif;
 }
+
 
 #header-title {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -32,13 +35,75 @@ body {
     font-size: 1vw;
 }
 .head {
+    position: sticky;
+    z-index: 10;
+    top: 0;
     width: 100%;
+    height: 20%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: rgba(160, 67, 38, 0.5);
+}
+.header-grp {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: default;
+
+}
+.title-grp {
+    align-items: center;
+    justify-content: start;
+}
+.list-grp {
+    font-weight: 800;
+}
+.nav-list {
+    list-style-type: none;
+    cursor: pointer;
+    gap: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     
 }
+.nav-list > li {
+    display: block; 
+    padding: 3rem 2rem; 
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.nav-list > li:hover {
+    filter: drop-shadow(0px 0px 5px white);
+    transform: translateY(-5px);
+    border-radius: 8px; 
+}
+.margin {
+    margin: 50% 0;
+}
+.upper-content {
+    width: 50%;
+    height: 500px;
+    padding: 10%;
+    background-color: black;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+#BVL {
+    width: 15%;
+    aspect-ratio: 1;
+}
+
 
 #form-title {
     font-size: 2rem;
@@ -343,6 +408,7 @@ input[type="text"] {
     background-color: rgba(205,154,101, 0.744);
     border-radius: 20px;
 }
+
 
 
 
