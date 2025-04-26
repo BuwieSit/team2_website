@@ -10,15 +10,17 @@
     
     <header class="head">
         <div class="header-grp title-grp">
-            <img src="../resources/BVL_logo.png" alt="BVL Logo" id="BVL">
+            <div id="BVL"></div>
+            <!-- <img src="../resources/BVL_logo.png" alt="BVL Logo" id="BVL"> -->
             <h2 id="header-title">BVL Public Market</h2>
         </div>
-        <div class="header-grp list-grp">
+        <div class="header-grp list-grp" >
             <ul class="nav-list">
-                <li class="nav-options">Home</li>
-                <li class="nav-options">Register</li>
-                <li class="nav-options">Vendors</li>
-                <li class="nav-options">Result</li>
+                <li class="nav-options"><a href="#">Home</a></li>
+                <li class="nav-options"><a href="#vendReg">Register</a></li>
+                <li class="nav-options"><a href="#vendList">Vendors</a></li>
+                <li class="nav-options"><a href="#vendRes">Result</a></li>
+            
             </ul>
         </div>
 
@@ -36,7 +38,7 @@
     </div>
     <div class="margin"></div>
 
-    <div class="form-container">
+    <div class="form-container" id="vendReg">
         <h2 id="form-title">Vendor Registration</h2>
 
         <form id="vendorForm">
@@ -61,7 +63,7 @@
     </div>
 
     
-    <div class="vend-title">
+    <div class="vend-title" id="vendList">
         <h3>Vendors List</h3>
     </div>
     
@@ -119,7 +121,7 @@
        
     </div>
 
-    <div class="results-section fade-in">
+    <div class="results-section fade-in" id="vendRes">
         <h2 class="surveyResults">Survey Results</h2>
         <button id="exportBtn">Export to Excel</button>
 
@@ -137,6 +139,6 @@
         </table>
     </div>
 
-
+    <script src="web1_script.js"></script>
 </body>
 </html>
