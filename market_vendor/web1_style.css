@@ -308,7 +308,7 @@ input[type="text"] {
 }
 #vendList {
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     height: 10px;
 }
 .vend-title {
@@ -339,6 +339,10 @@ input[type="text"] {
     -webkit-backdrop-filter: blur(7px);
     box-shadow:  -5px 5px 15px rgba(0, 0, 0, 0.644);
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     flex: 0 1 170px; /* grow, shrink, base width */
     min-width: 90px;
@@ -375,15 +379,19 @@ input[type="text"] {
     transition: 0.5s ease;
     
 }
-.vendor > p {
+.detail-title {
     font-size: 1rem;
+    font-weight: 800;
+}
+.detail-vendor {
+    font-size: 0.7rem;
 }
 .V-popup {
     transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
 }
 .vendor-pop {
-    width: 20rem;
+    width: 22rem;
     border-radius: 20px;
     aspect-ratio: 1;
     position: absolute;
@@ -396,8 +404,7 @@ input[type="text"] {
     z-index: 10;
     transition: 0.5s ease;
     transform: translate(-50%, -50%) scale(1);
-    visibility: visible;
-    
+    visibility: hidden;
 }
 .vendor-desc {
     width: 100%;
@@ -413,10 +420,26 @@ input[type="text"] {
     border-bottom: 0.1rem solid black;
 
 }
-
+.closeBtn {
+    width: 30px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.closeBtn:hover {
+    transform: scale(1.2);
+}
+.popup-form {
+    width: 100%;
+    height: 100%;
+}
 .vendor-hygiene {
     width: 100%;
     height: 80%;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -440,31 +463,75 @@ input[type="text"] {
     flex-direction: column;
     justify-content: space-evenly;
 }
+
 .radio-hygiene  {
-    justify-content: space-evenly;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3 ease;
 }
 .radio-hygiene > label > input[type="radio"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;;
+    cursor: pointer;  
 }
-.radio-hygiene:hover > label > input[type="radio"] ~ .checkmark {
+.radio-label:hover > input[type="radio"] ~ .checkmark {
     background-color: #ccc;
 }
-.radio-hygiene > label > input[type="radio"]:checked ~ .checkmark {
-    background-color: red;
+.radio-label:nth-child(1) > input[type="radio"]:checked ~ .checkmark {
+    background-color: #88ff00;
+}
+.radio-label:nth-child(2) > input[type="radio"]:checked ~ .checkmark {
+    background-color: #ffc400;
+}
+.radio-label:nth-child(3) > input[type="radio"]:checked ~ .checkmark {
+    background-color: #ff0800;
 }
 
 .checkmark {
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: #eee;
     border-radius: 50%;
   }
+.radio-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.radio-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* (dot/circle) */
+.radio-label .checkmark:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
 
 #hygieneBtn {
     width: 70px;

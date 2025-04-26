@@ -8,25 +8,99 @@ window.addEventListener('scroll', function() {
     if (window.scrollY > 100) {
         header.classList.add('scrolling');
     } else {
-    
+        
         header.classList.remove('scrolling');
     }
 });
 
 navOptions.forEach(opt => {
     opt.addEventListener('click', () => {
-
+        
         navOptions.forEach(o => o.style.boxShadow = 'none');
-
-        // Then, highlight the clicked one
         opt.style.boxShadow = '0px 5px 10px black';
     });
 });
 
+const close = document.querySelectorAll('.closeBtn');
+const vendorPopup = document.querySelectorAll('.vendor-pop');
 
-const formInputs = document.querySelectorAll(".vendor-form input");
+
+    // close.addEventListener('click', () => {
+    //     vendorPopup.classList.remove('vendor-pop')
+    // });
+
+    const vendorForm = document.getElementById('vendorForm');
+
+    const vendorDetails = e => {
+        e.preventDefault();
+    
+        let bName = document.getElementById('busName').value.trim();
+        let permitNum = document.getElementById('permitNumber').value.trim();
+        let prodType = document.getElementById('productType').value;
+    
+        let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
+    
+        let exist = vend_data.length && 
+            vend_data.some(v => 
+                v.bName.toLowerCase() === bName.toLowerCase() &&
+                v.permitNum.toLowerCase() === permitNum.toLowerCase()
+            );
+    
+        if (!exist) {
+            vend_data.push({ bName, permitNum, prodType });
+            localStorage.setItem('vend_data', JSON.stringify(vend_data));
+    
+            // Create elements ONLY if new
+            let title = document.createElement('p');
+            let desc = document.createElement('p');
+            let div = document.createElement('div');
+            let vendorList = document.querySelector('.vList');
+    
+            div.className = 'vendor';
+            title.className = 'detail-title';
+            desc.className = 'detail-vendor';
+    
+            title.textContent = bName; 
+            desc.textContent = permitNum;
+    
+            div.append(title, desc);
+            vendorList.append(div);
+    
+            vendorForm.reset();
+            alert('Submitted!');
+        } else {
+            alert('Vendor already exists!');
+        }
+    }
+
+  
+function addVendorToPage(bName, permitNum) {
+
+    let title = document.createElement('p');
+    let desc = document.createElement('p');
+    let div = document.createElement('div');
+    let vendorList = document.querySelector('.vList');
+
+    div.className = 'vendor';
+    title.className = 'detail-title';
+    desc.className = 'detail-vendor';
+
+    title.textContent = bName; 
+    desc.textContent = permitNum;
+
+    div.append(title, desc);
+    vendorList.append(div);
+
+}
 
 
+window.addEventListener('DOMContentLoaded', () => {
+    let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
 
-const vendorList = document.querySelector(".vendorList-cont");
+    vend_data.forEach(vendor => {
+        addVendorToPage(vendor.bName, vendor.permitNum);
+    });
+});
 
+    vendorForm.addEventListener('submit', vendorDetails);
+    

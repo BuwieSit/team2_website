@@ -54,17 +54,17 @@
         <form id="vendorForm">
             
                 <label for="busName">Business Name</label>
-  
-                <input type="text" id="busName"  required>
+                <input type="text" id="busName" required>
+
                 <label for="permitNumber">Permit Number:</label>
-                <input type="text" id="permitNumber"  required>
+                <input type="text" id="permitNumber" required>
 
                 <label for="productType">Product Type:</label>
                 <select id="productType" required>
-                <option value="Vegetables">Vegetables</option>
-                <option value="Meat">Meat</option>
-                <option value="Fish">Fish</option>
-                <option value="Frozen Goods">Frozen Goods</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Frozen Goods">Frozen Goods</option>
                 </select>
 
                 <button type="submit" id="submitBtn" class="button-style">Submit</button>
@@ -80,53 +80,54 @@
     </div>
     
     <div class="vendorList-cont">
-        
         <div class="vendor-pop V-popup">
-
-            <div class="vendor-desc">
-                    <h2>Placeholder Stall Name</h2> 
-                    <p>Permit Number Placeholder</p>
-            </div>
-        
-
-            <div class="vendor-hygiene">
-                
-                <label for="sanitary" class="hygiene-labels">Sanitary Practices:</label>
-                <div class="hygiene-wrap radio-hygiene">
-                    
-                    <label><input type="radio" name="sanitary" value="Good" required> 
-                        Good
-                        <span class="checkmark"></span>
-                    </label>
-                    <label><input type="radio" name="sanitary" value="Fair"> Fair</label>
-                    <label><input type="radio" name="sanitary" value="Poor"> Poor</label>
-        
+            <img src="../resources/close.png" alt="close" class="closeBtn" draggable="false">
+            <form class="popup-form">
+                <div class="vendor-desc">
+                        <h2>Placeholder Stall Name</h2> 
+                        <p>Permit Number Placeholder</p>
                 </div>
+            
 
-                <label for="cleanliness" class="hygiene-labels">Stall Cleanliness:</label>
-                <div class="hygiene-wrap checkbox-hygiene">
+                <div class="vendor-hygiene">
                     
-                    <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
-                    <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
-                </div>
-                <button type="submit" id="hygieneBtn" class="button-style">Update</button>
-            </div>
+                    <label for="sanitary" class="hygiene-labels">Sanitary Practices:</label>
+                    <div class="hygiene-wrap radio-hygiene">
+                        
+                        <label class="radio-label">
+                            Good
+                            <input type="radio" name="sanitary" value="Good" required> 
+                            <span class="checkmark"></span>
+                        </label>
 
+                        <label class="radio-label">
+                            Fair
+                            <input type="radio" name="sanitary" value="Fair"> 
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="radio-label">
+                            Poor
+                            <input type="radio" name="sanitary" value="Poor"> 
+                            <span class="checkmark"></span>
+                        </label>
+            
+                    </div>
+
+                    <label for="cleanliness" class="hygiene-labels">Stall Cleanliness:</label>
+                    <div class="hygiene-wrap checkbox-hygiene">
+                        
+                        <label><input type="checkbox" name="cleanliness" value="Daily Cleaning"> Daily Cleaning</label>
+                        <label><input type="checkbox" name="cleanliness" value="Waste Disposal"> Waste Disposal</label>
+                    </div>
+                    <button type="submit" id="hygieneBtn" class="button-style">Update</button>
+                </div>
+            </form>
         </div>
 
         <div class="vList">
             <div class="vendor vend-warning">
                 <img id="warningSign" src="../resources/warning.png" alt="warning">
                 <p>Placeholder Stall Name Placeholder Stall Name</p>
-            </div>
-            <div class="vendor">
-                <p>Placeholder Stall Name Placeholder Stall Name Placeholder Stall Name Placeholder Stall Name</p>
-            </div>
-            <div class="vendor">
-                <p>Placeholder Stall Name Place</p>
-            </div>
-            <div class="vendor">
-                <p>Placeholder Stall Name Placeholder Stall Name Placeholder Stall Name Placeholder Stall Name</p>
             </div>
 
         </div>
