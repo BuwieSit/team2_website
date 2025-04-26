@@ -34,9 +34,7 @@ body {
     text-align: center;
     font-size: 4vw;
 }
-#header-desc {
-    font-size: 1vw;
-}
+
 .head {
     position: sticky;
     z-index: 10;
@@ -53,16 +51,18 @@ body {
 
 .scrolling > * {
     transform: scale(0.5);
+
 }
 .scrolling > .header-grp > .nav-list {
     font-size: 2rem;
+
 }
 .scrolling {
     height: 80px;
     transition: all 0.3s ease;
-    background: rgba( 255, 255, 255, 0.2 );
+    background: rgba(2, 2, 2, 0.2);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.671);
-    backdrop-filter: blur( 7.5px );
+    backdrop-filter: blur( 2.5px );
     -webkit-backdrop-filter: blur( 4.5px );
     border-radius: 10px;
 }
@@ -94,40 +94,60 @@ body {
     gap: 30px;
     
 }
-.nav-list > li {
+.nav-options {
+    transition: all 0.3 ease;
+}
+.nav-options > a {
     display: block; 
     padding: 3rem 2rem; 
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
+
 li > a {
     color: white;
 }
-.nav-list > li:hover {
-    filter: drop-shadow(0px 0px 5px white);
+.nav-options:hover {
+    filter: drop-shadow(0px 0px 5px white); 
     transform: translateY(-5px);
-    border-radius: 8px; 
+    border-radius: 8px;
+
 }
 a {
     text-decoration: none;
     
 }
 .margin {
-    margin: 50% 0;
+    margin: 30% 0;
 }
 .upper-content {
-    width: 50%;
-    height: 300px;
-    padding: 10%;
-    background-color: black;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
+
     margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: justify;
-    animation-timeline: view(60% 20%);
+    text-align: center;
+    animation-timeline: view(100% auto);
     animation-name: movement;
+}
+
+.miss-vis {
+    width: 50%;
+    padding: 50px;
+}
+.miss-vis > section > h4 {
+    font-size: 2rem;
+}
+#header-desc {
+    font-size: 1rem;
 }
 
 #BVL {
@@ -137,8 +157,6 @@ a {
     aspect-ratio: 1;
 }
 
-
-
 #form-title {
     font-size: 2rem;
 }
@@ -146,19 +164,16 @@ a {
 .form-container {
     width: 50%;
     aspect-ratio: 16/9;
-    background-color: rgb(147,87,50);
-    border-radius: 8%;
     margin: auto;
     padding: 5%;
     font-family: "Plus Jakarta Sans", sans-serif;
     text-align: center;
-    color: rgb(19,15,14);
-    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
+    color: white;
 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border-radius: 10px;
     animation-timeline: view(95% auto);
     animation-name: movement;
 }
@@ -207,12 +222,14 @@ select {
     cursor: pointer;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 1rem;
+    color: white;
 }
 select:hover {
     box-shadow: 0px 5px 10px black;
 }
 
 select > option {
+    color: white;
     background-color: rgb(153, 98, 68);
     padding: 10px;
     border: none;
@@ -231,7 +248,7 @@ input[type="text"] {
     border-bottom: 2px solid;
     text-align: center;
     padding: 10px;
-    color: black;
+    color: white;
     font-size: 1rem;
 }
 .button-style {
@@ -242,14 +259,18 @@ input[type="text"] {
     transition: 0.5s ease;
     border-radius: 15px;
     transform: translate(0px, 5px);
-    box-shadow: 0px 0px 0px black;
-    background-color: 	#935732;
+    background-color: 	rgba(145, 85, 49, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    color: white;
     border: none;
 }
 .button-style:hover {
     box-shadow: 0px 5px 10px black;
+  
     transform: translate(0px, -5px);
-    background-color: 	white;
+    background-color: rgba(145, 85, 49, 0.5);
     border: none;
     
 }
@@ -284,6 +305,11 @@ input[type="text"] {
 
     animation-timeline: view(95% auto);
     animation-name: movement;
+}
+#vendList {
+    width: 100%;
+    margin-bottom: 10%;
+    height: 10px;
 }
 .vend-title {
 
