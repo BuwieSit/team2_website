@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: rgb(19,15,14);
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,6 +31,33 @@ body {
 }
 #header-desc {
     font-size: 1vw;
+}
+.roof-desc {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    position: absolute;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+#roof_title {
+    transform: rotateX(40deg);
+    font-size: 2rem;
+    z-index: 10;
+}
+#bvl_logo {
+
+    aspect-ratio: 1;
+    z-index: 10;
+    transform: rotateX(40deg);
+    flex: 0 1 150px;
+    min-width: 70px;
+    max-width: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
 }
 .head {
     width: 100%;
@@ -106,7 +133,7 @@ body {
 
 .stall-supp-cont {
     width: 100%;
-    height: 70%;
+    height: 50%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -180,9 +207,19 @@ body {
     font-size: 50px;
     text-align: center;
     color: black;
+    flex: 0 1 250px;
+    min-width: 90px;
     
 }
-
+.nail {
+    width: 30px;
+    aspect-ratio: 1;
+    position: absolute;
+    transform: translate(200%, -200%) scale(5);
+    
+    transition: all 0.2s ease;
+    opacity: 0;
+}
 .bs1 {
    
     rotate: -10deg;
@@ -196,6 +233,10 @@ body {
     rotate: 0deg;
     transition: 0.5s ease;
     cursor: pointer;
+}
+.body-sign:hover > .nail {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
 }
 
 .lower-middle {
@@ -224,6 +265,84 @@ body {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
+#info-text {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Moment', sans-serif;
+}
+.product-info {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    width: 400px;
+    aspect-ratio: 16/7;
+    background-image: linear-gradient(to top right, rgba(153, 98, 68, 0.3) 60%, rgba(234,225,220, 0.3));
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+.show {
+    opacity: 1;
+  
+}
+.products > img {
+    width: 150px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin-top: -5%;
+    filter: drop-shadow(0px 5px 10px black);
+    transition: all 0.5s ease;
+    animation: sway 5s infinite;
+    transform: rotate(-15deg);
+}
+.products > img:nth-child(1) {
+    animation-delay: 1.3s;
+    animation-direction: reverse;
+}
+.products > img:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.products > img:nth-child(3) {
+    animation-delay: 1s;
+}
+.products > img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 5px 10px white);
+}
+.products {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    z-index: 50;
+    transform: rotateX(0deg);
+}
+@keyframes sway {
+    0% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}
 .login-up, .register-up {
     transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
@@ -237,10 +356,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
-    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
+    /* background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220)); */
+    background-image: url(../resources/darkOak_1.jpg);
+    color: white;
+    font-family: 'Moment', sans-serif;
     padding: 5%;
     z-index: 10;
-    transition: 0.5s ease;
+    transition: all 0.5s ease;
     transform: translate(-50%, -50%) scale(1);
     visibility: visible;
 }
@@ -265,6 +387,11 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+.form-input {
+    background-image: url(../resources/darkOak_1.jpg);
+}
+
+
 input {
     padding: 10px;
 }
@@ -287,9 +414,13 @@ input {
     border-radius: 15px;
     transform: translate(0px, 5px);
     box-shadow: 0px 0px 0px black;
-    background-color: 	#935732;
+    /* background-color: 	#935732; */
+    background-image: url(../resources/darkOak_1.jpg);
+    
     border: none;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'Moment', sans-serif;
+    color: white;
+    font-weight: 500;
     cursor: pointer;
     border-radius: 30px;
 }
@@ -311,6 +442,10 @@ input {
 
 @media (max-width: 800px) {
 
+    .roof-desc {
+        width: 50%;
+    }
+    
     .roof-cont {
         width: 170%;
     }
@@ -323,12 +458,29 @@ input {
         margin-top: -15%;
         
     }
+
+    .products > img {
+        width: 100px;
+
+        
+    }
+    .stall-supp-cont {
+        height: 30%;
+        gap: 30%;
+    }
     #header-desc {
         font-size: 2vw;
     }
     .body-sign {
         font-size: 20px;
-        width: 150px;
+        width: 50px;
         height: 60px;
+    }
+    .nail {
+        width: 15px;
+    }
+
+    .product-info {
+        width: 60%;
     }
 }

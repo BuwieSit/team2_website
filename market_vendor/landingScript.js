@@ -1,22 +1,99 @@
+
+const reg_form = document.querySelector('.register-up');
+const login_form = document.querySelector('.login-up');
+
+
+const register = e => {
+    e.preventDefault();
+    
+    let email = document.getElementById('reg-email').value.trim();
+    let username = document.getElementById('reg-username').value.trim();
+    let password = document.getElementById('reg-password').value;
+    let data = JSON.parse(localStorage.getItem('data')) || [];
+
+  
+    if (!email || !username || !password) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    let exist = data.length && 
+        JSON.parse(localStorage.getItem('data')).some(data =>
+            data.email.toLowerCase() == email.toLowerCase() &&
+            data.username.toLowerCase() == username.toLowerCase()
+        );
+
+    if(!exist) {
+        data.push({ email, username, password});
+        localStorage.setItem('data', JSON.stringify(data));
+
+        reg_form.querySelector('form').reset();
+        document.getElementById('reg-email').focus();
+        alert('Account created');
+
+    }
+    else {
+        alert('Account exists');
+    }
+
+
+
+}
+
+const login = e => {
+    
+    e.preventDefault();
+
+    let username = document.getElementById('username').value.trim();
+    let password = document.getElementById('password').value;
+    let data = JSON.parse(localStorage.getItem('data')) || [];
+
+    if (!username || !password) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    let exist = data.length && 
+    JSON.parse(localStorage.getItem('data')).some(data => 
+        data.username.toLowerCase() == username &&
+        data.password == password
+    );
+
+    if(!exist) {
+        alert('Incorrect login credentials');
+    }
+    else {
+        window.location.href = '../market_vendor/web1_market.html';
+    }
+
+}
+
+reg_form.querySelector('form').addEventListener('submit', register);
+login_form.querySelector('form').addEventListener('submit', login);
+
+
+
+
+
 const formGroups = document.querySelectorAll('.form-grp');
 const sign1 = document.querySelector('.bs1');
 const sign2 = document.querySelector('.bs2');
-const login = document.querySelector('.login-up');
-const register = document.querySelector('.register-up');
+
+
 
 const logreg = document.querySelectorAll('.popup-group');
 const blackLayer = document.querySelector('.black-layer');
 
 sign1.addEventListener('click', () => {
-    register.classList.remove('popUp');
-    login.classList.add('popUp');
+    reg_form.classList.remove('popUp');
+    login_form.classList.add('popUp');
     blackLayer.style.visibility = "visible";
 
 })
 
 sign2.addEventListener('click', () => {
-    login.classList.remove('popUp');
-    register.classList.add('popUp');
+    login_form.classList.remove('popUp');
+    reg_form.classList.add('popUp');
     blackLayer.style.visibility = "visible";
 
 })
@@ -39,11 +116,30 @@ logreg.forEach(logRegs => {
     const close = logRegs.querySelector('.closeBtn');
 
     close.addEventListener('click', () => {
-        register.classList.remove('popUp');
-        login.classList.remove('popUp');
+        reg_form.classList.remove('popUp');
+        login_form.classList.remove('popUp');
         blackLayer.style.visibility = "hidden";
     })
 });
 
+const images = document.querySelectorAll('.products img'); 
+const info = document.querySelector('.product-info');
+const infoTxt = document.getElementById('info-text');
 
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        const type = image.id;
+        
+        infoTxt.innerHTML = type === 'fruit' ? "Fruits"
+                          : type === 'veggies' ? "Vegetables"
+                          : type === 'meat' ? "Meat"
+                          : "Unknown";
 
+   
+        info.classList.add('show');
+
+        setTimeout(() => {
+            info.classList.remove('show');
+        }, 1000);
+    });
+});

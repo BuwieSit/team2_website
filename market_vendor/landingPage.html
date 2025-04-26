@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="landingStyle.css">
-    
+    <link rel="icon" type="img/x-icon" href="../resources/BVL_favicon.png">
     <title>BVL Public Market</title>
 </head>
 <body>
     <header class="head">
+
         <div class="roof-cont">
             <div class="roof-red r1"></div>
             <div class="roof-white w2"></div>
+            <div class="roof-desc">
+                <img src="../resources/BVL_logo.png" alt="BVL Logo" id="bvl_logo" draggable="false">
+                <h1 id="roof_title">BVL Public Market</h1>
+            </div>
+
+            
             <div class="roof-red r2"></div>
             <div class="roof-white w2"></div>
             <div class="roof-red r3"></div>
@@ -47,27 +54,37 @@
     <div class="stall-content">
         <div class="stall-supp-cont">
             <div class="stall-supports ss1"></div>
+
+            <div class="product-info">
+                <p id="info-text">Placeholdeasdr</p>
+            </div>
+
             <div class="stall-supports ss2"></div>
         </div>
     
     
         <div class="stall-lower">
-         
-            <div class="lower-table"></div>
+            <div class="products">
+                <img id="fruit" src="../landing_resources/fruits.png" alt="fruits">
+                <img id="veggies" src="../landing_resources/veggies.png" alt="veggies">
+                <img id="meat" src="../landing_resources/meat.png" alt="meat">
+                
+            </div>
+            <div class="lower-table">
+               
+               
+            </div>
             <div class="lower-middle"></div>
             <div class="lower-body">
                 
                 <div class="body-sign bs1">
-            
-                    <p id="bs1-text">
-                        LOGIN
-                    </p>
+                    <img src="../landing_resources/nail.png" class="nail">
+                    <p id="bs1-text">LOGIN</p>
                     
                 </div>
                 <div class="body-sign bs2">
-                    <p id="bs2-text">
-                        REGISTER
-                    </p>
+                    <img src="../landing_resources/nail.png" class="nail">
+                    <p id="bs2-text">REGISTER</p>
                 </div>
             </div>
         </div>
@@ -76,40 +93,40 @@
     
 
     <div class="login-up popup-group">
-        <form action="" class="form-popup">
-            <img src="../resources/close.png" alt="close" class="closeBtn">
+        <form class="form-popup">
+            <img src="../resources/close.png" alt="close" class="closeBtn" draggable="false">
             <caption>Login</caption>
             <div class="form-grp">
                 <label class="input-label" for="username" name="username">Username</label>
-                <input class="form-input" type="text" placeholder="username" required>
+                <input class="form-input" type="text" id="username" required>
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password" name="password" placeholder="password" required>
+                <input class="form-input" type="password" name="password" id="password" required>
            </div>
             
-            <button type="submit" class="loginBtn form-button">LOGIN</button>
+            <button type="submit" class="loginBtn form-button">SIGN IN</button>
         </form>
     </div>
 
     <div class="register-up popup-group">
-        <form action="./register.php" method="post" class="form-popup">
-            <img src="../resources/close.png" alt="close" class="closeBtn">
+        <form class="form-popup">
+            <img src="../resources/close.png" alt="close" class="closeBtn" draggable="false">
             <caption>Register</caption>
             <div class="form-grp">
                 <label class="input-label" for="username">Email</label>
-                <input class="form-input" type="email" name="email" placeholder="email" required>
+                <input class="form-input" type="email" name="email"  id="reg-email" required>
             </div>
             <div class="form-grp">
                 <label class="input-label" for="username">Username</label>
-                <input class="form-input" type="text" name="username" placeholder="username" required>
+                <input class="form-input" type="text" name="username" id="reg-username" required>
             </div>
            <div class="form-grp">
                 <label class="input-label" for="password">Password</label>
-                <input class="form-input" type="password"  name="password" placeholder="password" required>
+                <input class="form-input" type="password"  name="password"  id="reg-password" required>
            </div>
             
-            <button type="submit" class="loginBtn form-button">Register</button>
+            <button type="submit" class="loginBtn form-button">SIGN UP</button>
         </form>
     </div>
     <div class="black-layer"></div>

@@ -93,3 +93,19 @@ document.querySelectorAll('.slider-nav a').forEach(dot => {
   });
 });
 //CSS CAROUSEL
+
+
+/*daku popup
+
+function openDakuPopup() {
+    const dakuPopup = document.getElementById('popup-daku');
+    popup.classList.add('openPopUp');
+}
+
+function closeDakuPopup() {
+
+    closeAllPopups();
+    const dakuPopup = document.getElementById('popup-daku');
+    popup.classList.add('openPopUp');
+}
+*/
