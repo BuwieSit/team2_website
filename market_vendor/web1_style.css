@@ -181,9 +181,11 @@ a {
 @keyframes movement {
     from {
         filter: blur(5px);
+        filter: drop-shadow(0px 0px 0px white);
     }
     to {
-
+        
+        filter: drop-shadow(0px 0px 10px white);
         filter: blur(0px);
     }
 }
@@ -281,18 +283,25 @@ input[type="text"] {
     border-style: none;
 }
 
+.vendor_el_container {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border-radius: 16px;
 
+}
 .vendorList-cont {
     width: 80%;
     height: 500px;
     margin: auto;
     padding: 5%;
-
-    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644) 20%, rgb(153, 98, 68) 90%, rgb(234,225,220));
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
-    backdrop-filter: blur(7.1px);
-    -webkit-backdrop-filter: blur(7.1px);
-    border-radius: 16px;
 
     overflow: scroll;
     overflow-x: hidden;
@@ -380,31 +389,40 @@ input[type="text"] {
     
 }
 .detail-title {
-    font-size: 1rem;
+    font-size: clamp(1.3rem, 2vw, 2rem);
     font-weight: 800;
 }
 .detail-vendor {
-    font-size: 0.7rem;
+    font-size: clamp(0.9rem, 1vw, 1.5rem);
+    font-weight: 500;
+}
+.detail-product {
+    font-size: clamp(0.7rem, 0.8vw, 1.3rem);
+    font-weight: 600;
 }
 .V-popup {
     transform: translate(-50%, -50%) scale(0.1);
-    visibility: hidden;
+    opacity: 0;
+}
+.close-pop {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
 }
 .vendor-pop {
-    width: 22rem;
+    width: 30rem;
+   
     border-radius: 20px;
     aspect-ratio: 1;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
     padding: 5%;
     z-index: 10;
     transition: 0.5s ease;
     transform: translate(-50%, -50%) scale(1);
-    visibility: visible;
+    opacity: 1;
 }
 .vendor-desc {
     width: 100%;

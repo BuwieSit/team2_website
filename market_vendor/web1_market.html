@@ -79,14 +79,27 @@
     <div class="vend-title">
         <h3>Vendors List</h3>
     </div>
-    
-    <div class="vendorList-cont">
-        <div class="V-popup">
+    <div class="vendor_el_container">
+
+        <div class="vendorList-cont">
+            <div class="vList">
+                <!--classes to be appended here-->
+                <!-- <div class="vendor vend-warning">
+                    <img id="warningSign" src="../resources/warning.png" alt="warning">
+                    <p data-name ="stall_name" class="detail-title">Placeholder Stall Name Placeholder Stall Name</p>
+                    <p data-name ="stall_name" class="detail-vendor">permit number</p>
+                </div> -->
+
+            </div>
+        </div>
+        <!--POPUP-->
+        <div class="V-popup"> 
             <img src="../resources/close.png" alt="close" class="closeBtn" draggable="false">
             <form class="popup-form">
                 <div class="vendor-desc">
-                        <h2>Placeholder Stall Name</h2> 
-                        <p>Permit Number Placeholder</p>
+                        <h2 data-name ="stall_name" id="detail-title" class="detail-title"></h2> 
+                        <p data-permit ="permit" id="detail-vendor" class="detail-vendor"></p>
+                        <p class="detail-product" id="detail-product"></p>
                 </div>
             
                 <div class="vendor-hygiene">
@@ -122,17 +135,10 @@
                     <button type="submit" id="hygieneBtn" class="button-style">Update</button>
                 </div>
             </form>
-        </div>
+        </div> <!--POPUP-->
 
-        <div class="vList">
-            <div class="vendor vend-warning">
-                <img id="warningSign" src="../resources/warning.png" alt="warning">
-                <p>Placeholder Stall Name Placeholder Stall Name</p>
-            </div>
-
-        </div>
-       
     </div>
+    
 
     <div class="results-section fade-in" id="vendRes">
         <h2 class="surveyResults">Survey Results</h2>
