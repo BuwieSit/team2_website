@@ -19,7 +19,7 @@
     "general_p" : "La Playa General Luna es conocida por sus arenas blancas prístinas, aguas cristalinas y atmósfera tranquila, lo que la convierte en un destino destacado en la isla de Siargao. Sirve como puerta de entrada para los visitantes que buscan surf de clase mundial, actividades de ocio y aventuras de recorrido por las islas. Más allá de sus famosas olas, la playa ofrece atardeceres impresionantes, una vibrante cultura local y un ambiente acogedor para la relajaci",
     "magpupungko_p" : "Conocido como \"Las Piscinas de Piedra Magpupungko\" (del término local \"pungko\", que significa \"agacharse\" o \"sentarse\"), su nombre proviene de sus notables formaciones rocosas, donde una enorme roca parece estar agachada sobre otra.",
 
-    "nationality" : "Nacionalidad",
+    "nationality" : "Nacionalidad:",
     
     "select_nation" : "Selecciona tu nacionalidad",
     "visit_date" : "Fecha de visita",
@@ -31,7 +31,7 @@
     "signup_google" : "Registrarse con Google",
     "alr_acc" : "¿Ya tienes una cuenta?",
     "about_lyft" : "Acerca de Lyft",
-    "about_desc" :  "En Lyft, nos apasiona mostrar la rica belleza, la vibrante cultura y las experiencias únicas que nuestros destinos locales tienen para ofrecer. Guiados por nuestra misión de promover el turismo y crear recuerdos inolvidables, nos esforzamos por conectar a los viajeros con viajes auténticos que dejen impresiones duraderas.",
+    "about_desc" :  "En Lyft, nos apasiona mostrar la rica belleza, la vibrante cultura y las experiencias únicas que nuestros destinos locales tienen para ofrecer.",
     "mission" : "Misión",
     "mission_text" : "Promover el turismo mientras se brindan experiencias inolvidables a cada visitante.",
     "vision" : "Visión",
