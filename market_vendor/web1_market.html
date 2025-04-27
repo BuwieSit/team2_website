@@ -104,35 +104,28 @@
             
                 <div class="vendor-hygiene">
                     
-                    <label for="sanitary" class="hygiene-labels">Sanitary Practices:</label>
+                    
                     <div class="hygiene-wrap radio-hygiene">
-                        
-                        <label class="radio-label">
-                            Good
-                            <input type="radio" name="sanitary" value="Good" required> 
-                            <span class="checkmark"></span>
+                        <label for="sanitary" class="hygiene-labels" id="sanitary_id">Sanitary Practices:</label>
+                        <label class="radio-label">Good<input type="radio" name="sanitary" value="Good" required>
                         </label>
 
-                        <label class="radio-label">
-                            Fair
-                            <input type="radio" name="sanitary" value="Fair"> 
-                            <span class="checkmark"></span>
+                        <label class="radio-label">Fair<input type="radio" name="sanitary" value="Fair">
                         </label>
-                        <label class="radio-label">
-                            Poor
-                            <input type="radio" name="sanitary" value="Poor"> 
-                            <span class="checkmark"></span>
+                        <label class="radio-label">Poor<input type="radio" name="sanitary" value="Poor">  
                         </label>
             
                     </div>
 
-                    <label for="cleanliness" class="hygiene-labels">Stall Cleanliness:</label>
+                    
                     <div class="hygiene-wrap checkbox-hygiene">
+                        <label for="cleanliness" class="hygiene-labels">Stall Cleanliness:</label>
+                        <label class="cboxes"><input type="checkbox" name="cleanliness" value="Daily Cleaning">Daily Cleaning</label>
+                        <label class="cboxes"><input type="checkbox" name="cleanliness" value="Waste Disposal">Waste Disposal</label>
                         
-                        <label><input type="checkbox" name="cleanliness" value="Daily Cleaning">Daily Cleaning</label>
-                        <label><input type="checkbox" name="cleanliness" value="Waste Disposal">Waste Disposal</label>
                     </div>
                     <button type="submit" id="hygieneBtn" class="button-style">Update</button>
+                    
                 </div>
             </form>
         </div> <!--POPUP-->
