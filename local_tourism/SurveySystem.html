@@ -18,14 +18,553 @@
         </div>
         <div class="SEARCHTAB">
             <div class="search-cluster">
-              <i class="fas fa-microphone" id="mic-icon" title="Click to speak"></i>
-              <input type="text" placeholder="Fort Santiago, Puerto Princesa...">
-              <i class="fas fa-search" id="search-icon"></i>
-             </div>
-        </div>
-        <div class="USERICON">
+              <input class="searchInput" type="text" placeholder="Fort Santiago, Puerto Princesa...">
+              <button class="searchButton" id="mic-icon" title="Click to speak">
+                <i class="fas fa-microphone"></i>
+              </button>
+              <button class="searchButton" id="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                  <g clip-path="url(#clip0_2_17)">
+                    <g filter="url(#filter0_d_2_17)">
+                      <path d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"></path>
+                    </g>
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                      <feOffset dy="4"></feOffset>
+                      <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                      <feComposite in2="hardAlpha" operator="out"></feComposite>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+                    </filter>
+                    <clipPath id="clip0_2_17">
+                      <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <div class="profile-tab">
             <i class="fas fa-user"></i>
+            <div class="dropdown">
+                <div class="dropdown-content">
+                    <a href="Profile.html">View Profile</a>
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
         </div>
+        
     </header>
+
+
+
+    <div class="survey-container">
+      <!-- Daku Island Card -->
+      <div class="card-Daku">
+          <div class="Daku-container">
+              <div class="daku-images"> 
+                  <img src="resources/DakuIsland.jpg" id="Daku1" alt="Daku Island">
+                  <img src="resources/DakuIsland2.jpg" id="Daku2" alt="Daku Island 2">
+                  <img src="resources/DakuIsland3.jpg" id="Daku3" alt="Daku Island 3"> 
+                  <div class="juskoano">
+                      <p>
+                          Daku is a Visayan term for “Big”. It is very known for its
+                          white powdery sand and crystal beach waters. 
+                          You can swim, do snorkeling and have
+                          a stroll inside the community to feel the island vibe 
+                          and to know a little bit of Siargaonon culture.
+                      </p>
+                  </div>
+              </div>
+              <div class="slider-daku">
+                  <a href="#Daku1"></a>
+                  <a href="#Daku2"></a>
+                  <a href="#Daku3"></a>
+              </div>
+          </div>
+
+          <div class="card-content">
+              <h3>1. Daku Island</h3>
+              <p>Islands</p>
+              <div class="rating-title">
+                  <h4 id="rate-heading">Rate your experience</h4>
+                  <div class="rating">
+                      <input type="radio" id="stars5" name="experience" value="5stars" />
+                      <label for="stars5">&#9733;</label>
+
+                      <input type="radio" id="stars4" name="experience" value="4stars" />
+                      <label for="stars4">&#9733;</label>
+
+                      <input type="radio" id="stars3" name="experience" value="3stars" />
+                      <label for="stars3">&#9733;</label>
+
+                      <input type="radio" id="stars2" name="experience" value="2stars" />
+                      <label for="stars2">&#9733;</label>
+
+                      <input type="radio" id="stars1" name="experience" value="1star" />
+                      <label for="stars1">&#9733;</label>
+                  </div>
+              </div>
+
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                  <input type="text" id="username" placeholder="Enter your name" />
+                  <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                  <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div id="comments-section">
+                  <!-- Comments will appear here -->
+              </div>
+          </div>
+      </div>
+
+      <!-- Additional Cards can be added below without affecting Daku Island Card -->
+                                    <!-- DAKU END -->
+    
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/NakedIsland.jpg"  id="Naked1"  alt="Naked Island">
+              <img src="resources/NakedIsland2.png" id="Naked2" alt="Naked Island 2">
+              <img src="resources/NakedIsland3.jpg" id="Naked3" alt="Naked Island 3"> 
+                  <div class="juskoano">
+                    <p>
+                      The island that no vegetation can survive. 
+                      The main reason why it is called Naked Island by the locals. 
+                      It is a sandbar that is surrounded by crystal clear waters.
+                      It is one of the most popular
+                      Island hopping destinations in Siargao.
+                      
+                    </p>
+                  </div>
+            </div>
+                      <div class="slider-naked">
+                        <a href="#Naked1"></a>
+                        <a href="#Naked2"></a>
+                        <a href="#Naked3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3>2. Naked Island</h3>
+            <p>Islands</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div> <!-- close comment-box -->
+          </div> <!-- close card-content -->
+        </div> <!-- close card-Daku -->
+
+        
+                                    <!-- NAKED END -->
+    
+    
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/HagukanCove.jpg" id="Hagukan1"  alt="Hagukan Cove">
+              <img src="resources/HagukanCove2.jpg" id="Hagukan2" alt="Hagukan Cove 2">
+              <img src="resources/HagukanCove3.jpg" id="Hagukan3" alt="Hagukan Cove 3"> 
+                  <div class="juskoano">
+                    <p>
+                      Hagukan Cave, also called the Luminescent Cave, gets its name from the shimmering blue-green glow of its waters when you splash them. 
+                      Access to the cave is through a passage that’s fully submerged during high tide. 
+                    </p>
+                  </div>
+            </div>
+                      <div class="slider-hagukan">
+                        <a href="#Hagukan1"></a>
+                        <a href="#Hagukan2"></a>
+                        <a href="#Hagukan3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3>3. Hagukan Cave </h3>
+            <p>Cave</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="h-stars5" name="experience2" value="5stars" />
+                <label for="h-stars5">&#9733;</label>
+                
+                <input type="radio" id="h-stars4" name="experience2" value="4stars" />
+                <label for="h-stars4">&#9733;</label>
+                
+                <input type="radio" id="h-stars3" name="experience2" value="3stars" />
+                <label for="h-stars3">&#9733;</label>
+                
+                <input type="radio" id="h-stars2" name="experience2" value="2stars" />
+                <label for="h-stars2">&#9733;</label>
+                
+                <input type="radio" id="h-stars1" name="experience2" value="1star" />
+                <label for="h-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+        </div>
+                                    <!-- HAGUKAN END -->
+    
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/Taktak.jpg"  id="taktak1"  alt="Taktak Falls">
+              <img src="resources/Taktak2.jpg" id="taktak2" alt="Taktak Falls 2">
+              <img src="resources/Taktak3.jpg" id="taktak3" alt="Taktak Falls 3"> 
+                  <div class="juskoano">
+                    <p>
+                      Tak Tak Falls is the only waterfall on Siargao Island, located in the province of Surigao del Norte in the Philippines.
+                      
+                    </p>
+                  </div>
+            </div>
+                      <div class="slider-taktak">
+                        <a href="#taktak1"></a>
+                        <a href="#taktak2"></a>
+                        <a href="#taktak3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3>4. Tak Tak Falls</h3>
+            <p>Falls</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+    
+                                    <!-- TAKTAK END -->
+    
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/GuyamIsland.jpg"  id="guyam1" alt="Guyam Island">
+              <img src="resources/GuyamIsland2.jpg" id="guyam2" alt="Guyam Island 2">
+              <img src="resources/GuyamIsland3.jpg" id="guyam3" alt="Guyam Island 3"> 
+                  <div class="juskoano">
+                    <p>
+                      Guyam Island is famous for its small stretch of white sand beach and abundant marine life. 
+                      There are snorkeling areas located around the island where reefs and coral rock formations are found. 
+                      Tourists can enjoy surfing near the island as the waves here are ideally strong enough for the surfboards.
+                    </p>
+                  </div>
+            </div>
+                      <div class="slider-guyam">
+                        <a href="#guyam1"></a>
+                        <a href="#guyam2"></a>
+                        <a href="#guyam3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3>5. Guyam Island</h3>
+            <p>Islands</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+    
+                                    <!-- GUYAM END -->
+    
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/Sugba.jpg"  id="Sugba1"  alt="Sugba Lagoon">
+              <img src="resources/Sugba2.jpg" id="Sugba2" alt="Sugba Lagoon 2">
+              <img src="resources/Sugba3.jpg" id="Sugba3" alt="Sugba Lagoon 3"> 
+                  <div class="juskoano">
+                    <p>
+                      Sugba Lagoon is known for its crystal-clear turquoise waters, surrounded by lush hills and mangroves. 
+                      It's a popular spot for activities like kayaking, paddleboarding, and swimming, 
+                      offering a peaceful and scenic environment for visitors to relax and enjoy nature.
+                    </p>
+                  </div>
+            </div>
+                      <div class="slider-Sugba">
+                        <a href="#Sugba1"></a>
+                        <a href="#Sugba2"></a>
+                        <a href="#Sugba3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3>6. Sugba Lagoon</h3>
+            <p>Islands</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+                                    <!-- SUGBA END -->
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/Alegria.jpg"  id="Alegria1" alt="Alegria Beach">
+              <img src="resources/Alegria2.jpg" id="Alegria2" alt="Alegria Beach 2">
+              <img src="resources/Alegria3.jpg" id="Alegria3" alt="Alegria Beach 3"> 
+                  <div class="juskoano">
+                    <p>
+                      Alegria Beach is a stunning white sand beach with the most amazing turquoise and 
+                      transparent water that is located in the island's most northern region.
+                  </div>
+            </div>
+                      <div class="slider-Alegria">
+                        <a href="#Alegria1"></a>
+                        <a href="#Alegria2"></a>
+                        <a href="#Alegria3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3>7. Alegria Beach</h3>
+            <p>Islands</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+                                    <!-- ALEGRIA END -->
+    
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/General2.jpg"  id="General1" alt="General Luna Beach">
+              <img src="resources/General.jpg" id="General2" alt="General Luna Beach 2">
+              <img src="resources/General3.jpg" id="General3" alt="General Luna Beach 3"> 
+                  <div class="juskoano">
+                    <p>
+                      General Luna Beach is renowned for its pristine white sands, crystal-clear waters, and serene atmosphere, 
+                      making it a distinguished destination on Siargao Island. 
+                      It serves as a gateway for visitors seeking world-class surfing, leisure activities, and island-hopping adventures. 
+                      Beyond its famed waves, the beach offers breathtaking sunsets, a vibrant local culture, and an inviting setting for relaxation.
+                  </div>
+            </div>
+                      <div class="slider-General">
+                        <a href="#General1"></a>
+                        <a href="#General2"></a>
+                        <a href="#General3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3> General Luna Beach</h3>
+            <p>Islands</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+                                    <!-- General Luna END -->
+                                     
+        <div class="card-Daku">
+          <div class="Daku-container">
+            <div class="daku-images">
+              <img src="resources/Magpupungko.jpg"  id="Magpupungko1" alt="Magpupungko Beach">
+              <img src="resources/Magpupungko2.jpg" id="Magpupungko2" alt="Magpupungko Beach 2">
+              <img src="resources/Magpupungko3.jpg" id="Magpupungko3" alt="Magpupungko Beach 3"> 
+                  <div class="juskoano">
+                    <p>
+                      known as "Magpupungko Rock Pools" 
+                      (from pungko, a local term meaning "to squat" or "to sit down"), 
+                      is named after its remarkable rock formations, where a massive boulder appears to be squatting atop another.
+                  </div>
+            </div>
+                      <div class="slider-Magpupungko">
+                        <a href="#Magpupungko1"></a>
+                        <a href="#Magpupungko2"></a>
+                        <a href="#Magpupungko3"></a>
+                      </div>
+          </div>
+        
+          <div class="card-content">
+            <h3> Magpupungko Beach</h3>
+            <p>Islands</p>
+            <div class="rating-title">
+              <h4 id="rate-heading">Rate your experience</h4>
+              <div class="rating">
+                <input type="radio" id="n-stars5" name="experience2" value="5stars" />
+                <label for="n-stars5">&#9733;</label>
+                
+                <input type="radio" id="n-stars4" name="experience2" value="4stars" />
+                <label for="n-stars4">&#9733;</label>
+                
+                <input type="radio" id="n-stars3" name="experience2" value="3stars" />
+                <label for="n-stars3">&#9733;</label>
+                
+                <input type="radio" id="n-stars2" name="experience2" value="2stars" />
+                <label for="n-stars2">&#9733;</label>
+                
+                <input type="radio" id="n-stars1" name="experience2" value="1star" />
+                <label for="n-stars1">&#9733;</label>
+              </div>
+              
+            </div>
+            <div class="comment-box">
+              <textarea placeholder="Leave a comment..."></textarea>
+            </div>
+          </div>
+        </div>
+                                    <!-- Magpupungko END -->
+      </div>
+    </div>
 </body>
+
+<footer></footer>
+
+<div id="backToTopContainer" style="display: none; position: fixed; bottom: 40px; right: 40px; z-index: 9999;">
+    <button class="button">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+        </path>
+      </svg>
+    </button>
+  </div>
+
+</body>
+
+
+
+
+
+<script src="SurveySYS.js"></script>
+
+
+
+
+
+
 </html>

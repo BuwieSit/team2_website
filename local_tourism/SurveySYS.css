@@ -10,12 +10,18 @@ body{
     background-color: #96ceb4;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    position: fixed;
+    position: fixed;
+    justify-content: space-evenly;
     gap: 5px;
     margin: 0;
     padding: 0px 24px;
     width: 100%;
     height: 90px;
+    z-index: 1000;
+    border-bottom:  2px solid #d65241;
+    box-shadow: 0 8px 16px rgb(51, 51, 51, 0.3);
+
 }
 
 .logo-home{
@@ -28,34 +34,655 @@ body{
     height: 90px;
 }
 
-.SEARCHTAB{
+.SEARCHTAB {
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
-    width: 600px;
-    max-width: 400px;
-    max-width: 100px;
-}
-.search-cluster{
-    display: flex;
-    justify-items: center;
-    align-items: center;
+    width: 100%;
     padding: 10px;
-    background-color: white;
-    border-radius: 15px;
-    justify-content: space-between;
-    gap: 5px;
-}
-.search-cluster input{
-    border: none;
 }
 
-.USERICON{
+.search-cluster {
     display: flex;
-    justify-items: center;
     align-items: center;
+    justify-content: space-between;
+    background: #2f3640;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 400px;
+    gap: 8px;
+    position: relative;
+}
+
+.search-cluster input {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px; /* adjusted without mic */
+    width: 100%;
+}
+
+#search-icon {
+    background: var(--gradient-2, linear-gradient(90deg, #f7ce5c 0%, #96ceb4 100%));
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+#search-icon:hover {
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/* Press effect */
+#search-icon:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.profile-tab {
+    display: flex;
+    align-items: center;
+    background: #96ceb4;
+    border-radius: 40px;
+    padding: 8px 50px 8px 16px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.profile-tab:hover {
+    background: #f7ce5c;
+}
+
+.profile-tab i {
+    font-size: 20px;
+    color: #333;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 150px;
+    z-index: 10;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.profile-tab:hover .dropdown {
+    display: block;
+}
+
+
+/*Css Carousel-start*/
+.survey-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 90px;
+}
+
+.card-Daku {
+    margin-top: 40px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    width: 450px;
+    height: auto;
+    left: 0; 
+    transition: box-shadow 0.3 ease;
+}
+.card-Daku:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.603);
+    transform: translateY(-5px);
+}
+.Daku-container {
+    position: relative;
+    display: flex;
+    margin: 30px 15px 15px;
+}
+
+  
+.Daku-container img {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.image-container:hover .hover-description {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+#daku-title {
+    margin: 0;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star {
+    font-size: 20px;
+}
+
+.star.selected {
+    color: #FFD700;
+}
+
+.comment-box {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #555;
+}
+
+.comment-box input,
+  .comment-box textarea {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+
+select{
+    color: black;
+}
+
+select option:first-child{
+    color: lightslategray;
+}
+
+.rating {
+    direction: rtl;
+    display: inline-block;
+}
+
+.rating input{
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #78909c;
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+#rate-heading{
+    margin-bottom: 0%;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f2b600;
+}
+
+.rating input:checked + label{
+    color: #f2b600;
+}
+/* User Comment Section */
+.user-comment {
+    background: #f7ce5c;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-comment p {
+    margin: 5px 0;
+}
+
+.user-comment strong {
+    color: #d65241;
+}
+
+/* Comment Box */
+.comment-box {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #555;
+}
+
+.comment-box input,
+.comment-box textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #96ceb4;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #d65241;
+}
+
+/* Rating Stars */
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #78909c;
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.rating input:checked + label {
+    color: #f2b600;
+}
+
+.rating input:checked ~ label {
+    color: #f2b600;
+}
+
+
+
+
+
+
+
+/*Css Carousel-end*/
+
+
+
+
+/*Slider-Daku*/
+
+.daku-images{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 260px;
+    width: fit-content;
+}
+
+.daku-images:hover .juskoano{
+    height: 50%; 
+}
+
+/*FIRST CARD - START */
+
+.slider-daku{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-daku a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
     
 }
+ 
+.slider-daku a:hover{
+    opacity: 3;
+}
+
+/*FIRST CARD - END */
+
+/*SECOND CARD - START */
+
+.slider-naked{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-naked a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-naked a:hover{
+    opacity: 3;
+}
 
 
+/*SECOND CARD - END */
 
+/*THIRD CARD - START */
+
+.slider-hagukan {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-hagukan a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-hagukan a:hover{
+    opacity: 3;
+}
+
+
+/*THIRD CARD - END */
+
+/*FOURTH CARD - START */
+
+
+.slider-taktak{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-taktak a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-taktak a:hover{
+    opacity: 3;
+}
+
+
+/*FOURTH CARD - END */
+
+/*FIFTH CARD - START */
+
+.slider-guyam{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-guyam a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-guyam a:hover{
+    opacity: 3;
+}
+
+
+/*FIFTH CARD - END */
+
+/*SIXTH CARD - START */
+
+.slider-Sugba{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-Sugba a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-Sugba a:hover{
+    opacity: 3;
+}
+
+
+/*SIXTH CARD - END */
+
+/*SEVENTH CARD - START */
+
+.slider-Alegria{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-Alegria a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-Alegria a:hover{
+    opacity: 3;
+}
+
+/**SEVENTH CARD - END */
+
+/*EIGHTH CARD - START */
+
+.slider-General{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-General a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-General a:hover{
+    opacity: 3;
+}
+
+/*EIGHTH CARD - END */
+
+/*NINTH CARD - START */
+
+.slider-Magpupungko{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-Magpupungko a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background:  #ff6f69; 
+    opacity: 0.75;
+    cursor: pointer;
+    
+}
+ 
+.slider-Magpupungko a:hover{
+    opacity: 3;
+}
+
+/*NINTH CARD - END */
+
+/*Hover on picture*/
+.juskoano{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: justify;
+    font-size: 11px;
+    height: 0;
+    width: fit-content;
+    left: 0;
+    bottom: 0;
+    padding: 0 10px;
+    background: linear-gradient(transparent, white 45%,#96ceb4 100%);
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+/*FROM THE TOP BUTTON*/
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+  }
+  
+  .button:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+  }
+  
+  .button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+  }
+  

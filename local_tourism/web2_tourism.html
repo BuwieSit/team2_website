@@ -533,42 +533,42 @@
         <label for="stars1">&#9733;</label>
     </div>
 -->
-    <!--POP UP KINEME-->
-    <!--LOG-IN-->
-    <div class="popUp" id="popup">
-        <img src="resources/tourism.png" class="tourism-image">
-        <h2 data-translate="ty_feedback">Thank you for your feedback!</h2>
-        <p data-translate="feedback_text">We are looking forward to your next visit!</p>
-        <button onclick="closeFeedbackPopup()" data-translate="close">Close</button>    
-    </div>
-    
-    <div class="popUp-logIn" id="popup1">
-        <img src="resources/tourism.png" alt="logo ata eto">
-        <h2 data-translate="log_to_lyft">Log In to Lyft</h2>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button id="loginBTN" onclick="LoggedIn()" data-translate="login">Log In</button>
-        <button id="closeBTN" onclick="closeLoginPopup()" data-translate="close">Close</button>
-    </div>
+<!--POP UP KINEME-->
+<!--LOG-IN-->
+<div class="popUp" id="popup">
+  <img src="resources/tourism.png" class="tourism-image">
+  <h2 data-translate="ty_feedback">Thank you for your feedback!</h2>
+  <p data-translate="feedback_text">We are looking forward to your next visit!</p>
+  <button onclick="closeFeedbackPopup()" data-translate="close">Close</button>    
+</div>
 
-    <!--SIGN UP-->
-    <div class="popup-signUp" id="popup2">
-        <img src="resources/tourism.png" alt="d ko sure kung eto ba talaga ang logo">
-        <h1>Lyft</h1>
-        <h2 data-translate="create_acc">Create an account</h2>
-        <input type="text" id="SignUname" placeholder="Username" required>
-        <br>
-        <input type="email" id="Signemail" placeholder="Email" required>
-        <br>
-        <input type="password" id="Signpass" placeholder="Password" required>
-        <br>
-        <button id="signUp" onclick="SignedUp()" data-translate="signup">Sign Up</button>
-        <br>
-        <button id="signGoogle" onclick="SignedUp()" data-translate="signup_google">Sign Up with Google</button>
-        <br>
-        <button id="signCloseBTN" onclick="closeSignPopup()" data-translate="close">Close</button>
-        <p data-translate="alr_acc">Already have an account? <a href="#" onclick="openLoginPopup()" data-translate="login"><u>Log In</u></a></p>
-    </div>
+<div class="popUp-logIn" id="popup1">
+  <img src="resources/tourism.png" alt="logo ata eto">
+  <h2 data-translate="log_to_lyft">Log In to Lyft</h2>
+  <input type="text" id="loginUsername" placeholder="Username" required>
+  <input type="password" id="loginPassword" placeholder="Password" required>
+  <button id="loginBTN" onclick="LoggedIn()" data-translate="login">Log In</button>
+  <button id="closeBTN" onclick="closeLoginPopup()" data-translate="close">Close</button>
+</div>
+
+<!--SIGN UP-->
+<div class="popup-signUp" id="popup2">
+  <img src="resources/tourism.png" alt="d ko sure kung eto ba talaga ang logo">
+  <h1>Lyft</h1>
+  <h2 data-translate="create_acc">Create an account</h2>
+  <input type="text" id="SignUname" placeholder="Username" required>
+  <br>
+  <input type="email" id="Signemail" placeholder="Email" required>
+  <br>
+  <input type="password" id="Signpass" placeholder="Password" required>
+  <br>
+  <button id="signUp" onclick="SignedUp()" data-translate="signup">Sign Up</button>
+  <br>
+  <button id="signGoogle" onclick="SignedUp()" data-translate="signup_google">Sign Up with Google</button>
+  <br>
+  <button id="signCloseBTN" onclick="closeSignPopup()" data-translate="close">Close</button>
+  <p data-translate="alr_acc">Already have an account? <a href="#" onclick="openLoginPopup()" data-translate="login"><u>Log In</u></a></p>
+</div>
 
     <!--ABOUT US-->
     <div class="popup-aboutUs" id="popup3">

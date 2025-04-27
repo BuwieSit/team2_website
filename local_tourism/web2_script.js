@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 function closeAllPopups() {
     document.querySelectorAll('.openPopUp').forEach(popup => {
         popup.classList.remove('openPopUp');
@@ -83,6 +82,48 @@ function openAboutusPopup() {
 function closeAboutPopup() {
     const popup = document.getElementById('popup3');
     popup.classList.remove('openPopUp');
+}
+// Sign Up Function
+function SignedUp() {
+    const username = document.getElementById('SignUname').value;
+    const email = document.getElementById('Signemail').value;
+    const password = document.getElementById('Signpass').value;
+
+    // Check if fields are filled
+    if (!username || !email || !password) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    // Store the user's credentials in localStorage (simple front-end approach)
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+
+    alert("Account created successfully!");
+
+    // Close the sign-up popup
+    closeSignPopup();
+}
+// Log In Function
+function LoggedIn() {
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Retrieve stored user credentials from localStorage
+    const storedUsername = localStorage.getItem('username');
+    const storedPassword = localStorage.getItem('password');
+
+    // Check if entered credentials match the stored ones
+    if (username === storedUsername && password === storedPassword) {
+        alert("Logged in successfully!");
+        closeLoginPopup();
+        
+        // Redirect to SurveySystem.html after successful login
+        window.location.href = 'SurveySystem.html';
+    } else {
+        alert("Invalid username or password.");
+    }
 }
 
 //para hindi tumalon Daku Island //
