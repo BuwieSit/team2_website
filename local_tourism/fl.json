@@ -1,0 +1,47 @@
+{
+    "signup": "Magrehistro",
+    "login": "Login",
+    "about": "Tungkol sa amin",
+    "feedback": "Mga Feedback",
+    "daku_p" : "Ang Daku ay isang terminong Bisaya na nangangahulugang \"Malaki\". Kilala ito sa puting buhanging buhangin at kristal na malinaw na tubig ng dagat. Maaari kang maligo, mag-snorkeling at maglakad-lakad sa loob ng komunidad upang maramdaman ang vibe ng isla at makilala ang kaunting kultura ng Siargaonon.",
+
+    "islands" : "Mga Isla",
+    "rating": "I-rate",
+
+    "naked_p" : "Ang isla kung saan walang halaman na maaaring mabuhay, kaya't tinatawag itong Naked Island ng mga lokal. Isang kahanga-hangang sandbar na napapalibutan ng kristal na malinaw na tubig, perfect para sa mga mahilig mag-relax at maglakbay. Isa ito sa mga pinaka-popular na destinasyon para sa island hopping sa Siargao, na tiyak magbibigay sa'yo ng unforgettable na karanasan.",
+
+    "hagukan_p" : "Ang Kuweba Hagukan, na kilala rin bilang Kuweba Luminescente, ay tumatanggap ng pangalan mula sa kumikislap na asul at berdeng liwanag ng tubig nito kapag ito ay nasasabuyan. Ang pagpasok sa kuweba ay sa pamamagitan ng isang daanan na ganap na lumulubog tuwing mataas ang tide.",
+
+    "cave" : "Kuweba",
+    "taktak_p" : "Ang Tak Tak falls ang kaisa-isang talon sa Isla ng Siargao, matatagpuan sa probinsya ng Surigao Del Norte sa Pilipinas.",
+
+    "falls" : "Talon",
+    "guyam_p" : "Ang Isla ng Guyam ay kilala sa maliit nitong bahagi ng puting buhangin na beach at masaganang buhay-dagat. May mga lugar para sa snorkeling sa paligid ng isla kung saan matatagpuan ang mga reef at coral na pormasyon ng bato. Maaaring mag-enjoy ang mga turista sa surfing malapit sa isla dahil ang mga alon dito ay sapat na lakas para sa mga surfboard.",
+
+    "sugba_p" : "Ang Laguna ng Sugba ay kilala sa mga kristal na malinaw na turkesa nitong tubig, napapaligiran ng mga luntiang burol at mangrove. Ito ay isang popular na lugar para sa mga aktibidad tulad ng kayaking, paddleboarding, at paglangoy, na nag-aalok ng isang tahimik at tanawin na kapaligiran para sa mga bisita upang mag-relax at tamasahin ang kalikasan.",
+    "alegria_p" : "Ang Alegria Beach ay isang kamangha-manghang puting buhangin na beach na may pinaka-mazing turkesa at transparent na tubig, matatagpuan sa pinakahilagang bahagi ng isla.",
+    "general_p" : "Ang General Luna Beach ay kilala sa mga pristing puting buhangin, kristal na malinaw na tubig, at tahimik na atmospera, na ginagawang isang kilalang destinasyon sa Isla ng Siargao.Ito ay nagsisilbing isang pintuan para sa mga bisita na naghahanap ng world-class na surfing, mga aktibidad na pampalipas-oras, at mga adventure sa island-hopping. Higit pa sa mga tanyag na alon nito, ang beach ay nag-aalok ng nakamamanghang mga paglubog ng araw, isang masiglang lokal na kultura, at isang kaakit-akit na setting para sa pagpapahinga.",
+    "magpupungko_p" : "Kilalala rin bilang \"Magpupungko Rock Pools\" ( mula sa \"pungko\", isang lokal na termino na nangangahulugang \"umupo\" o \"mag-squat\"), ang pangalan nito ay mula sa mga kahanga-hangang pormasyon ng bato, kung saan ang isang malaking bato ay parang nakaupo sa ibabaw ng isa pa.",
+
+    "nationality" : "Nasyonalidad:",
+    
+    "select_nation" : "Pumili ng iyong Nasyonalidad",
+    "visit_date" : "Petsa ng Pagbisita:",
+    "ty_feedback" : "Salamat sa iyong mga feedback!",
+    "feedback_text" : "Inaasahan namin ang iyong susunod na pagbisita!",
+    "log_to_lyft" : "Mag-login sa Lyft",
+    "close" : "i-sarado",
+    "create_acc" : "Gumawa ng account",
+    "signup_google" : "Mag-rehistro gamit ang google",
+    "alr_acc" : "May account ka na ba?",
+    "about_lyft" : "Tungkol sa Lyft",
+    "about_desc" :  "Sa Lyft, kami ay may malasakit sa pagpapakita ng mayamang kagandahan, makulay na kultura, at mga natatanging karanasan na inaalok ng aming mga lokal na destinasyon.",
+    "mission" : "Misyon",
+    "mission_text" : "Itaguyod ang turismo habang nagbibigay ng mga hindi malilimutang karanasan sa bawat bisita.",
+    "vision" : "Bisyon",
+    "vision_text" : "Maging pangunahing sentro ng mga destinasyon sa paglalakbay, na hinahangaan sa buong mundo para sa kanyang kagandahan at kultura.",
+    "goal" : "Layunin",
+    "goal_text" : "Bigyan ng kapangyarihan ang mga lokal na komunidad sa pamamagitan ng mga inisyatibo at pakikipagtulungan sa napapanatiling turismo.",
+    "copyright" : "2023 Lokal na Turismo. Lahat ng karapatan ay nakalaan.",
+    "contact" : "Makipag-ugnayan sa amin:"
+  }

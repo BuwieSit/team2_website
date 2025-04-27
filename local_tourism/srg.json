@@ -1,0 +1,49 @@
+{
+    "signup": "Magrehistro",
+    "login": "Mag-login",
+    "about": "Mahitungod Kanamo",
+    "feedback": "Feedback",
+    "daku_p" : " Ang Daku usa ka termino sa Bisaya nga nagpasabot og \"Dako\". Kilala kini tungod sa puti nga buhanging balas ug kristal nga tubig sa baybayon. Pwede ka maglangoy, mag-snorkeling, ug maglakaw-lakaw sulod sa komunidad aron mabati ang kahimtang sa isla ug makaila og gamay sa kultura sa Siargaonon.",
+
+    "islands" : "Mga Isla",
+    "rating": "Irate ang imong kasinatian",
+
+    "naked_p" : "Ang isla nga walay tanom nga mabuhi. Mao kini ang nag-unang rason ngano nga gitawag kini og Naked Island sa mga lokal. Usa kini ka sandbar nga napalibutan og kristal nga klaro nga tubig. Usa kini sa mga pinakasikat nga destinasyon sa island hopping sa Siargao.",
+
+    "hagukan_p" : "Ang Hagukan Cave, nga kilala usab nga Luminescent Cave, nakakuha sa ngalan gikan sa nagasidlak nga asul-berdeng kahayag sa tubig niini kung kini sabawan. Ang pagsulod sa kuweba kay pinaagi sa usa ka agianan nga lubos nga nalunod sa taas nga tide.",
+
+    "cave" : "Kuweba",
+    "taktak_p" : "Ang Tak Tak Falls ang kaisa-isang talon sa Isla ng Siargao, matatagpuan sa probinsya ng Surigao Del Norte sa Pilipinas.",
+
+    "falls" : "Talon",
+    "guyam_p" : "Ang Isla sa Guyam kilala sa gamay nga bahin sa puti nga balas nga baybayon ug masagana nga kinabuhi-dagat. Adunay mga lugar para sa snorkeling sa palibot sa isla diin makita ang mga reef ug coral nga pormasyon sa bato. Pwede mag-enjoy ang mga turista sa surfing duol sa isla tungod kay ang mga balud dinhi igo ra nga kusog para sa mga surfboard.",
+
+    "sugba_p" : "Ang Sugba Lagoon kilala sa kristal nga malinaw nga turkesa nga tubig, nga napalibutan sa mga luntiang bungtod ug mangrove. Usa kini ka popular nga lugar para sa mga aktibidad sama sa kayaking, paddleboarding, ug paglangoy, nga naghatag og usa ka malinawon ug matahum nga palibot para sa mga bisita aron magpahulay ug mag-enjoy sa kalikupan.",
+    "alegria_p" : "Ang Alegria Beach usa ka matahum nga puti nga balas nga baybayon nga adunay pinaka-kahanga-hangang turkesa ug transparent nga tubig nga nahimutang sa pinakahilagang rehiyon sa isla.",
+
+    "general_p" : "Ang General Luna Beach kilala sa mga pristing puti nga buhangin, kristal nga malinaw nga tubig, ug tahimik nga kahimtang, nga nagahimo niini nga usa ka iladong destinasyon sa Isla sa Siargao. Nagsilbi kini nga gateway para sa mga bisita nga nangita og world-class nga surfing, mga aktibidad sa kahilayan, ug mga adventure sa island-hopping. Labaw pa sa mga bantog nga balud niini, ang baybayon naghatag og nakamamanghang pagsalop sa adlaw, usa ka masigla nga lokal nga kultura, ug usa ka imbita nga lugar para sa pagpahulay.",
+
+    "magpupungko_p" : "Kilala usab nga \"Magpupungko Rock Pools\" (gikan sa pungko, usa ka lokal nga termino nga nagpasabot og \"mag-squat\" o \"maglingkod\"), ang pangalan niini gikan sa mga talagsaong pormasyon sa bato, diin ang usa ka dako nga bato nagtan-aw nga nag-squat ibabaw sa laing bato.",
+
+    "nationality" : "Nasyonalidad:",
+    
+    "select_nation" : "Pili-a ang imong Nasyonalidad",
+    "visit_date" : "",
+    "ty_feedback" : "Salamat sa imong mga feedback!",
+    "feedback_text" : "Nagpaabot kami sa imong sunod nga pagbisita!",
+    "log_to_lyft" : "Mag-login sa Lyft",
+    "close" : "Isara",
+    "create_acc" : "Magparehistro",
+    "signup_google" : "Mag-sign up gamit ang Google",
+    "alr_acc" : "May account na ba? ",
+    "about_lyft" : "Tungod sa Lyft",
+    "about_desc" :  "Sa Lyft, kami may kadasig sa pagpakita sa mahayag nga katahom, buhing kultura, ug talagsaong mga kasinatian nga gihatag sa among lokal nga mga destinasyon.",
+    "mission" : "Misyon  ",
+    "mission_text" : "Aron ipromote ang turismo samtang naghatag og mga dili malimtan nga kasinatian sa matag bisita.",
+    "vision" : "Bisyon",
+    "vision_text" : "Mamahimong lider nga destinasyon sa pagbiyahe, nga gihangaan sa tibuok kalibutan tungod sa katahom ug kultura.",
+    "goal" : "Tuyo",
+    "goal_text" : "Palig-onon ang mga lokal nga komunidad pinaagi sa mga inisyatibo sa malungtarong turismo ug mga pakig-partner.",
+    "copyright" : "2023 Lokal nga Turismo. Tanang katungod gipreserve.",
+    "contact" : "Kontaka kami:"
+  }

@@ -1,0 +1,48 @@
+{
+    "signup": "Sign Up",
+    "login": "Log In",
+    "about": "About Us",
+    "feedback": "Feedback",
+    "daku_p" : " Daku is a Visayan term for “Big”. It is very known for its white powdery sand and crystal beach waters. You can swim, do snorkeling and have a stroll inside the community to feel the island vibe and to know a little bit of Siargaonon culture.",
+
+    "islands" : "Islands",
+    "rating": "Rate your experience",
+
+    "naked_p" : "The island that no vegetation can survive. The main reason why it is called Naked Island by the locals. It is a sandbar that is surrounded by crystal clear waters. It is one of the most popular island hopping destinations in Siargao.",
+
+    "hagukan_p" : "Hagukan Cave, also called the Luminescent Cave, gets its name from the shimmering blue-green glow of its waters when you splash them. Access to the cave is through a passage that’s fully submerged during high tide. ",
+
+    "cave" : "Cave",
+    "taktak_p" : "Tak Tak Falls is the only waterfall on Siargao Island, located in the province of Surigao del Norte in the Philippines.",
+
+    "falls" : "Falls",
+    "guyam_p" : "Guyam Island is famous for its small stretch of white sand beach and abundant marine life. There are snorkeling areas located around the island where reefs and coral rock formations are found. Tourists can enjoy surfing near the island as the waves here are ideally strong enough for the surfboards.",
+
+    "sugba_p" : "Sugba Lagoon is known for its crystal-clear turquoise waters, surrounded by lush hills and mangroves. It's a popular spot for activities like kayaking, paddleboarding, and swimming, offering a peaceful and scenic environment for visitors to relax and enjoy nature.",
+    "alegria_p" : "Alegria Beach is a stunning white sand beach with the most amazing turquoise and transparent water that is located in the island's most northern region.",
+    "general_p" : "General Luna Beach is renowned for its pristine white sands, crystal-clear waters, and serene atmosphere, making it a distinguished destination on Siargao Island. It serves as a gateway for visitors seeking world-class surfing, leisure activities, and island-hopping adventures. Beyond its famed waves, the beach offers breathtaking sunsets, a vibrant local culture, and an inviting setting for relaxation.",
+
+    "magpupungko_p" : "Also known as \"Magpupungko Rock Pools\" (from pungko, a local term meaning \"to squat\" or \"to sit down\"), is named after its remarkable rock formations, where a massive boulder appears to be squatting atop another.",
+
+    "nationality" : "Nationality:",
+    
+    "select_nation" : "Select your Nationality",
+    "visit_date" : "Visit Date:",
+    "ty_feedback" : "Thank you for your feedback!",
+    "feedback_text" : "We are looking forward to your next visit!",
+    "log_to_lyft" : "Log In to Lyft",
+    "close" : "Close",
+    "create_acc" : "Create an account",
+    "signup_google" : "Sign Up with Google",
+    "alr_acc" : "Already have an account?",
+    "about_lyft" : "About Lyft",
+    "about_desc" :  "At Lyft, we are passionate about showcasing the rich beauty, vibrant culture, and unique experiences our local destinations have to offer.",
+    "mission" : "Mission",
+    "mission_text" : "To promote tourism while delivering unforgettable experiences to every visitor.",
+    "vision" : "Vision",
+    "vision_text" : "To become the leading travel destination hub, admired globally for its beauty and culture.",
+    "goal" : "Goal",
+    "goal_text" : "Empower local communities through sustainable tourism initiatives and partnerships.",
+    "copyright" : "2023 Local Tourism. All rights reserved.",
+    "contact" : "Contact us:"
+  }

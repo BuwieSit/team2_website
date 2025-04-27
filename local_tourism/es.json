@@ -8,7 +8,36 @@
     "islands" : "Islas",
     "rating": "Califica tu experiencia",
 
-    "naked_p" : "La isla en la que ninguna vegetación puede sobrevivir. La principal razón por la que los locales la llaman Isla Desnuda. Es un banco de arena rodeado por aguas cristalinas. Es uno de los destinos más populares para el recorrido de islas en Siargao."
+    "naked_p" : "La isla en la que ninguna vegetación puede sobrevivir. La principal razón por la que los locales la llaman Isla Desnuda. Es un banco de arena rodeado por aguas cristalinas. Es uno de los destinos más populares para el recorrido de islas en Siargao.",
+    "hagukan_p" : "La Cueva Hagukan, también conocida como la Cueva Luminescente, recibe su nombre por el resplandor azul-verde brillante de sus aguas cuando las salpicas. El acceso a la cueva es a través de un pasaje que está completamente sumergido durante la marea alta.",
+    "cave" : "Cueva",
+    "taktak_p" : "Las Cascadas Tak Tak son la única cascada en la isla de Siargao, ubicada en la provincia de Surigao del Norte en Filipinas.",
+    "falls" : "Cascadas",
+    "guyam_p" : "La Isla Guyam es famosa por su pequeña franja de playa de arena blanca y su abundante vida marina. Existen áreas para practicar esnórquel alrededor de la isla donde se encuentran arrecifes y formaciones rocosas de coral. Los turistas pueden disfrutar del surf cerca de la isla, ya que las olas aquí son lo suficientemente fuertes para las tablas de surf.",
+    "sugba_p" : "La Laguna Sugba es conocida por sus aguas turquesas cristalinas, rodeadas de colinas y manglares frondosos.Es un lugar popular para actividades como kayak, paddleboard y natación, ofreciendo un entorno tranquilo y pintoresco para que los visitantes se relajen y disfruten de la naturaleza.",
+    "alegria_p" : "La Playa Alegría es una impresionante playa de arena blanca con las aguas turquesas y transparentes más asombrosas, ubicada en la región más al norte de la isla.",
+    "general_p" : "La Playa General Luna es conocida por sus arenas blancas prístinas, aguas cristalinas y atmósfera tranquila, lo que la convierte en un destino destacado en la isla de Siargao. Sirve como puerta de entrada para los visitantes que buscan surf de clase mundial, actividades de ocio y aventuras de recorrido por las islas. Más allá de sus famosas olas, la playa ofrece atardeceres impresionantes, una vibrante cultura local y un ambiente acogedor para la relajaci",
+    "magpupungko_p" : "Conocido como \"Las Piscinas de Piedra Magpupungko\" (del término local \"pungko\", que significa \"agacharse\" o \"sentarse\"), su nombre proviene de sus notables formaciones rocosas, donde una enorme roca parece estar agachada sobre otra.",
 
-
+    "nationality" : "Nacionalidad:",
+    
+    "select_nation" : "Selecciona tu nacionalidad",
+    "visit_date" : "Fecha de visita",
+    "ty_feedback" : "¡Gracias por tus comentarios!",
+    "feedback_text" : "¡Esperamos tu próxima visita!",
+    "log_to_lyft" : "Iniciar sesión en Lyft",
+    "close" : "Cerrar",
+    "create_acc" : "Crear una cuenta",
+    "signup_google" : "Registrarse con Google",
+    "alr_acc" : "¿Ya tienes una cuenta?",
+    "about_lyft" : "Acerca de Lyft",
+    "about_desc" :  "En Lyft, nos apasiona mostrar la rica belleza, la vibrante cultura y las experiencias únicas que nuestros destinos locales tienen para ofrecer.",
+    "mission" : "Misión",
+    "mission_text" : "Promover el turismo mientras se brindan experiencias inolvidables a cada visitante.",
+    "vision" : "Visión",
+    "vision_text" : "Convertirse en el principal centro de destinos turísticos, admirado globalmente por su belleza y cultura.",
+    "goal" : "Meta",
+    "goal_text" : "Empoderar a las comunidades locales a través de iniciativas de turismo sostenible y asociaciones.",
+    "copyright" : "2023 Turismo Local. Todos los derechos reservados.",
+    "contact" : "Contáctanos:"
   }
