@@ -403,6 +403,9 @@ input[type="text"] {
     line-height: 0;
     padding: 10px;
 }
+.vendor-desc > * {
+    cursor: default;
+}
 .detail-title {
     font-size: clamp(1.3rem, 2vw, 2rem);
     font-weight: 800;
@@ -488,12 +491,13 @@ input[type="text"] {
 .hygiene-labels {
     position: absolute;
     top: 0;
+    font-size: clamp(1rem, 2.5vw, 2rem);
 }
 .hygiene-labels {
     color: black;
 }
 .checkbox-hygiene {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
 }
@@ -510,8 +514,12 @@ input[type="text"] {
     opacity: 0;
     cursor: pointer;  
 }
-.radio-label:hover > input[type="radio"] ~ .checkmark {
-    background-color: #ccc;
+.radio-label {
+    transition: all 0.3s ease;
+}
+.radio-label:hover {
+    filter: drop-shadow(0 0 5px white);
+    transform: translateY(-5%);
 }
 .radio-label:nth-child(2):has(input[type="radio"]:checked) {
     color: #88ff00;
@@ -530,7 +538,7 @@ input[type="text"] {
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.5rem);
   padding: 5%;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -542,15 +550,19 @@ input[type="text"] {
 
 .cboxes {
     cursor: pointer;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
     color:#85100c;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.9rem, 1.8vw, 1.5rem);
+}
+.cboxes:hover {
+    filter: drop-shadow(0 0 5px green);
+    transform: translateY(-5%);
 }
 .cboxes > input {
     display: none;
 }
 .cboxes:has(input:checked)  {
-    color: green;
+    color: rgb(3, 224, 3);
 }
 
 #hygieneBtn {
