@@ -30,6 +30,11 @@
                 <a href="#" data-translate="login" onclick="openLoginPopup()">Log In</a>
                 <a href="#" data-translate="about" onclick="openAboutusPopup()">About Us</a>
                 <a href="#" data-translate="feedback" >Feedback</a>
+                <select onchange="loadLanguage(this.value)">
+                  <option value="en">English</option>
+                  <option value="tl">Tagalog</option>
+                  <option value="es">Español</option>
+                </select>
           </nav>
       </div>
   </header>
@@ -569,10 +574,7 @@
     <div class="popup-aboutUs" id="popup3">
         <img src="resources/tourism.png" alt="sure na ba talaga na eto logo??">
         <h1 data-translate="about_lyft">About Lyft</h1>
-        <h6 data-translate="about_desc">no lube, no protection, all night all day, from the kitchen floor to the toilet seat,
-             from the dining table to the church, from the front porch to the balcony, vertically, 
-             horizontally, quadratic, 
-             while i gasp for air and scream the lord’s prayer, she can top me.
+        <h6 data-translate="about_desc">At Lyft, we are passionate about showcasing the rich beauty, vibrant culture, and unique experiences our local destinations have to offer. Guided by our mission to promote tourism and create unforgettable memories, we strive to connect travelers with authentic journeys that leave lasting impressions.
              <div class="card-wrapper">
                 <div class="flip-card-container">
                   <div class="flip-card">
