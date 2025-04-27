@@ -54,12 +54,16 @@ body {
   }
   
   .search-container {
-    position: relative;
+    position: absolute;
+    left: 20%;
     margin-left: 0;
     display: flex;
     flex-wrap: wrap;
 }
-
+.search-cluster > input::placeholder {
+    font-size: 0.8rem;
+    padding: 5px;
+}
 .search-container input {
     padding: 10px 10px 10px 40px;
     width: 270px;
