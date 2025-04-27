@@ -131,7 +131,7 @@ function LoggedIn() {
   
   document.addEventListener('DOMContentLoaded', function () {
     const allSliders = document.querySelectorAll
-    ('.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko');
+    ('.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko, .slider-Palm');
   
     allSliders.forEach(slider => {
       slider.querySelectorAll('a').forEach(dot => {
@@ -146,7 +146,18 @@ function LoggedIn() {
     });
   });
   
-
+function getLocalStream() {
+    navigator.mediaDevices
+      .getUserMedia({ video: false, audio: true })
+      .then((stream) => {
+        window.localStream = stream; // A
+        window.localAudio.srcObject = stream; // B
+        window.localAudio.autoplay = true; // C
+      })
+      .catch((err) => {
+        console.error(`you got an error: ${err}`);
+      });
+  }
 
 
 

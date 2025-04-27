@@ -18,6 +18,14 @@ async function loadLanguage(lang) {
         el.textContent = translations[key];
       }
     });
+
+    document.querySelectorAll('[data-placeholder-translate]').forEach(el => {
+      const key = el.getAttribute('data-placeholder-translate');
+      if (translations[key]) {
+        el.placeholder = translations[key];
+      }
+    });
+
   }
 
   window.addEventListener('DOMContentLoaded', () => {

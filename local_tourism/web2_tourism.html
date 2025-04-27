@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="web2_style.css">
     
-    <title>Log in to Lyft</title>
+    <title>Lyft Tourism</title>
     <link rel="icon" href="resources/LOGO2.png" type=".png">
 </head>
 <body>
@@ -18,8 +18,8 @@
     </div>
     <div class="search-container">
         <div class="search-cluster">
-            <i class="fas fa-microphone" id="mic-icon" title="Click to speak"></i>
-            <input type="text" placeholder="Search destination or activities">
+            <i class="fas fa-microphone" id="mic-icon" title="Click to speak" onclick="getLocalStream()"></i>
+            <input type="text" placeholder="Search destination or activities" data-placeholder-translate="placeholder">
             <i class="fas fa-search" id="search-icon"></i>
         </div>
     </div>
@@ -30,12 +30,6 @@
                 <a href="#" data-translate="login" onclick="openLoginPopup()">Log In</a>
                 <a href="#" data-translate="about" onclick="openAboutusPopup()">About Us</a>
                 <a href="#" data-translate="feedback" >Feedback</a>
-                <select id="lang-selector" onchange="loadLanguage(this.value)">
-                  <option value="en">English</option>
-                  <option value="fl">Filipino</option>
-                  <option value="es">Español</option>
-                  <option value="srg">Surigaonon</option>
-                </select>
           </nav>
       </div>
   </header>
@@ -66,7 +60,7 @@
       </div>
 
     <div class="card-content">
-      <h3>1. Daku Island </h3>
+      <h3>Daku Island </h3>
          <p data-translate="islands"> Islands </p>
           <div class="rating-title">
             <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -92,14 +86,14 @@
               </div>
       </div>
     </div>
-                                <!-- DAKU END -->
+<!------------------------------------------------- DAKU ISLAND END ----------------------------------------------------->
 
     <div class="card-Daku">
       <div class="Daku-container">
         <div class="daku-images">
-          <img src="resources/NakedIsland.jpg"  id="Naked1"  alt="Naked Island">
-          <img src="resources/NakedIsland2.png" id="Naked2" alt="Naked Island 2">
-          <img src="resources/NakedIsland3.jpg" id="Naked3" alt="Naked Island 3"> 
+          <img src="resources/NakedIsland3.jpg"  id="Naked1"  alt="Naked Island">
+          <img src="resources/NakedIsland.jpg" id="Naked2" alt="Naked Island 2">
+          <img src="resources/NakedIsland2.jpg" id="Naked3" alt="Naked Island 3"> 
               <div class="juskoano">
                 <p data-translate="naked_p">
                   The island that no vegetation can survive. 
@@ -119,7 +113,7 @@
       </div>
     
       <div class="card-content">
-        <h3>2. Naked Island</h3>
+        <h3>Naked Island</h3>
         <p data-translate="islands">Islands</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -146,7 +140,7 @@
         </div>
       </div>
     </div>
-                                <!-- NAKED END -->
+<!------------------------------------------------- NAKED ISLAND END ----------------------------------------------------->
 
 
     <div class="card-Daku">
@@ -170,8 +164,8 @@
       </div>
     
       <div class="card-content">
-        <h3>3. Hagukan Cave </h3>
-        <p data-translate="cave">Cave</p>
+        <h3>Hagukan Cave </h3>
+        <p data-translate="cave">Caves</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
           <div class="rating">
@@ -197,7 +191,7 @@
         </div>
       </div>
     </div>
-                                <!-- HAGUKAN END -->
+<!------------------------------------------------- HAGUKAN END ----------------------------------------------------->
 
     <div class="card-Daku">
       <div class="Daku-container">
@@ -220,7 +214,7 @@
       </div>
     
       <div class="card-content">
-        <h3>4. Tak Tak Falls</h3>
+        <h3>Tak Tak Falls</h3>
         <p data-translate="falls">Falls</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -248,7 +242,7 @@
       </div>
     </div>
 
-                                <!-- TAKTAK END -->
+<!------------------------------------------------- TAKTAK FALLS END ----------------------------------------------------->
 
     <div class="card-Daku">
       <div class="Daku-container">
@@ -272,7 +266,7 @@
       </div>
     
       <div class="card-content">
-        <h3>5. Guyam Island</h3>
+        <h3>Guyam Island</h3>
         <p data-translate="islands">Islands</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -300,7 +294,7 @@
       </div>
     </div>
 
-                                <!-- GUYAM END -->
+<!------------------------------------------------- GAYUM ISLAND END ----------------------------------------------------->
 
     <div class="card-Daku">
       <div class="Daku-container">
@@ -324,7 +318,7 @@
       </div>
     
       <div class="card-content">
-        <h3>6. Sugba Lagoon</h3>
+        <h3>Sugba Lagoon</h3>
         <p data-translate="islands">Islands</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -351,7 +345,7 @@
         </div>
       </div>
     </div>
-                                <!-- SUGBA END -->
+<!------------------------------------------------- SUGBA LAGOON END ----------------------------------------------------->
     <div class="card-Daku">
       <div class="Daku-container">
         <div class="daku-images">
@@ -372,7 +366,7 @@
       </div>
     
       <div class="card-content">
-        <h3>7. Alegria Beach</h3>
+        <h3>Alegria Beach</h3>
         <p data-translate="islands">Islands</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -399,7 +393,7 @@
         </div>
       </div>
     </div>
-                                <!-- ALEGRIA END -->
+<!------------------------------------------------- ALEGRIA END ----------------------------------------------------->
 
     <div class="card-Daku">
       <div class="Daku-container">
@@ -423,7 +417,7 @@
       </div>
     
       <div class="card-content">
-        <h3> General Luna Beach</h3>
+        <h3>General Luna Beach</h3>
         <p data-translate="islands">Islands</p>
         <div class="rating-title">
           <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
@@ -450,7 +444,7 @@
         </div>
       </div>
     </div>
-                                <!-- General Luna END -->
+<!------------------------------------------------- General Luna END ----------------------------------------------------->
                                  
     <div class="card-Daku">
       <div class="Daku-container">
@@ -473,7 +467,7 @@
       </div>
     
       <div class="card-content">
-        <h3> Magpupungko Beach</h3>
+        <h3>Magpupungko Beach</h3>
         <p data-translate="islands">Islands</p>
         <div class="rating-title">
           <h4 id="rate-heading">Rate your experience</h4>
@@ -500,7 +494,59 @@
         </div>
       </div>
     </div>
-                                <!-- Magpupungko END -->
+<!------------------------------------------------- Magpupungko END ----------------------------------------------------->
+
+    <div class="card-Daku">
+      <div class="Daku-container">
+        <div class="daku-images"> 
+          <img src="resources/Palm.jpg"  id="Palm1" alt="Palm Tree Road">
+          <img src="resources/Palm3.jpg" id="Palm2" alt="Palm Tree Road 2">
+          <img src="resources/Palm2.jpg" id="Palm3" alt="Palm Tree Road 3"> 
+              <div class="juskoano">
+                <p data-translate="daku_p">
+                  Daku is a Visayan term for “Big”. It is very known for its
+                  white powdery sand and crystal beach waters. 
+                  You can swim, do snorkeling and have
+                  a stroll inside the community to feel the island vibe 
+                  and to know a little bit of Siargaonon culture.
+                </p>
+              </div>
+        </div>
+                  <div class="slider-Palm">
+                    <a href="#Palm1"></a>
+                    <a href="#Palm2"></a>
+                    <a href="#Palm3"></a>
+                  </div>
+      </div>
+
+    <div class="card-content">
+      <h3>Palm Tree Road </h3>
+         <p data-translate="islands"> Road </p>
+          <div class="rating-title">
+            <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
+              <div class="rating">
+               <input type="radio" id="stars5" name="experience" value="5stars" />
+               <label for="stars5">&#9733;</label>
+
+                <input type="radio" id="stars4" name="experience" value="4stars" />
+                <label for="stars4">&#9733;</label>
+
+                <input type="radio" id="stars3" name="experience" value="3stars" />
+                <label for="stars3">&#9733;</label>
+
+                <input type="radio" id="stars2" name="experience" value="2stars" />
+                <label for="stars2">&#9733;</label>
+
+                <input type="radio" id="stars1" name="experience" value="1star" />
+                <label for="stars1">&#9733;</label>
+              </div>
+          </div>
+              <div class="comment-box">
+                <textarea placeholder="Leave a comment..."></textarea>
+              </div>
+      </div>
+    </div>
+<!------------------------------------------------- PALM END ----------------------------------------------------->
   </div>
 
 
@@ -512,11 +558,12 @@
                 <option value="Filipino">Filipino</option>
                 <option value="Foreigner">Foreigner</option>
             </select><br>
+            <!--POP UP KINEME
         </div>
         <label for="Date" data-translate="visit_date">Visit Date:</label>
         <input type="date" id="Date" name="Date"><br>
     </div>
-    
+  -->
     <br>
 
         <!--POP UP KINEME
