@@ -169,11 +169,11 @@ a {
     font-family: "Plus Jakarta Sans", sans-serif;
     text-align: center;
     color: white;
-
+/* 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
-    border-radius: 10px;
+    border-radius: 10px; */
     animation-timeline: view(95% auto);
     animation-name: movement;
 }
@@ -181,11 +181,11 @@ a {
 @keyframes movement {
     from {
         filter: blur(5px);
-        filter: drop-shadow(0px 0px 0px white);
+        
     }
     to {
         
-        filter: drop-shadow(0px 0px 10px white);
+       
         filter: blur(0px);
     }
 }
@@ -297,12 +297,11 @@ input[type="text"] {
     border-radius: 16px;
 
 }
-.vendorList-cont {
+.cont-style {
     width: 80%;
     height: 500px;
     margin: auto;
     padding: 5%;
-
     overflow: scroll;
     overflow-x: hidden;
     display: flex;
@@ -311,10 +310,21 @@ input[type="text"] {
     align-items: start;
     justify-content: space-evenly;
     gap: 10px;
-
     animation-timeline: view(95% auto);
     animation-name: movement;
 }
+.reg-cont {
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border-radius: 16px;
+    width: 100%;
+    padding: 0;
+    height: fit-content;
+
+}
+
 #vendList {
     width: 100%;
     margin-bottom: 5%;
@@ -391,7 +401,6 @@ input[type="text"] {
 .vendor-desc {
     width: clamp(15rem, 50%, 35rem);
     height: 20%;
-
     color:#130f0e;
     font-weight: 800;
     text-align: center;
@@ -429,6 +438,7 @@ input[type="text"] {
 .V-popup {
     transform: translate(-50%, -50%) scale(0.1);
     opacity: 0;
+    position: absolute;
 }
 .close-pop {
     transform: translate(-50%, -50%) scale(0.1);
@@ -444,7 +454,7 @@ input[type="text"] {
     top: 50%;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.644);
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
-    padding: 2rem;
+    padding: 5rem;
     z-index: 10;
     transition: 0.5s ease;
     transform: translate(-50%, -50%) scale(1);
@@ -492,6 +502,7 @@ input[type="text"] {
     position: absolute;
     top: 0;
     font-size: clamp(1rem, 2.5vw, 2rem);
+    margin-bottom: 3%;
 }
 .hygiene-labels {
     color: black;
@@ -566,8 +577,7 @@ input[type="text"] {
 }
 
 #hygieneBtn {
-    width: 70px;
-    font-size: 15px;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 ::-webkit-scrollbar-track {

@@ -48,31 +48,31 @@
         
     </div>
     <div class="margin"></div>
+    <div class="cont-style reg-cont">
+        <div class="form-container" id="vendReg">
+            <h2 id="form-title">Vendor Registration</h2>
 
-    <div class="form-container" id="vendReg">
-        <h2 id="form-title">Vendor Registration</h2>
+            <form id="vendorForm">
+                
+                    <label for="busName">Business Name</label>
+                    <input type="text" id="busName" required>
 
-        <form id="vendorForm">
-            
-                <label for="busName">Business Name</label>
-                <input type="text" id="busName" required>
+                    <label for="permitNumber">Permit Number:</label>
+                    <input type="text" id="permitNumber" required>
 
-                <label for="permitNumber">Permit Number:</label>
-                <input type="text" id="permitNumber" required>
+                    <label for="productType">Product Type:</label>
+                    <select id="productType" required>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Frozen Goods">Frozen Goods</option>
+                    </select>
 
-                <label for="productType">Product Type:</label>
-                <select id="productType" required>
-                    <option value="Vegetables">Vegetables</option>
-                    <option value="Meat">Meat</option>
-                    <option value="Fish">Fish</option>
-                    <option value="Frozen Goods">Frozen Goods</option>
-                </select>
-
-                <button type="submit" id="submitBtn" class="button-style">Submit</button>
-            
-        </form>
-    </div>
-    
+                    <button type="submit" id="submitBtn" class="button-style">Submit</button>
+                
+            </form>
+        </div>
+    </div>   
     <div class="margin"></div>
     <div id="vendList"></div>
 
@@ -81,7 +81,7 @@
     </div>
     <div class="vendor_el_container">
 
-        <div class="vendorList-cont">
+        <div class="cont-style">
             <div class="vList">
                 <!--classes to be appended here-->
                 <!-- <div class="vendor vend-warning">
