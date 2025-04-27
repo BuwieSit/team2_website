@@ -71,66 +71,75 @@
 
 
     <div class="survey-container">
-      <!-- Daku Island Card -->
-      <div class="card-Daku">
-          <div class="Daku-container">
+          <!-- Daku Island Card -->
+          <div class="card-Daku">
+                  
+            <div class="Daku-container">
               <div class="daku-images"> 
-                  <img src="resources/DakuIsland.jpg" id="Daku1" alt="Daku Island">
-                  <img src="resources/DakuIsland2.jpg" id="Daku2" alt="Daku Island 2">
-                  <img src="resources/DakuIsland3.jpg" id="Daku3" alt="Daku Island 3"> 
-                  <div class="juskoano">
-                      <p>
-                          Daku is a Visayan term for “Big”. It is very known for its
-                          white powdery sand and crystal beach waters. 
-                          You can swim, do snorkeling and have
-                          a stroll inside the community to feel the island vibe 
-                          and to know a little bit of Siargaonon culture.
-                      </p>
-                  </div>
+                <img src="resources/DakuIsland.jpg" id="Daku1" alt="Daku Island">
+                <img src="resources/DakuIsland2.jpg" id="Daku2" alt="Daku Island 2">
+                <img src="resources/DakuIsland3.jpg" id="Daku3" alt="Daku Island 3"> 
+                
+                <div class="juskoano">
+                  <p>
+                    Daku is a Visayan term for “Big”. It is very known for its
+                    white powdery sand and crystal beach waters. 
+                    You can swim, do snorkeling and have
+                    a stroll inside the community to feel the island vibe 
+                    and to know a little bit of Siargaonon culture.
+                  </p>
+                </div>
               </div>
-              <div class="slider-daku">
-                  <a href="#Daku1"></a>
-                  <a href="#Daku2"></a>
-                  <a href="#Daku3"></a>
-              </div>
-          </div>
 
-          <div class="card-content">
+              <div class="slider-daku">
+                <a href="#Daku1"></a>
+                <a href="#Daku2"></a>
+                <a href="#Daku3"></a>
+              </div>
+            </div> <!-- End of Daku-container -->
+
+            <div class="card-content">
               <h3>1. Daku Island</h3>
               <p>Islands</p>
+
               <div class="rating-title">
-                  <h4 id="rate-heading">Rate your experience</h4>
-                  <div class="rating">
-                      <input type="radio" id="stars5" name="experience" value="5stars" />
-                      <label for="stars5">&#9733;</label>
+                <h4 id="rate-heading">Rate your experience</h4>
+                <div class="rating">
+                  <input type="radio" id="stars5" name="experience" value="5stars" />
+                  <label for="stars5">&#9733;</label>
 
-                      <input type="radio" id="stars4" name="experience" value="4stars" />
-                      <label for="stars4">&#9733;</label>
+                  <input type="radio" id="stars4" name="experience" value="4stars" />
+                  <label for="stars4">&#9733;</label>
 
-                      <input type="radio" id="stars3" name="experience" value="3stars" />
-                      <label for="stars3">&#9733;</label>
+                  <input type="radio" id="stars3" name="experience" value="3stars" />
+                  <label for="stars3">&#9733;</label>
 
-                      <input type="radio" id="stars2" name="experience" value="2stars" />
-                      <label for="stars2">&#9733;</label>
+                  <input type="radio" id="stars2" name="experience" value="2stars" />
+                  <label for="stars2">&#9733;</label>
 
-                      <input type="radio" id="stars1" name="experience" value="1star" />
-                      <label for="stars1">&#9733;</label>
-                  </div>
+                  <input type="radio" id="stars1" name="experience" value="1star" />
+                  <label for="stars1">&#9733;</label>
+                </div>
               </div>
 
               <!-- User Input Fields -->
               <div class="comment-box">
-                  <input type="text" id="username" placeholder="Enter your name" />
-                  <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
-                  <button id="submit-comment" class="submit-btn">Submit Review</button>
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
               </div>
 
               <!-- Comments Section -->
-              <div id="comments-section">
-                  <!-- Comments will appear here -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
               </div>
-          </div>
-      </div>
+
+            </div> <!-- End of card-content -->
+
+          </div> <!-- End of card-Daku -->
+
+          <!-- Additional Cards can be added below without affecting Daku Island Card -->
+                              <!-- DAKU END -->
 
       <!-- Additional Cards can be added below without affecting Daku Island Card -->
                                     <!-- DAKU END -->
@@ -182,9 +191,17 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div> <!-- close comment-box -->
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
           </div> <!-- close card-content -->
         </div> <!-- close card-Daku -->
 
@@ -235,12 +252,21 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
+              </div>
           </div>
-        </div>
-        </div>
+        
+        
                                     <!-- HAGUKAN END -->
     
         <div class="card-Daku">
@@ -286,11 +312,20 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
+                </div>
           </div>
-        </div>
+        
     
                                     <!-- TAKTAK END -->
     
@@ -338,9 +373,17 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
           </div>
         </div>
     
@@ -390,9 +433,17 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
           </div>
         </div>
                                     <!-- SUGBA END -->
@@ -438,9 +489,17 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
           </div>
         </div>
                                     <!-- ALEGRIA END -->
@@ -489,9 +548,17 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
           </div>
         </div>
                                     <!-- General Luna END -->
@@ -539,14 +606,82 @@
               </div>
               
             </div>
-            <div class="comment-box">
-              <textarea placeholder="Leave a comment..."></textarea>
-            </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
           </div>
         </div>
                                     <!-- Magpupungko END -->
+  
+    <div class="card-Daku">
+      <div class="Daku-container">
+        <div class="daku-images"> 
+          <img src="resources/Palm.jpg"  id="Palm1" alt="Palm Tree Road">
+          <img src="resources/Palm3.jpg" id="Palm2" alt="Palm Tree Road 2">
+          <img src="resources/Palm2.jpg" id="Palm3" alt="Palm Tree Road 3"> 
+              <div class="juskoano">
+                <p data-translate="daku_p">
+                  Daku is a Visayan term for “Big”. It is very known for its
+                  white powdery sand and crystal beach waters. 
+                  You can swim, do snorkeling and have
+                  a stroll inside the community to feel the island vibe 
+                  and to know a little bit of Siargaonon culture.
+                </p>
+              </div>
+        </div>
+                  <div class="slider-Palm">
+                    <a href="#Palm1"></a>
+                    <a href="#Palm2"></a>
+                    <a href="#Palm3"></a>
+                  </div>
+      </div>
+
+    <div class="card-content">
+      <h3>Palm Tree Road </h3>
+         <p data-translate="islands"> Road </p>
+          <div class="rating-title">
+            <h4 id="rate-heading" data-translate="rating">Rate your experience</h4>
+              <div class="rating">
+               <input type="radio" id="stars5" name="experience" value="5stars" />
+               <label for="stars5">&#9733;</label>
+
+                <input type="radio" id="stars4" name="experience" value="4stars" />
+                <label for="stars4">&#9733;</label>
+
+                <input type="radio" id="stars3" name="experience" value="3stars" />
+                <label for="stars3">&#9733;</label>
+
+                <input type="radio" id="stars2" name="experience" value="2stars" />
+                <label for="stars2">&#9733;</label>
+
+                <input type="radio" id="stars1" name="experience" value="1star" />
+                <label for="stars1">&#9733;</label>
+              </div>
+          </div>
+              <!-- User Input Fields -->
+              <div class="comment-box">
+                <input type="date" id="visit-date" placeholder="Select Date of Visit" />
+                <textarea id="comment-textarea" placeholder="Leave a comment..."></textarea>
+                <button id="submit-comment" class="submit-btn">Submit Review</button>
+              </div>
+
+              <!-- Comments Section -->
+              <div class="comments-section">
+                <!-- Comments will appear here -->
+              </div>
       </div>
     </div>
+                                     
+  </div>  
+    
 </body>
 
 <footer></footer>
