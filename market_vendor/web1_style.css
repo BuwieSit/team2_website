@@ -34,11 +34,11 @@ body {
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-    
 }
+
 #greeting {
     text-align: center;
-    font-size: clamp(1rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 800;
     font-family: "DM Serif Text", serif;
     animation: greetAnim 1s ease;
@@ -159,14 +159,15 @@ a {
     text-decoration: none;
     
 }
-#signout-pop {
+
+.small-pops {
     width: 200px;
     aspect-ratio: 16/9;
     padding: 5%;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* initially small */
     z-index: 50;
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
     backdrop-filter: blur(5px);
@@ -178,6 +179,30 @@ a {
     justify-content: center;
     font-size: 1.5rem;
     opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none; 
+}
+#register-pop {
+    width: 200px;
+    height: 50px;
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgba(153, 98, 68, 0.3) 60%, rgba(234,225,220, 1));
+}
+#register-pop > p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    text-wrap: nowrap;
+    transition: all 0.3s ease;
+}
+
+.reg-pop-show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+}
+
+.reg-pop-hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1); 
+    pointer-events: none;
 }
 .btnCont {
     display: flex;
@@ -229,15 +254,18 @@ a {
 }
 
 .miss-vis {
-    width: 50%;
-    padding: 50px;
+    width: 100%;
+
+
+}
+.miss-vis > section {
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .miss-vis > section > h4 {
     font-size: 2rem;
 }
-#header-desc {
-    font-size: 1rem;
-}
+
 
 #BVL {
     background: url('../resources/BVL_logo.png');
@@ -247,14 +275,17 @@ a {
 }
 
 #form-title {
-    font-size: 2rem;
+    font-size: clamp(2rem, 3.5vw, 4rem);
 }
 
 .form-container {
-    width: 50%;
-    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: auto;
-    padding: 5%;
     font-family: "Plus Jakarta Sans", sans-serif;
     text-align: center;
     color: white;
@@ -267,6 +298,21 @@ a {
     animation-name: movement;
 }
 
+#vendorForm {
+
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+
+
 @keyframes movement {
     from {
         filter: blur(5px);
@@ -278,18 +324,6 @@ a {
         filter: blur(0px);
     }
 }
-
-#vendorForm {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 1em;
-}
-
 
 
 .form-group-1 {
@@ -375,7 +409,6 @@ input[type="text"] {
 .vendor_el_container {
     position: relative;
     width: 100%;
-    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -410,7 +443,7 @@ input[type="text"] {
     border-radius: 16px;
     width: 100%;
     padding: 0;
-    height: fit-content;
+    height: 50rem;
 
 }
 
@@ -428,12 +461,20 @@ input[type="text"] {
 
 }
 .vList {
-    width: 80%;
+    width: 100%;
+    height: 50%;
+    max-height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.vendor-cont {
+    height: auto;
+    overflow: hidden;
 }
 
 .vendor {
@@ -520,7 +561,7 @@ input[type="text"] {
     
 }
 .detail-product {
-    font-size: clamp(0.7rem, 0.8vw, 1.3rem);
+    font-size: clamp(1rem, 0.8vw, 2rem);
     font-weight: 600;
     border: 1px solid black;
     padding: 10px;
@@ -536,7 +577,7 @@ input[type="text"] {
 }
 
 .vendor-pop {
-    width: clamp(15rem, 50%, 30rem);
+    width: clamp(8rem, 50%, 25rem);
     border-radius: 20px;
     aspect-ratio: 1;
     position: absolute;
@@ -617,6 +658,7 @@ input[type="text"] {
 }
 .radio-label {
     transition: all 0.3s ease;
+    margin-top: 5%;
 }
 .radio-label:hover {
     filter: drop-shadow(0 0 5px white);
@@ -732,7 +774,11 @@ td {
         opacity: 0;
     }
     #header-desc {
-        font-size: 2vw;
+        font-size: 3vw;
+    }
+    .miss-vis > section {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     .form-container {
@@ -741,6 +787,9 @@ td {
     }
     .vendor {
         width: 25%;
+    }
+    .vList {
+        justify-content: center;
     }
 }
 

@@ -87,6 +87,8 @@ const signOut = document.getElementById('signout');
 const signout_button = document.getElementById('signoutBtn');
 const cancel_button = document.getElementById('cancelBtn');
 const signout_popup = document.getElementById('signout-pop');
+const register_popup = document.getElementById('register-pop');
+
 
 signOut.addEventListener('click', () => {
     
@@ -105,9 +107,6 @@ cancel_button.addEventListener('click', () => {
     signout_popup.style.opacity = '0';
     signout_popup.style.pointerEvents = 'none';
 });
-
-
-
 
 const vendorDetails = e => {
         e.preventDefault();
@@ -143,7 +142,20 @@ const vendorDetails = e => {
             vendorList.append(div);
     
             vendorForm.reset();
-            alert('Submitted!');
+
+            // const submit_btn = document.getElementById('submitBtn');
+            // submit_btn.addEventListener('click', () => {
+                const register_popup = document.getElementById('register-pop');
+
+                register_popup.classList.remove('reg-pop-hide');
+                register_popup.classList.add('reg-pop-show');
+
+                setTimeout(() => {
+                    register_popup.classList.remove('reg-pop-show');
+                    register_popup.classList.add('reg-pop-hide');
+                }, 2000);
+            // });
+
         } else {
             alert('Vendor already exists!');
         }
@@ -397,6 +409,9 @@ const vendorHygiene = e => {
 
 
 vendorForm.addEventListener('submit', vendorDetails);
+
+
+    
 popupForm.addEventListener('submit', vendorHygiene);
 
 
