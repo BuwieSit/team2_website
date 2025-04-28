@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="web2_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <title>Lyft Tourism</title>
     <link rel="icon" href="resources/LOGO2.png" type=".png">
@@ -16,25 +17,24 @@
     <div class="logo-container">
             <img src="resources/LOGO2.png" alt="Logo" class="logo">
     </div>
-    <div class="search-container">
-        <div class="search-cluster">
-            <i class="fas fa-microphone" id="mic-icon" title="Click to speak" onclick="getLocalStream()"></i>
-            <input type="text" placeholder="Search destination or activities" data-placeholder-translate="placeholder">
-            <i class="fas fa-search" id="search-icon"></i>
-        </div>
-    </div>
-        
+
       <div class="header-right">
           <nav class="nav-links">
                 <a href="#" data-translate="signup" onclick="openSignPopup()">Sign Up</a>
                 <a href="#" data-translate="login" onclick="openLoginPopup()">Log In</a>
                 <a href="#" data-translate="about" onclick="openAboutusPopup()">About Us</a>
-                <a href="#" data-translate="feedback" >Feedback</a>
+                <a href="#" data-translate="contactus" onclick="openContactusPopup()">Contact Us</a>
                 <select id="lang-selector" onchange="loadLanguage(this.value)">
                   <option value="en">English</option>
                   <option value="fl">Filipino</option>
                   <option value="es">Español</option>
                   <option value="srg">Surigaonon</option>
+                </select>
+                <select id="Nationality" name="Nationality" onchange="checkNationality()">
+                  <option value="select" disabled selected hidden>Select your Nationality</option>
+                  <option value="US">American</option>
+                  <option value="ES">Spanish</option>
+                  <option value="PH">Filipino</option>
                 </select>
           </nav>
       </div>
@@ -87,9 +87,18 @@
                 <label for="stars1">&#9733;</label>
               </div>
           </div>
-              <div class="comment-box">
-                <textarea placeholder="Leave a comment..."></textarea>
-              </div>
+        <!-- User Input Fields -->
+        <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+          <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- DAKU ISLAND END ----------------------------------------------------->
@@ -141,9 +150,19 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+      
+        <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+          <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- NAKED ISLAND END ----------------------------------------------------->
@@ -192,9 +211,19 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+    
+      <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+      <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- HAGUKAN END ----------------------------------------------------->
@@ -242,8 +271,16 @@
           </div>
           
         </div>
+        <!-- User Input Fields -->
         <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
+        <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+        <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+        <button class="submit-btn" data-target="daku">Submit Review</button>
+        </div>
+
+        <!-- Comments Section -->
+        <div id="comments-section-daku" class="comments-section">
+        <!-- Comments will appear here -->
         </div>
       </div>
     </div>
@@ -294,9 +331,18 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+
+      <!-- User Input Fields -->
+      <div class="comment-box">
+        <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+        <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+        <button class="submit-btn" data-target="daku">Submit Review</button>
+    </div>
+
+    <!-- Comments Section -->
+    <div id="comments-section-daku" class="comments-section">
+    <!-- Comments will appear here -->
+    </div>
       </div>
     </div>
 
@@ -346,9 +392,19 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+
+      <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+      <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- SUGBA LAGOON END ----------------------------------------------------->
@@ -394,9 +450,19 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+
+      <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+      <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- ALEGRIA END ----------------------------------------------------->
@@ -445,9 +511,19 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+
+      <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+      <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- General Luna END ----------------------------------------------------->
@@ -495,9 +571,19 @@
           </div>
           
         </div>
-        <div class="comment-box">
-          <textarea placeholder="Leave a comment..."></textarea>
-        </div>
+
+      <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+      <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- Magpupungko END ----------------------------------------------------->
@@ -547,57 +633,35 @@
                 <label for="stars1">&#9733;</label>
               </div>
           </div>
-              <div class="comment-box">
-                <textarea placeholder="Leave a comment..."></textarea>
-              </div>
+
+      <!-- User Input Fields -->
+      <div class="comment-box">
+          <input type="date" id="visit-date-daku" placeholder="Select Date of Visit" />
+          <textarea id="comment-textarea-daku" placeholder="Leave a comment..."></textarea>
+          <button class="submit-btn" data-target="daku">Submit Review</button>
+      </div>
+
+      <!-- Comments Section -->
+      <div id="comments-section-daku" class="comments-section">
+      <!-- Comments will appear here -->
+      </div>
+
       </div>
     </div>
 <!------------------------------------------------- PALM END ----------------------------------------------------->
   </div>
 
-
-    <div class="visitor-information">
-        <div class="visitor-nationality">
-            <label for="Nationality" data-translate="nationality">Nationality:</label>
-            <select id="Nationality" name="Nationality">
-                <option value="select" disabled selected hidden data-translate="select_nation">Select your Nationality</option>
-                <option value="Filipino">Filipino</option>
-                <option value="Foreigner">Foreigner</option>
-            </select><br>
-            <!--POP UP KINEME
-        </div>
-        <label for="Date" data-translate="visit_date">Visit Date:</label>
-        <input type="date" id="Date" name="Date"><br>
-    </div>
-  -->
-    <br>
-
-        <!--POP UP KINEME
-    <div class="rating">
-        <h2>Rate your experience</h2>
-        <input type="radio" id="stars5" name="experience" value="5stars" />
-        <label for="stars5">&#9733;</label>
-        <input type="radio" id="stars4" name="experience" value="4stars" />
-        <label for="stars4">&#9733;</label>
-        <input type="radio" id="stars3" name="experience" value="3stars" />
-        <label for="stars3">&#9733;</label>
-        <input type="radio" id="stars2" name="experience" value="2stars" />
-        <label for="stars2">&#9733;</label>
-        <input type="radio" id="stars1" name="experience" value="1star" />
-        <label for="stars1">&#9733;</label>
-    </div>
--->
 <!--POP UP KINEME-->
 <!--LOG-IN-->
 <div class="popUp" id="popup">
-  <img src="resources/tourism.png" class="tourism-image">
+  <img src="resources/LOGO2.png" class="tourism-image">
   <h2 data-translate="ty_feedback">Thank you for your feedback!</h2>
   <p data-translate="feedback_text">We are looking forward to your next visit!</p>
   <button onclick="closeFeedbackPopup()" data-translate="close">Close</button>    
 </div>
 
 <div class="popUp-logIn" id="popup1">
-  <img src="resources/tourism.png" alt="logo ata eto">
+  <img src="resources/LOGO2.png" alt="logo ata eto">
   <h2 data-translate="log_to_lyft">Log In to Lyft</h2>
   <input type="text" id="loginUsername" placeholder="Username" required>
   <input type="password" id="loginPassword" placeholder="Password" required>
@@ -607,7 +671,7 @@
 
 <!--SIGN UP-->
 <div class="popup-signUp" id="popup2">
-  <img src="resources/tourism.png" alt="d ko sure kung eto ba talaga ang logo">
+  <img src="resources/LOGO2.png" alt="d ko sure kung eto ba talaga ang logo">
   <h1>Lyft</h1>
   <h2 data-translate="create_acc">Create an account</h2>
   <input type="text" id="SignUname" placeholder="Username" required>
@@ -626,7 +690,7 @@
 
     <!--ABOUT US-->
     <div class="popup-aboutUs" id="popup3">
-        <img src="resources/tourism.png" alt="sure na ba talaga na eto logo??">
+        <img src="resources/LOGO2.png" alt="sure na ba talaga na eto logo??">
         <h1 data-translate="about_lyft">About Lyft</h1>
         <h6 data-translate="about_desc">At Lyft, we are passionate about showcasing the rich beauty, vibrant culture, and unique experiences our local destinations have to offer. 
              <div class="card-wrapper">
@@ -666,12 +730,39 @@
         <button id="aboutCloseBTN" onclick="closeAboutPopup()" data-translate="close">Close</button>
     </div>
 
+
+<!--CONTACT US-->
+<div class="popup-contactUs" id="popup4">
+  <img src="resources/LOGO2.png" alt="sure na ba talaga na eto logo??">
+  <h1 data-translate="about_lyft">Contact Lfyt</h1>
+  <h6 data-translate="about_desc">Our "Contact Us" page serves as an easy and efficient way for you to get in touch with our team. Whether you have inquiries, suggestions, or need assistance, we're here to help. You can reach out to us through the following options:</h6>
+  
+  <div class="social-media-cards">
+    <div class="social-card">
+      <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <i class="fab fa-facebook-f"></i>
+        <h3>Facebook</h3>
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="mailto:your-email@example.com" class="social-icon">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+      </a>
+    </div>
+    <div class="social-card">
+      <a href="#" class="social-icon" onclick="showPhoneAlert(event)">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Phone</h3>
+      </a>
+    </div>
+  </div>
+  
+  <button id="contactCloseBTN" onclick="closeContactPopup()" data-translate="close">Close</button>
+</div>
+
     <footer class="foot">
         <p data-translate="copyright">&copy; 2023 Local Tourism. All rights reserved.</p>
-        
-        <p data-translate="contact">Contact us: <a href="https://www.facebook.com/LYFT">Facebook</a> | <a href="https://www.instagram.com/LYFT">Instagram |</a>
-        <a href="mailto:LYFT@gmail.com">LFYT@gmail.com</a>
-        </p>
     </footer>
     <script src="languages.js"></script>
     <script src="web2_script.js"></script>
