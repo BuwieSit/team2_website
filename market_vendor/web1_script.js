@@ -30,12 +30,6 @@ function getLoggedInUser() {
     const loggedInUsername = localStorage.getItem('loggedInUsername');
     const loggedInUser = landing_data.find(user => user.username === loggedInUsername);
 
-    if (!loggedInUsername) {
-        alert('Please login first')
-        window.location.href = 'landingPage.html';
-        return;
-    }
-
     if (loggedInUser) {
         console.log("Logged-in user:", loggedInUser);
         return loggedInUser;
@@ -50,9 +44,8 @@ function getLoggedInUser() {
 const user = getLoggedInUser();
 if (user) {
     console.log(user.username);  
-    console.log(user.email);     
-}
-
+    console.log(user.email);  
+    
     if (h > 0 && h < 5) {
         greet.textContent = 'Good eve,  ' + user.username;
     }
@@ -68,6 +61,9 @@ if (user) {
     else if (h >= 18 && h <= 23) {
         greet.textContent = 'Good eve, '+ user.username;
     }
+}
+
+
 
 window.addEventListener('scroll', function() {
 
@@ -216,15 +212,14 @@ function addVendorToTable(bName, permitNum, prodtype, sanitaryHygiene, cleanline
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    vend_data.forEach(vendor => {
-        addVendorToPage(vendor.bName, vendor.permitNum);
-    });
-    
+
     const table = document.querySelector('.resultsTable');
 
     vend_data.forEach(vendor => {
-    
-        let existingRow = Array.from(table.querySelectorAll('tr:not(#first_row)')).find(row => {
+        addVendorToPage(vendor.bName, vendor.permitNum);
+
+        
+        let existingRow = Array.from(table.querySelectorAll('tr')).find(row => {
             const bNameCell = row.querySelector('.bName-row');
             return bNameCell && bNameCell.textContent === vendor.bName;
         });
@@ -238,6 +233,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 (vendor.cleanliness || []).join(', ')
             );
         }
+        
     });
     
     signout_popup.style.opacity = '0';
@@ -252,8 +248,8 @@ vendorList.addEventListener('click', (event) => {
     if (!clickedVendor) return; 
 
     const vendors = Array.from(vendorList.children);
-    selectedVendorIndex = vendors.indexOf(clickedVendor);
     const vendor_index = vend_data[selectedVendorIndex];
+    selectedVendorIndex = vendors.indexOf(clickedVendor);
     const table = document.querySelector('.resultsTable');
 
     if (vendor_index) {
@@ -279,7 +275,9 @@ vendorList.addEventListener('click', (event) => {
                 vendor_index.sanitary || "",
                 (vendor_index.cleanliness || []).join(', ')
             );
+            
         }
+     
     }
 
     if (selectedVendorIndex !== null) {
@@ -340,7 +338,6 @@ const vendorHygiene = e => {
         localStorage.setItem('vend_data', JSON.stringify(vend_data));
         vendorPopup.classList.remove('vendor-pop'); 
     }
-        // 📌 UPDATE TABLE
         const table = document.querySelector('.resultsTable');
         let vendor_index = vend_data[selectedVendorIndex];
 
