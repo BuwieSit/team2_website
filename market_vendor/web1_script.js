@@ -15,6 +15,56 @@ let fair = document.getElementById('fair');
 let poor = document.getElementById('poor');
 let daily_cleaning = document.getElementById('dailyClean');
 let waste_disposal = document.getElementById('wasteDispo');
+let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
+let landing_data = JSON.parse(localStorage.getItem('data')) || [];
+
+let date = new Date;
+let h = date.getHours();
+let m = date.getMinutes();
+let s = date.getSeconds();
+let greet = document.getElementById('greeting');
+
+function getLoggedInUser() {
+    const loggedInUsername = localStorage.getItem('loggedInUsername');
+    const loggedInUser = landing_data.find(user => user.username === loggedInUsername);
+
+    if (!loggedInUsername) {
+        console.log("No user is logged in.");
+        return;
+    }
+
+    if (loggedInUser) {
+        console.log("Logged-in user:", loggedInUser);
+        return loggedInUser;
+    } 
+    else {
+        console.log("User not found in data.");
+        alert('Please login first');
+        window.location.href = 'landingPage.html';
+    }
+}
+
+const user = getLoggedInUser();
+if (user) {
+    console.log(user.username);  
+    console.log(user.email);     
+}
+
+    if (h > 0 && h < 5) {
+        greet.textContent = 'Good eve,  ' + user.username;
+    }
+    else if (h >= 5 && h <= 11) {
+        greet.textContent = 'Good morning, ' + user.username;
+    }
+    else if (h == 12) {
+        greet.textContent = 'Good noon, '+ user.username;
+    }
+    else if (h >= 13 && h <= 17) {
+        greet.textContent = 'Good afternoon, '+ user.username;
+    }
+    else if (h >= 18 && h <= 23) {
+        greet.textContent = 'Good eve, '+ user.username;
+    }
 
 window.addEventListener('scroll', function() {
 
@@ -41,9 +91,6 @@ const vendorDetails = e => {
         let bName = document.getElementById('busName').value.trim();
         let permitNum = document.getElementById('permitNumber').value.trim();
         let prodType = document.getElementById('productType').value;
-    
-        let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
-    
         let exist = vend_data.length && 
             vend_data.some(v => 
                 v.bName.toLowerCase() === bName.toLowerCase() &&
@@ -113,15 +160,11 @@ function addVendorToPopup(bName, permitNum, prodType) {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
-
     vend_data.forEach(vendor => {
         addVendorToPage(vendor.bName, vendor.permitNum);
     });
     
 });
-
-vendorForm.addEventListener('submit', vendorDetails);
 
 let selectedVendorIndex = null;
 
@@ -129,8 +172,6 @@ vendorList.addEventListener('click', (event) => {
     
     const clickedVendor = event.target.closest('.vendor');
     if (!clickedVendor) return; 
-
-    let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
 
     const vendors = Array.from(vendorList.children);
     selectedVendorIndex = vendors.indexOf(clickedVendor);
@@ -141,7 +182,6 @@ vendorList.addEventListener('click', (event) => {
 
 
     if (selectedVendorIndex !== null) {
-        let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
 
         document.getElementById('good').checked = false;
         document.getElementById('fair').checked = false;
@@ -182,7 +222,7 @@ const popupForm = document.querySelector('.popup-form');
 const vendorHygiene = e => {
     e.preventDefault();
 
-    let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
+    
 
     if (selectedVendorIndex !== null && vend_data[selectedVendorIndex]) {
 
@@ -199,7 +239,6 @@ const vendorHygiene = e => {
         if (waste_disposal.checked) {
             vend_data[selectedVendorIndex].cleanliness.push(waste_disposal.value);
         }
-
        
         localStorage.setItem('vend_data', JSON.stringify(vend_data));
         alert('UPDATED');
@@ -207,6 +246,13 @@ const vendorHygiene = e => {
     }
 };
 
+
+const deleteVendor = e => {
+    e.preventDefault();
+
+
+}
+vendorForm.addEventListener('submit', vendorDetails);
 popupForm.addEventListener('submit', vendorHygiene);
 
 

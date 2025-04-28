@@ -1,7 +1,7 @@
 
 const reg_form = document.querySelector('.register-up');
 const login_form = document.querySelector('.login-up');
-
+let data = JSON.parse(localStorage.getItem('data')) || [];
 
 const register = e => {
     e.preventDefault();
@@ -9,8 +9,6 @@ const register = e => {
     let email = document.getElementById('reg-email').value.trim();
     let username = document.getElementById('reg-username').value.trim();
     let password = document.getElementById('reg-password').value;
-    let data = JSON.parse(localStorage.getItem('data')) || [];
-
   
     if (!email || !username || !password) {
         alert('Please fill in all fields');
@@ -55,7 +53,7 @@ const login = e => {
 
     let exist = data.length && 
     JSON.parse(localStorage.getItem('data')).some(data => 
-        data.username.toLowerCase() == username &&
+        data.username.toLowerCase() == username.toLowerCase() &&
         data.password == password
     );
 
@@ -63,6 +61,8 @@ const login = e => {
         alert('Incorrect login credentials');
     }
     else {
+        localStorage.setItem('loggedInUsername', username);
+        
         window.location.href = '../market_vendor/web1_market.html';
     }
 
