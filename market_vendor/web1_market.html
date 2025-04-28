@@ -154,7 +154,7 @@
     <div class="results-section" id="vendRes">
 
 
-        <table class="resultsTable">
+        <table class="resultsTable" id="tableResults">
             <thead>
                 <tr id="header_row">
                     <th>Business Name</th>
@@ -181,5 +181,16 @@
     </div>
     <div class="margin"></div>
     <script src="web1_script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#exportBtn').on('click', function () {
+                $("#tableResults").table2excel({
+                    filename: "vendorData.xls"
+                });
+            });
+        });
+    </script>
 </body>
 </html>

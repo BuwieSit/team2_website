@@ -217,7 +217,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     vend_data.forEach(vendor => {
         addVendorToPage(vendor.bName, vendor.permitNum);
-
         
         let existingRow = Array.from(table.querySelectorAll('tr')).find(row => {
             const bNameCell = row.querySelector('.bName-row');
@@ -248,8 +247,9 @@ vendorList.addEventListener('click', (event) => {
     if (!clickedVendor) return; 
 
     const vendors = Array.from(vendorList.children);
-    const vendor_index = vend_data[selectedVendorIndex];
     selectedVendorIndex = vendors.indexOf(clickedVendor);
+    const vendor_index = vend_data[selectedVendorIndex];
+    
     const table = document.querySelector('.resultsTable');
 
     if (vendor_index) {
