@@ -143,8 +143,7 @@ const vendorDetails = e => {
     
             vendorForm.reset();
 
-            // const submit_btn = document.getElementById('submitBtn');
-            // submit_btn.addEventListener('click', () => {
+
                 const register_popup = document.getElementById('register-pop');
 
                 register_popup.classList.remove('reg-pop-hide');
@@ -154,7 +153,6 @@ const vendorDetails = e => {
                     register_popup.classList.remove('reg-pop-show');
                     register_popup.classList.add('reg-pop-hide');
                 }, 2000);
-            // });
 
         } else {
             alert('Vendor already exists!');
@@ -397,21 +395,50 @@ const vendorHygiene = e => {
 
 };
 
-// CONTINUE 
-// const deleteVendor = e => {
-//     e.preventDefault();
+const deleteBtn = document.querySelector('.deleteBtn');
+const deleteVendor = e => {
+    e.preventDefault();
 
-//     const vendorDiv = vendorList.children[selectedVendorIndex];
-//     const vendorData = vend_data[selectedVendorIndex];
-//     localStorage.removeItem('');
-
-// }
+    const del_popup = document.getElementById('delete-pop');
+    const yes = document.getElementById('yesBtn');
+    const cancel = document.getElementById('noBtn');
 
 
-vendorForm.addEventListener('submit', vendorDetails);
+    del_popup.classList.remove('del-hide');
+    del_popup.classList.add('del-show');
 
-
+    yes.addEventListener('click', () => {
+        if (selectedVendorIndex !== null && selectedVendorIndex >= 0) {
     
+            vend_data.splice(selectedVendorIndex, 1); 
+            localStorage.setItem('vend_data', JSON.stringify(vend_data));
+
+            console.log('Vendor deleted');
+            console.log(vend_data);
+
+            const vendorDiv = vendorList.children[selectedVendorIndex];
+            vendorDiv.remove();
+            vendorPopup.classList.remove('vendor-pop');
+            del_popup.classList.remove('del-show');
+            del_popup.classList.add('del-hide');
+
+        } else {
+            console.log('No vendor selected to delete');
+        }
+    });
+    
+    cancel.addEventListener('click', () => {
+        del_popup.classList.remove('del-show');
+        del_popup.classList.add('del-hide');
+    });
+
+
+
+
+}
+
+deleteBtn.addEventListener('click', deleteVendor);
+vendorForm.addEventListener('submit', vendorDetails);
 popupForm.addEventListener('submit', vendorHygiene);
 
 
