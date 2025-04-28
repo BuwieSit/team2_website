@@ -89,6 +89,7 @@ const signout_popup = document.getElementById('signout-pop');
 
 signOut.addEventListener('click', () => {
     
+    signout_popup.style.pointerEvents = 'visible';
     signout_popup.style.opacity = '1';
 });
 
@@ -99,7 +100,9 @@ signout_button.addEventListener('click', () => {
 });
 
 cancel_button.addEventListener('click', () => {
+    
     signout_popup.style.opacity = '0';
+    signout_popup.style.pointerEvents = 'none';
 });
 
 
