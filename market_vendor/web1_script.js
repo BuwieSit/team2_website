@@ -10,6 +10,12 @@ const vendorPopup = document.querySelector('.V-popup');
 const popHandler = document.querySelectorAll('.vendor');
 const vendorDesc = document.querySelector('.vendor-desc');
 
+let good = document.getElementById('good');
+let fair = document.getElementById('fair');
+let poor = document.getElementById('poor');
+let daily_cleaning = document.getElementById('dailyClean');
+let waste_disposal = document.getElementById('wasteDispo');
+
 window.addEventListener('scroll', function() {
 
     if (window.scrollY > 100) {
@@ -29,7 +35,7 @@ navOptions.forEach(opt => {
 });
 
 
-    const vendorDetails = e => {
+const vendorDetails = e => {
         e.preventDefault();
     
         let bName = document.getElementById('busName').value.trim();
@@ -93,7 +99,7 @@ function addVendorToPage(bName, permitNum) {
 
 function addVendorToPopup(bName, permitNum, prodType) {
 
-     const vendorDesc = document.querySelector('.vendor-desc'); 
+    const vendorDesc = document.querySelector('.vendor-desc'); 
     const title = vendorDesc.querySelector('.detail-title'); 
     const desc = vendorDesc.querySelector('.detail-vendor'); 
     const product = vendorDesc.querySelector('.detail-product'); 
@@ -117,28 +123,91 @@ window.addEventListener('DOMContentLoaded', () => {
 
 vendorForm.addEventListener('submit', vendorDetails);
 
+let selectedVendorIndex = null;
 
 vendorList.addEventListener('click', (event) => {
+    
     const clickedVendor = event.target.closest('.vendor');
     if (!clickedVendor) return; 
 
     let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
 
     const vendors = Array.from(vendorList.children);
-    const index = vendors.indexOf(clickedVendor);
+    selectedVendorIndex = vendors.indexOf(clickedVendor);
 
-    if (vend_data[index]) {
-        addVendorToPopup(vend_data[index].bName, vend_data[index].permitNum, vend_data[index].prodType);
+    if (vend_data[selectedVendorIndex]) {
+        addVendorToPopup(vend_data[selectedVendorIndex].bName, vend_data[selectedVendorIndex].permitNum, vend_data[selectedVendorIndex].prodType);
     }
 
+
+    if (selectedVendorIndex !== null) {
+        let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
+
+        document.getElementById('good').checked = false;
+        document.getElementById('fair').checked = false;
+        document.getElementById('poor').checked = false;
+        document.getElementById('dailyClean').checked = false;
+        document.getElementById('wasteDispo').checked = false;
+
+        if (vend_data[selectedVendorIndex]) {
+            const vendor = vend_data[selectedVendorIndex];
+
+            if (vendor.sanitary === "Good") good.checked = true;
+            if (vendor.sanitary === "Fair") fair.checked = true;
+            if (vendor.sanitary === "Poor") poor.checked = true;
+
+            if (vendor.cleanliness && vendor.cleanliness.includes('Daily Cleaning')) {
+                daily_cleaning.checked = true;
+            }
+            if (vendor.cleanliness && vendor.cleanliness.includes('Waste Disposal')) {
+                waste_disposal.checked = true;
+            }
+        }
+    }
+
+    
     if (!vendorPopup.classList.contains('vendor-pop')) {
         vendorPopup.classList.add('vendor-pop');
     }
+
 });
 
 close.addEventListener('click', () => {
     vendorPopup.classList.remove('vendor-pop');
 });
+
+// SANITARY AND HYGIENE UPDATE HANDLER
+const popupForm = document.querySelector('.popup-form');
+
+const vendorHygiene = e => {
+    e.preventDefault();
+
+    let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
+
+    if (selectedVendorIndex !== null && vend_data[selectedVendorIndex]) {
+
+        vend_data[selectedVendorIndex].sanitary = 
+            good.checked ? good.value :
+            fair.checked ? fair.value :
+            poor.checked ? poor.value : "";
+
+        vend_data[selectedVendorIndex].cleanliness = [];
+
+        if (daily_cleaning.checked) {
+            vend_data[selectedVendorIndex].cleanliness.push(daily_cleaning.value);
+        }
+        if (waste_disposal.checked) {
+            vend_data[selectedVendorIndex].cleanliness.push(waste_disposal.value);
+        }
+
+       
+        localStorage.setItem('vend_data', JSON.stringify(vend_data));
+        alert('UPDATED');
+        vendorPopup.classList.remove('vendor-pop'); 
+    }
+};
+
+popupForm.addEventListener('submit', vendorHygiene);
 
 
 
