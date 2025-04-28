@@ -27,7 +27,8 @@ function getLoggedInUser() {
     const loggedInUser = landing_data.find(user => user.username === loggedInUsername);
 
     if (!loggedInUsername) {
-        console.log("No user is logged in.");
+        alert('Please login first')
+        window.location.href = 'landingPage.html';
         return;
     }
 
@@ -178,19 +179,19 @@ function addVendorToPopup(bName, permitNum, prodType) {
     desc.textContent = permitNum;
     product.textContent = prodType;
 
-
 }
-
 
 window.addEventListener('DOMContentLoaded', () => {
     vend_data.forEach(vendor => {
         addVendorToPage(vendor.bName, vendor.permitNum);
     });
     
+    signout_popup.style.opacity = '0';
+    signout_popup.style.pointerEvents = 'none';
 });
 
-let selectedVendorIndex = null;
 
+let selectedVendorIndex = null;
 vendorList.addEventListener('click', (event) => {
     
     const clickedVendor = event.target.closest('.vendor');
@@ -198,11 +199,11 @@ vendorList.addEventListener('click', (event) => {
 
     const vendors = Array.from(vendorList.children);
     selectedVendorIndex = vendors.indexOf(clickedVendor);
+    const vendor_index = vend_data[selectedVendorIndex];
 
     if (vend_data[selectedVendorIndex]) {
         addVendorToPopup(vend_data[selectedVendorIndex].bName, vend_data[selectedVendorIndex].permitNum, vend_data[selectedVendorIndex].prodType);
     }
-
 
     if (selectedVendorIndex !== null) {
 
@@ -213,16 +214,15 @@ vendorList.addEventListener('click', (event) => {
         document.getElementById('wasteDispo').checked = false;
 
         if (vend_data[selectedVendorIndex]) {
-            const vendor = vend_data[selectedVendorIndex];
 
-            if (vendor.sanitary === "Good") good.checked = true;
-            if (vendor.sanitary === "Fair") fair.checked = true;
-            if (vendor.sanitary === "Poor") poor.checked = true;
+            if (vendor_index.sanitary === "Good") good.checked = true;
+            if (vendor_index.sanitary === "Fair") fair.checked = true;
+            if (vendor_index.sanitary === "Poor") poor.checked = true;
 
-            if (vendor.cleanliness && vendor.cleanliness.includes('Daily Cleaning')) {
+            if (vendor_index.cleanliness && vendor_index.cleanliness.includes('Daily Cleaning')) {
                 daily_cleaning.checked = true;
             }
-            if (vendor.cleanliness && vendor.cleanliness.includes('Waste Disposal')) {
+            if (vendor_index.cleanliness && vendor_index.cleanliness.includes('Waste Disposal')) {
                 waste_disposal.checked = true;
             }
         }
@@ -235,6 +235,7 @@ vendorList.addEventListener('click', (event) => {
 
 });
 
+
 close.addEventListener('click', () => {
     vendorPopup.classList.remove('vendor-pop');
 });
@@ -245,7 +246,6 @@ const popupForm = document.querySelector('.popup-form');
 const vendorHygiene = e => {
     e.preventDefault();
 
-    
 
     if (selectedVendorIndex !== null && vend_data[selectedVendorIndex]) {
 
@@ -264,9 +264,30 @@ const vendorHygiene = e => {
         }
        
         localStorage.setItem('vend_data', JSON.stringify(vend_data));
-        alert('UPDATED');
         vendorPopup.classList.remove('vendor-pop'); 
     }
+
+    const vendorDiv = vendorList.children[selectedVendorIndex];
+    const vendorData = vend_data[selectedVendorIndex];
+    let warnImg = document.createElement('img');
+    warnImg.src = '../resources/warning.png';
+    warnImg.alt = 'warning';
+    warnImg.id = 'warningSign';
+
+    if (
+        !vendorData.cleanliness.includes('Daily Cleaning') ||
+        !vendorData.cleanliness.includes('Waste Disposal')
+    ) {
+        vendorDiv.classList.add('vend-warning');
+        vendorDiv.append(warnImg);
+    } else {
+        vendorDiv.classList.remove('vend-warning');
+        let img = vendorDiv.querySelector('img');
+        vendorDiv.removeChild(img);
+    }
+
+    vendorPopup.classList.remove('vendor-pop'); 
+
 };
 
 

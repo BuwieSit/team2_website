@@ -98,9 +98,10 @@
                 <!--classes to be appended here-->
                 <!-- <div class="vendor vend-warning">
                     <img id="warningSign" src="../resources/warning.png" alt="warning">
-                    <p data-name ="stall_name" class="detail-title">Placeholder Stall Name Placeholder Stall Name</p>
+                    <p data-name ="stall_name" class="detail-title">Placeholder Stall N</p>
                     <p data-name ="stall_name" class="detail-vendor">permit number</p>
                 </div> -->
+                
 
             </div>
         </div>
@@ -145,21 +146,30 @@
     </div>
     
 
-    <div class="results-section fade-in" id="vendRes">
+    <div class="results-section" id="vendRes">
         <h2 class="surveyResults">Survey Results</h2>
         <button id="exportBtn">Export to Excel</button>
 
         <table id="resultsTable">
-        <thead>
-            <tr>
-            <th>Business Name</th>
-            <th>Product Type</th>
-            <th>Permit #</th>
-            <th>Sanitary</th>
-            <th>Cleanliness</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
+            <thead>
+                <tr id="header_row">
+                <th>Business Name</th>
+                <th>Product Type</th>
+                <th>Permit #</th>
+                <th>Sanitary</th>
+                <th>Cleanliness</th>
+                </tr>
+            </thead>
+            
+            <tbody>            
+                <tr id="first_row">
+                <td>Business Name here</td>
+                <td>Product here</td>
+                <td>Permit Number here</td>
+                <td>Sanitary here (radio)</td>
+                <td>Cleanliness here (checkbox)</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
