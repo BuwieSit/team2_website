@@ -1,23 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const stars = document.querySelectorAll('input[name=".rating input"]');
-    const popup = document.getElementById('popup');
-    const popupHeading = popup.querySelector('h2');
-    const popupMessage = popup.querySelector('p');
-
-    stars.forEach(star => {
-        star.addEventListener('change', function () {
-                if (star.value === '4stars' || star.value === '5stars') {
-                    popupMessage.textContent = "We are looking forward to your next visit!";
-                    openPopup();
-                }
-                else {
-                    popupMessage.textContent = "We will continue to improve our services.";
-                    openPopup();
-            }
-            popup.classList.add('openPopUp');
-            
-        });
-    });
+    
     
 });
 
@@ -28,25 +10,17 @@ function closeAllPopups() {
     });
 }
 
-document.querySelectorAll('.rating input').forEach(function(star) {
-    star.addEventListener('change', function() {
-        document.getElementById('popup').classList.add('openPopUp');
-    });
-});
 
-function closePopUp() {
-    document.getElementById('ratingPopUp').classList.remove('openPopUp');
+
+  // CONTACT US POPUP//
+  function openContactusPopup() {
+    closeAllPopups();
+    const popup = document.getElementById('popup4');
+    popup.classList.add('openPopUp');
 }
 
-
-//POP UP NG FEEDBACK//
-function closeFeedbackPopup() {
-    const popup = document.querySelector('.popUp');
-    popup.classList.remove('openPopUp');
-}
-
-function closePopup() {
-    const popup = document.querySelector('.popUp');
+function closeContactPopup() {
+    const popup = document.getElementById('popup4');
     popup.classList.remove('openPopUp');
 }
 
@@ -91,7 +65,13 @@ function SignedUp() {
 
     // Check if fields are filled
     if (!username || !email || !password) {
-        alert("Please fill out all fields.");
+        Swal.fire({
+            title: 'Please fill out all fields.',
+            text: 'All fields are required to create an account.',
+            icon: 'warning',
+            iconColor: '#e74c3c',
+            confirmButtonText: 'OK'
+        });
         return;
     }
 
@@ -100,10 +80,18 @@ function SignedUp() {
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
 
-    alert("Account created successfully!");
+    Swal.fire({
+        title: 'Account created successfully!',
+        text: 'You can now log in with your credentials.',
+        icon: 'success',
+        confirmButtonText: 'Close'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            closeSignPopup();  // Close the sign-up popup
+            openLoginPopup(); // Open the login popup
+        }
+    });
 
-    // Close the sign-up popup
-    closeSignPopup();
 }
 // Log In Function
 function LoggedIn() {
@@ -114,22 +102,32 @@ function LoggedIn() {
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
 
-    // Check if entered credentials match the stored ones
     if (username === storedUsername && password === storedPassword) {
-        alert("Logged in successfully!");
+        Swal.fire({
+            title: 'Logged in successfully!',
+            text: 'You are now logged in.',
+            icon: 'success',
+            confirmButtonText: 'Close'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect to the survey system page
+                window.location.href = 'SurveySystem.html';
+            }
+        });
         closeLoginPopup();
-        
-        // Redirect to SurveySystem.html after successful login
-        window.location.href = 'SurveySystem.html';
     } else {
-        alert("Invalid username or password.");
+    // Show an error message if credentials are incorrect
+        Swal.fire({
+            title: 'Invalid username or password',
+            text: 'Please check your credentials and try again.',
+            icon: 'warning',
+            iconColor: '#e74c3c',
+            confirmButtonText: 'Try Again'
+        });
     }
 }
 
 //para hindi tumalon Daku Island //
-
-  
-  document.addEventListener('DOMContentLoaded', function () {
     const allSliders = document.querySelectorAll
     ('.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko, .slider-Palm');
   
@@ -144,7 +142,7 @@ function LoggedIn() {
         });
       });
     });
-  });
+  
   
 function getLocalStream() {
     navigator.mediaDevices
@@ -159,6 +157,71 @@ function getLocalStream() {
       });
   }
 
+// Function to show login/signin alert when clicking submit button
+
+  const isSignedIn = false; 
+
+  const submitButtons = document.querySelectorAll('.submit-btn');
+
+  submitButtons.forEach(button => 
+    button.addEventListener('click', function(event) {
+      if (!isSignedIn) {
+        event.preventDefault();
+      
+      Swal.fire({
+        title: 'Please sign in first!',
+        text: 'You need to sign in to submit your review.',
+        icon: 'warning',
+        confirmButtonText: 'Close',
+        background: '#f9f9f9',
+        iconColor: '#e74c3c',
+        confirmButtonColor: '#3498db'
+        }).then((result) => {
+    if (result.isConfirmed) {
+        openSignPopup(); 
+        
+    }
+});
+} 
+}));
+
+// Function to show login alert when changing nationality
+function checkIfSignedIn(event) {
+    if (!isSignedIn) {
+      event.preventDefault();
+      
+      Swal.fire({
+        title: 'Please log in first!',
+        text: 'You need to log in to change your nationality.',
+        icon: 'warning',
+        confirmButtonText: 'Close',
+        background: '#f9f9f9',
+        iconColor: '#e74c3c',
+        confirmButtonColor: '#3498db'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          openSignPopup();
+        }
+      });
+    }
+  }
+  document.getElementById('Nationality').addEventListener('change', checkIfSignedIn);
+
+
+// Function to show Phone number alert//
+  function showPhoneAlert() {
+    event.preventDefault();
+
+    Swal.fire({
+      title: 'Contact Us via Phone',
+      text: 'We are available to assist you! Please give us a call.',
+      text: ' +63 123 456 7890',
+      icon: 'info',
+      iconColor: '#3BB44B',
+      confirmButtonText: 'Got it!',
+      confirmButtonColor: '#96ceb4',
+    });
+  }
 
 
 

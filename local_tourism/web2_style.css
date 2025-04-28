@@ -40,57 +40,9 @@ body {
     justify-content: flex-start;
 
 }
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
+
   
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .search-container {
-    position: absolute;
-    left: 20%;
-    margin-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.search-cluster > input::placeholder {
-    font-size: 0.8rem;
-    padding: 5px;
-}
-.search-container input {
-    padding: 10px 0 10px 40px;
-    width: 260px;
-    height: 25px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    font-size: 16px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.search-container input:hover{
-    border-color: #ffeead;
-    box-shadow: 0 4px 8px 	#be5855;
-    transition: 0.3s ease; 
-}
-
-#search-icon {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: solid transparent;
-    font-size: 18px;
-}
-
+ 
 
 /*leo-start*/
 .nav-links {
@@ -116,6 +68,37 @@ body {
     background-color: #ffebc6;
     color: #000;
 }
+
+#lang-selector {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#lang-selector:hover {
+    background-color: #ffebc6;
+    color: #000;
+}
+
+#Nationality {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+#Nationality:hover {
+    background-color: #ffebc6;
+    color: #000;
+}
+
 /*leo-end*/
 
 /*Slider-Daku*/
@@ -499,20 +482,86 @@ body {
     color: #FFD700;
 }
 
+.user-comment {
+    background: #f7ce5c;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-comment p {
+    margin: 5px 0;
+}
+
+.user-comment strong {
+    color: #d65241;
+}
+
+/* Comment Box */
 .comment-box {
     font-size: 14px;
     margin-top: 8px;
     color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .comment-box input,
-  .comment-box textarea {
-    padding: 8px;
-    margin-top: 5px;
+.comment-box textarea {
+    padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style for Date Input */
+.comment-box input[type="date"] {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #555;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #7ab79b;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #FFD700;
+}
+
+
+/* Rating Stars */
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #78909c;
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.rating input:checked + label {
+    color: #f2b600;
+}
+
+.rating input:checked ~ label {
+    color: #f2b600;
 }
 
 /*Css Carousel-end*/
@@ -634,7 +683,7 @@ select option:first-child{
 /*Log-In POP UP*/
 .popUp-logIn {
     width: 400px;
-    background: rgb(150, 206, 180, 0.5);
+    background: #96ceb480;
     border-radius: 72% 28% 85% 15% / 27% 88% 12% 73% ;
     position: fixed;
     top: 50%;
@@ -642,7 +691,7 @@ select option:first-child{
     text-align: center;
     padding: 30px;
     color: #333;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px #00000033;
     visibility: hidden;
     transform: translate(-50%, -50%) rotateX(-90deg); 
     opacity: 0;
@@ -668,7 +717,7 @@ select option:first-child{
 
 #closeBTN{
     background-color: #96ceb4;
-    color: rgb(0, 0, 0);
+    color: #000000;
     padding: 8px 16px;
     font-size: 20px;
     border-radius: 5px;
@@ -877,6 +926,125 @@ select option:first-child{
     background-position: right center;
     background-color: transparent;
 }
+
+/*POP UP NG CONTACT US*/
+.popup-contactUs {
+    width: 1000px;
+    max-width: 90%;
+    background: #c8cfd1;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0.4s;
+    z-index: -1;
+}
+
+.popup-contactUs.openPopUp {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    z-index: 1000;
+}
+
+.popup-contactUs img {
+    width: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.popup-contactUs h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #3e3e3e;
+}
+
+.popup-contactUs h6 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.popup-contactUs button {
+    background-color: #96ceb4;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px 0 rgba(255, 17, 0, 0.75);
+    background-size: 200% auto;
+    background-image: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup-contactUs button:hover {
+    background-image: linear-gradient(to right, #ff0000, #e09026, #fa8500, #ffe600);
+    background-position: right center;
+    background-color: transparent;
+}
+
+.social-media-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 90px;
+    padding: 20px;
+    margin-top: 20px; /* Optional: Space between content and social cards */
+  }
+  
+  .social-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 180px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+  
+  .social-icon i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover i {
+    color: #0056b3;
+  }
+  
+  .social-icon h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+/* END */
 
 .card-wrapper {
     display: flex;
