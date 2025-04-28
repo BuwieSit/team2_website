@@ -48,6 +48,7 @@ body {
     from {
         opacity: 0;
         transform: translateX(-10%);
+        
     }
     to {
         opacity: 1;
@@ -79,8 +80,8 @@ body {
     transform: scale(0.5);
 
 }
-.scrolling > .header-grp > .nav-list {
-    font-size: 2rem;
+.scrolling > .header-grp > .nav-list  {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 
 }
 .scrolling {
@@ -100,7 +101,6 @@ body {
     align-items: center;
     justify-content: end;
     cursor: default;
-
 }
 .title-grp {
     align-items: center;
@@ -112,13 +112,11 @@ body {
 .nav-list {
     list-style-type: none;
     cursor: pointer;
-    gap: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    
+    justify-content: space-evenly;
+    margin-right: 5%;
 }
 .nav-options {
     transition: all 0.3 ease;
@@ -128,6 +126,7 @@ body {
     padding: 3rem 2rem; 
     cursor: pointer;
     transition: all 0.3s ease;
+    text-wrap: nowrap;
 }
 
 li > a {
@@ -143,9 +142,56 @@ a {
     text-decoration: none;
     
 }
+#signout-pop {
+    width: 200px;
+    aspect-ratio: 16/9;
+    padding: 5%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 0.644), rgb(153, 98, 68) 60%, rgb(234,225,220));
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 10px black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    opacity: 0;
+}
+.btnCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.btnCont > button {
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 0 0 5px black;
+    
+}
+.btnCont > button:hover {
+    transform: translateY(-10%);
+    box-shadow: 0 5px 5px black;
+}
+.btnCont > button:active {
+    transform: translateY(0);
+}
 .margin {
     margin: 30% 0;
 }
+
 .upper-content {
     width: 100%;
     padding-top: 5%;

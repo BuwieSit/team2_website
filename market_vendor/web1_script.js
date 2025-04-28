@@ -20,8 +20,6 @@ let landing_data = JSON.parse(localStorage.getItem('data')) || [];
 
 let date = new Date;
 let h = date.getHours();
-let m = date.getMinutes();
-let s = date.getSeconds();
 let greet = document.getElementById('greeting');
 
 function getLoggedInUser() {
@@ -83,6 +81,28 @@ navOptions.forEach(opt => {
         opt.style.boxShadow = '0px 5px 10px black';
     });
 });
+
+const signOut = document.getElementById('signout');
+const signout_button = document.getElementById('signoutBtn');
+const cancel_button = document.getElementById('cancelBtn');
+const signout_popup = document.getElementById('signout-pop');
+
+signOut.addEventListener('click', () => {
+    
+    signout_popup.style.opacity = '1';
+});
+
+signout_button.addEventListener('click', () => {
+
+    localStorage.removeItem('loggedInUsername');
+    window.location.href = 'landingPage.html';
+});
+
+cancel_button.addEventListener('click', () => {
+    signout_popup.style.opacity = '0';
+});
+
+
 
 
 const vendorDetails = e => {

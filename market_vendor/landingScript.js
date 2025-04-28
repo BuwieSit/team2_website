@@ -150,6 +150,8 @@ const LogPassType = document.getElementById('password');
 const RegPassType = document.getElementById('reg-password');
 const showPass = document.getElementById('showPassword');
 const logShow = document.getElementById('logShowPassword');
+showPass.value = RegPassType.value;
+RegPassType.value = showPass.value;
 
 eye_reg.addEventListener('mousedown', () => {
         eye_reg.style.filter = "invert(1)";
