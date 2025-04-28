@@ -18,9 +18,13 @@ let waste_disposal = document.getElementById('wasteDispo');
 let vend_data = JSON.parse(localStorage.getItem('vend_data')) || [];
 let landing_data = JSON.parse(localStorage.getItem('data')) || [];
 
+
+
 let date = new Date;
 let h = date.getHours();
 let greet = document.getElementById('greeting');
+
+console.log(vend_data);
 
 function getLoggedInUser() {
     const loggedInUsername = localStorage.getItem('loggedInUsername');
@@ -178,12 +182,62 @@ function addVendorToPopup(bName, permitNum, prodType) {
     title.textContent = bName;
     desc.textContent = permitNum;
     product.textContent = prodType;
+}
+function addVendorToTable(bName, permitNum, prodtype, sanitaryHygiene, cleanlinessHygiene) {
+    const table = document.querySelector('.resultsTable');
 
+    let rowAdd = document.createElement('tr');
+    rowAdd.classList.add('add-row');
+
+    let bNameRow = document.createElement('td');
+    bNameRow.classList.add('bName-row');
+
+    let permNumRow = document.createElement('td');
+    permNumRow.classList.add('permNum-row');
+
+    let prodTypeRow = document.createElement('td');
+    prodTypeRow.classList.add('prodType-row');
+
+    let sanitaryRow = document.createElement('td');
+    sanitaryRow.classList.add('sanitary-row');
+
+    let cleanliRow = document.createElement('td');
+    cleanliRow.classList.add('cleanli-row');
+
+    bNameRow.textContent = bName;
+    permNumRow.textContent = permitNum;
+    prodTypeRow.textContent = prodtype;
+    sanitaryRow.textContent = sanitaryHygiene;
+    cleanliRow.textContent = cleanlinessHygiene;
+
+    rowAdd.append(bNameRow, prodTypeRow, permNumRow, sanitaryRow, cleanliRow);
+
+    table.append(rowAdd);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
     vend_data.forEach(vendor => {
         addVendorToPage(vendor.bName, vendor.permitNum);
+    });
+    
+    const table = document.querySelector('.resultsTable');
+
+    vend_data.forEach(vendor => {
+    
+        let existingRow = Array.from(table.querySelectorAll('tr:not(#first_row)')).find(row => {
+            const bNameCell = row.querySelector('.bName-row');
+            return bNameCell && bNameCell.textContent === vendor.bName;
+        });
+
+        if (!existingRow) {
+            addVendorToTable(
+                vendor.bName,
+                vendor.permitNum,
+                vendor.prodType,
+                vendor.sanitary || "",
+                (vendor.cleanliness || []).join(', ')
+            );
+        }
     });
     
     signout_popup.style.opacity = '0';
@@ -200,9 +254,32 @@ vendorList.addEventListener('click', (event) => {
     const vendors = Array.from(vendorList.children);
     selectedVendorIndex = vendors.indexOf(clickedVendor);
     const vendor_index = vend_data[selectedVendorIndex];
+    const table = document.querySelector('.resultsTable');
 
-    if (vend_data[selectedVendorIndex]) {
+    if (vendor_index) {
         addVendorToPopup(vend_data[selectedVendorIndex].bName, vend_data[selectedVendorIndex].permitNum, vend_data[selectedVendorIndex].prodType);
+
+        let existingRow = Array.from(table.querySelectorAll('tr:not(#first_row)')).find(row => {
+            const bNameCell = row.querySelector('.bName-row');
+            return bNameCell && bNameCell.textContent === vendor_index.bName;
+        });
+        
+        console.log(existingRow);
+
+        if (existingRow) {
+            existingRow.querySelector('.permNum-row').textContent = vendor_index.permitNum;
+            existingRow.querySelector('.prodType-row').textContent = vendor_index.prodType;
+            existingRow.querySelector('.sanitary-row').textContent = vendor_index.sanitary || "";
+            existingRow.querySelector('.cleanli-row').textContent = (vendor_index.cleanliness || []).join(', ');
+        } else {
+            addVendorToTable(
+                vendor_index.bName,
+                vendor_index.permitNum,
+                vendor_index.prodType,
+                vendor_index.sanitary || "",
+                (vendor_index.cleanliness || []).join(', ')
+            );
+        }
     }
 
     if (selectedVendorIndex !== null) {
@@ -227,8 +304,6 @@ vendorList.addEventListener('click', (event) => {
             }
         }
     }
-
-    
     if (!vendorPopup.classList.contains('vendor-pop')) {
         vendorPopup.classList.add('vendor-pop');
     }
@@ -245,7 +320,6 @@ const popupForm = document.querySelector('.popup-form');
 
 const vendorHygiene = e => {
     e.preventDefault();
-
 
     if (selectedVendorIndex !== null && vend_data[selectedVendorIndex]) {
 
@@ -266,7 +340,29 @@ const vendorHygiene = e => {
         localStorage.setItem('vend_data', JSON.stringify(vend_data));
         vendorPopup.classList.remove('vendor-pop'); 
     }
+        // 📌 UPDATE TABLE
+        const table = document.querySelector('.resultsTable');
+        let vendor_index = vend_data[selectedVendorIndex];
 
+        let existingRow = Array.from(table.querySelectorAll('tr:not(#first_row)')).find(row => {
+            const bNameCell = row.querySelector('.bName-row');
+            return bNameCell && bNameCell.textContent === vendor_index.bName;
+        });
+
+        if (existingRow) {
+            existingRow.querySelector('.permNum-row').textContent = vendor_index.permitNum;
+            existingRow.querySelector('.prodType-row').textContent = vendor_index.prodType;
+            existingRow.querySelector('.sanitary-row').textContent = vendor_index.sanitary || "";
+            existingRow.querySelector('.cleanli-row').textContent = (vendor_index.cleanliness || []).join(', ');
+        } else {
+            addVendorToTable(
+                vendor_index.bName,
+                vendor_index.permitNum,
+                vendor_index.prodType,
+                vendor_index.sanitary || "",
+                (vendor_index.cleanliness || []).join(', ')
+            );
+        }
     const vendorDiv = vendorList.children[selectedVendorIndex];
     const vendorData = vend_data[selectedVendorIndex];
     let warnImg = document.createElement('img');
@@ -283,19 +379,26 @@ const vendorHygiene = e => {
     } else {
         vendorDiv.classList.remove('vend-warning');
         let img = vendorDiv.querySelector('img');
-        vendorDiv.removeChild(img);
+        if (img) {
+            vendorDiv.removeChild(img);
+        }
     }
 
     vendorPopup.classList.remove('vendor-pop'); 
 
 };
 
+// CONTINUE 
+// const deleteVendor = e => {
+//     e.preventDefault();
 
-const deleteVendor = e => {
-    e.preventDefault();
+//     const vendorDiv = vendorList.children[selectedVendorIndex];
+//     const vendorData = vend_data[selectedVendorIndex];
+//     localStorage.removeItem('');
+
+// }
 
 
-}
 vendorForm.addEventListener('submit', vendorDetails);
 popupForm.addEventListener('submit', vendorHygiene);
 
