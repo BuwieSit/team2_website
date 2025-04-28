@@ -21,13 +21,17 @@
                 <li class="nav-options"><a href="#vendReg">Add</a></li>
                 <li class="nav-options"><a href="#vendList">Vendors</a></li>
                 <li class="nav-options"><a href="#vendRes">Result</a></li>
-                <li class="nav-options" id="signout"><a>Sign out</a></li>
+                <li class="nav-options"></li>
             </ul>
+            <p class="nav-options" id="signout">
+                <img src="../resources/sign_out.png" alt="sign out" id="signoutImg">
+                Sign out
+            </p>
         </div>
 
     </header>
     <div class="hello-user" id="upper">
-        <p id="greeting">Hello, </p>
+        <p id="greeting"></p>
 
     </div>
     <div id="signout-pop">
@@ -89,7 +93,7 @@
     <div id="vendList"></div>
 
     <div class="vend-title">
-        <h3>Vendors List</h3>
+        <h3>Vendors Hygiene Check</h3>
     </div>
     <div class="vendor_el_container">
 
@@ -145,34 +149,37 @@
 
     </div>
     
-
+    <div class="margin"></div>
+    <h2 class="vend-title">Vendor Table List</h2>
     <div class="results-section" id="vendRes">
-        <h2 class="surveyResults">Survey Results</h2>
-        <button id="exportBtn">Export to Excel</button>
 
-        <table id="resultsTable">
+
+        <table class="resultsTable">
             <thead>
                 <tr id="header_row">
-                <th>Business Name</th>
-                <th>Product Type</th>
-                <th>Permit #</th>
-                <th>Sanitary</th>
-                <th>Cleanliness</th>
+                    <th>Business Name</th>
+                    <th>Product Type</th>
+                    <th>Permit #</th>
+                    <th>Sanitary</th>
+                    <th>Cleanliness</th>
                 </tr>
             </thead>
             
             <tbody>            
-                <tr id="first_row">
-                <td>Business Name here</td>
-                <td>Product here</td>
-                <td>Permit Number here</td>
-                <td>Sanitary here (radio)</td>
-                <td>Cleanliness here (checkbox)</td>
+                <tr class="add-row" id="first_row">
+                    <td class="bName-row">Business Name here</td>
+                    <td class="prodType-row">Product here</td>
+                    <td class="permNum-row">Permit Number here</td>
+                    <td class="sanitary-row">Sanitary here (radio)</td>
+                    <td class="cleanli-row">Cleanliness here (checkbox)</td>
                 </tr>
+                <!--ROW TO BE APPENDED HERE-->
             </tbody>
         </table>
+                
+        <button id="exportBtn" class="button-style">Export to Excel</button>
     </div>
-
+    <div class="margin"></div>
     <script src="web1_script.js"></script>
 </body>
 </html>
