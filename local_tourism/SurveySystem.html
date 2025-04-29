@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="SurveySYS.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <title>Lyft</title>
     <link rel="icon" href="resources/tourism.png" type=".png">
@@ -47,15 +49,25 @@
                 </svg>
               </button>
             </div>
-            
           </div>
+
+            <nav class="nav-links">
+              <a href="#" data-translate="contactus" onclick="openContactusPopup()">Contact Us</a>
+            </nav>
+          
           <select id="lang-selector" onchange="loadLanguage(this.value)">
             <option value="en">English</option>
             <option value="fl">Filipino</option>
             <option value="es">Español</option>
             <option value="srg">Surigaonon</option>
           </select>
-          
+          <select id="Nationality" name="Nationality" onchange="checkNationality()">
+            <option value="select" disabled selected hidden>Select your Nationality</option>
+            <option value="US">American</option>
+            <option value="ES">Spanish</option>
+            <option value="PH">Filipino</option>
+          </select>
+
           <div class="profile-tab">
             <i class="fas fa-user"></i>
             <div class="dropdown">
@@ -693,6 +705,35 @@
         </path>
       </svg>
     </button>
+  </div>
+
+  <div class="popup-contactUs" id="popup4">
+    <img src="resources/LOGO2.png" alt="sure na ba talaga na eto logo??">
+    <h1 data-translate="about_lyft">Contact Lfyt</h1>
+    <h6 data-translate="about_desc">Our "Contact Us" page serves as an easy and efficient way for you to get in touch with our team. Whether you have inquiries, suggestions, or need assistance, we're here to help. You can reach out to us through the following options:</h6>
+    
+    <div class="social-media-cards">
+      <div class="social-card">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+          <h3>Facebook</h3>
+        </a>
+      </div>
+      <div class="social-card">
+        <a href="mailto:your-email@example.com" class="social-icon">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+        </a>
+      </div>
+      <div class="social-card">
+        <a href="#" class="social-icon" onclick="showPhoneAlert(event)">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Phone</h3>
+        </a>
+      </div>
+    </div>
+    
+    <button id="contactCloseBTN" onclick="closeContactPopup()" data-translate="close">Close</button>
   </div>
 
 </body>
