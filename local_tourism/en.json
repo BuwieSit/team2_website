@@ -45,5 +45,11 @@
     "goal" : "Goal",
     "goal_text" : "Empower local communities through sustainable tourism initiatives and partnerships.",
     "copyright" : "2023 Local Tourism. All rights reserved.",
-    "contact" : "Contact us:"
+    "contact" : "Contact us:",
+
+    "view-prof": "",
+    "logout" : "",
+    
+
+
   }
