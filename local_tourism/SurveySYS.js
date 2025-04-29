@@ -45,7 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 allComments[target].push({ username, starRating, visitDate, commentText });
                 localStorage.setItem('comments', JSON.stringify(allComments));
             } else {
-                alert('Please fill in all fields: Date of Visit, Rating, and Comment');
+                Swal.fire({
+                    title: 'Incomplete Submission',
+                    text: 'Please fill in all fields: Date of Visit, Rating, and Comment.',
+                    icon: 'warning',
+                    iconColor: '#e74c3c',
+                    confirmButtonText: 'Okay',
+                    confirmButtonColor: '#96ceb4',
+                });
             }
         });
     });
@@ -67,4 +74,51 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+});
+
+
+function closeAllPopups() {
+    document.querySelectorAll('.openPopUp').forEach(popup => {
+        popup.classList.remove('openPopUp');
+    });
+}
+
+function openContactusPopup() {
+    closeAllPopups();
+    const popup = document.getElementById('popup4');
+    popup.classList.add('openPopUp');
+}
+
+function closeContactPopup() {
+    const popup = document.getElementById('popup4');
+    popup.classList.remove('openPopUp');
+}
+
+function showPhoneAlert(event) {
+    event.preventDefault();
+
+    Swal.fire({
+      title: 'Contact Us via Phone',
+      html: 'We are available to assist you!<br><strong>+63 123 456 7890</strong>',
+      icon: 'info',
+      iconColor: '#3BB44B',
+      confirmButtonText: 'Got it!',
+      confirmButtonColor: '#96ceb4',
+    });
+}
+
+//para hindi tumalon tumalon yung iba//
+const allSliders = document.querySelectorAll
+('.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko, .slider-Palm');
+
+allSliders.forEach(slider => {
+  slider.querySelectorAll('a').forEach(dot => {
+    dot.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetImg = document.getElementById(targetId);
+      const dakuImages = this.closest('.card-Daku').querySelector('.daku-images');
+      dakuImages.scrollTo({ left: targetImg.offsetLeft, behavior: 'smooth' });
+    });
+  });
 });

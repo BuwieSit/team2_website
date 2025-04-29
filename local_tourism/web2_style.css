@@ -35,14 +35,7 @@ body {
     height: 100px;
     margin-left: 0;
 }
-.nav-head{
-    display: flex;
-    justify-content: flex-start;
 
-}
-
-  
- 
 
 /*leo-start*/
 .nav-links {
@@ -70,6 +63,8 @@ body {
 }
 
 #lang-selector {
+    display: flex;
+    flex-wrap: wrap;
     text-decoration: none;
     color: #333;
     font-weight: 600;
@@ -85,6 +80,8 @@ body {
 }
 
 #Nationality {
+    display: flex;
+    flex-wrap: wrap;
     text-decoration: none;
     color: #333;
     font-weight: 600;

@@ -92,6 +92,30 @@ body{
     transform: translateY(0);
 }
 
+.nav-links {
+    display: flex;  
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ffebc6;
+    color: #000;
+}
+
 #lang-selector {
     background-color: #2f3640; 
     color: white;
@@ -112,6 +136,30 @@ body{
 }
 
 #lang-selector:focus {
+    background-color: #2f3640;
+    outline: none;
+}
+
+#Nationality {
+    background-color: #2f3640; 
+    color: white;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; 
+    margin-top: 20px;
+}
+
+#Nationality:hover {
+    background-color: #f7ce5c; /* Matches profile hover effect */
+}
+
+#Nationality:focus {
     background-color: #2f3640;
     outline: none;
 }
@@ -739,5 +787,123 @@ select option:first-child{
     opacity: 1;
     bottom: unset;
     transition-duration: 0.3s;
+  }
+
+/* CONTACT US POPUP */
+.popup-contactUs {
+    width: 1000px;
+    max-width: 90%;
+    background: #c8cfd1;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0.4s;
+    z-index: -1;
+}
+
+.popup-contactUs.openPopUp {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    z-index: 1000;
+}
+
+.popup-contactUs img {
+    width: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.popup-contactUs h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #3e3e3e;
+}
+
+.popup-contactUs h6 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.popup-contactUs button {
+    background-color: #96ceb4;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 0 4px 15px 0 rgba(255, 17, 0, 0.75);
+    background-size: 200% auto;
+    background-image: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup-contactUs button:hover {
+    background-image: linear-gradient(to right, #ff0000, #e09026, #fa8500, #ffe600);
+    background-position: right center;
+    background-color: transparent;
+}
+
+.social-media-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 90px;
+    padding: 20px;
+    margin-top: 20px; /* Optional: Space between content and social cards */
+  }
+  
+  .social-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 180px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+  
+  .social-icon i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover i {
+    color: #0056b3;
+  }
+  
+  .social-icon h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
   }
   
