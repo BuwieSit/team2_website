@@ -44,5 +44,12 @@
     "goal" : "Layunin",
     "goal_text" : "Bigyan ng kapangyarihan ang mga lokal na komunidad sa pamamagitan ng mga inisyatibo at pakikipagtulungan sa napapanatiling turismo.",
     "copyright" : "2023 Lokal na Turismo. Lahat ng karapatan ay nakalaan.",
-    "contact" : "Makipag-ugnayan sa amin:"
+    "contact" : "Makipag-ugnayan sa amin:",
+
+    "view-prof": "Tingnan ang Profile",
+    "logout": "Mag-Logout",
+    "road": "Kalsada",
+    "about_cont": "Ang aming \"Contact Us\" na pahina ay nagsisilbing madaling paraan para makipag-ugnayan sa aming team. Kung may katanungan ka, suhestyon, o kailangan ng tulong, narito kami para tumugon. Maari kang makipag-ugnayan sa amin sa pamamagitan ng mga sumusunod na opsyon:",
+    "cont_lyft": "Makipag-ugnayan sa Lyft"
+
   }

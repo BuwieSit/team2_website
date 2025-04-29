@@ -46,5 +46,11 @@
     "goal" : "Tuyo",
     "goal_text" : "Palig-onon ang mga lokal nga komunidad pinaagi sa mga inisyatibo sa malungtarong turismo ug mga pakig-partner.",
     "copyright" : "2023 Lokal nga Turismo. Tanang katungod gipreserve.",
-    "contact" : "Kontaka kami:"
+    "contact" : "Kontaka kami:",
+
+   "view-prof": "Tan-awa an Profile",
+    "logout": "Gawas",
+    "road": "Dalan",
+    "about_cont": "An among \"Contact Us\" nga pahina kay sayon ug epektibong paagi para makig-istorya sa among team. Kung naa kay mga pangutana, suhestyon, o nanginahanglan ka ug tabang, andam kami motabang. Pwede ka makakontak pinaagi sa mosunod nga paagi:",
+    "cont_lyft": "Kontaka an Lyft"
   }

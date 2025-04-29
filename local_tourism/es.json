@@ -40,5 +40,13 @@
     "goal" : "Meta",
     "goal_text" : "Empoderar a las comunidades locales a través de iniciativas de turismo sostenible y asociaciones.",
     "copyright" : "2023 Turismo Local. Todos los derechos reservados.",
-    "contact" : "Contáctanos:"
+    "contact" : "Contáctanos:",
+
+    "view-prof": "Ver Perfil",
+    "logout": "Cerrar Sesión",
+    "road": "Carretera",
+    "about_cont": "Nuestra página de \"Contáctanos\" es una forma fácil y eficiente de comunicarte con nuestro equipo. Ya sea que tengas preguntas, sugerencias o necesites ayuda, estamos aquí para ti. Puedes contactarnos a través de las siguientes opciones:",
+    "cont_lyft": "Contactar a Lyft"
+
+
   }

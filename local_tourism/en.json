@@ -47,9 +47,10 @@
     "copyright" : "2023 Local Tourism. All rights reserved.",
     "contact" : "Contact us:",
 
-    "view-prof": "",
-    "logout" : "",
-    
-
+    "view-prof": "View Profile",
+    "logout" : "Log Out",
+    "road" : "Road",
+    "about_cont" : "Our \"Contact Us\" page serves as an easy and efficient way for you to get in touch with our team. Whether you have inquiries, suggestions, or need assistance, we're here to help. You can reach out to us through the following options:",
+    "cont_lyft" : "Contact Lyft"
 
   }
