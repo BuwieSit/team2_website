@@ -46,7 +46,10 @@
     "logout": "Cerrar Sesión",
     "road": "Carretera",
     "about_cont": "Nuestra página de \"Contáctanos\" es una forma fácil y eficiente de comunicarte con nuestro equipo. Ya sea que tengas preguntas, sugerencias o necesites ayuda, estamos aquí para ti. Puedes contactarnos a través de las siguientes opciones:",
-    "cont_lyft": "Contactar a Lyft"
+    "cont_lyft": "Contactar a Lyft",
+
+    "beach": "Playa",
+    "lagoon": "Laguna"
 
 
   }
