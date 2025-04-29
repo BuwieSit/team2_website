@@ -465,6 +465,72 @@ select option:first-child{
 
 /*FIRST CARD - END */
 
+
+/*CLEANLINESS*/
+/* Cleanliness Rating */
+/* Star Rating Reuse - Already existing styles likely cover this, but ensure spacing */
+.rating-title {
+    margin-top: 1rem;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.2rem;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 1.2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.rating input[type="radio"]:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f5b301;
+}
+
+/* Amenities Section */
+.amenities-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.amenities-checkboxes label {
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.amenities-checkboxes input[type="checkbox"] {
+    transform: scale(1.1);
+    accent-color: #3bb44b; /* or any highlight color matching your theme */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*SECOND CARD - START */
 
 .slider-naked{

@@ -10,7 +10,6 @@ input.addEventListener('keyup', e => {
         }
     });
 });
-
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.submit-btn').forEach(button => {
         button.addEventListener('click', function () {
@@ -22,6 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const visitDate = document.getElementById(`visit-date-${target}`).value;
             const rating = card.querySelector(`input[name="experience-${target}"]:checked`);
 
+            let cleanlinessRating = '';
+            let amenities = [];
+
+            // Generalize for any card with cleanliness and amenities section
+            const cleanliness = card.querySelector(`input[name="cleanliness-${target}"]:checked`);
+            const amenitiesChecks = card.querySelectorAll('.amenities-section input[type="checkbox"]:checked');
+
+            cleanlinessRating = cleanliness ? cleanliness.value : '';
+            amenities = Array.from(amenitiesChecks).map(cb => cb.value);
+
             if (commentText && rating && visitDate) {
                 const starRating = rating.value;
 
@@ -31,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p><strong>${username}</strong> rated this ${starRating}</p>
                     <p><em>Visited on: ${visitDate}</em></p>
                     <p>${commentText}</p>
+                    ${cleanlinessRating ? `<p>Cleanliness: ${cleanlinessRating} ⭐</p>` : ''}
+                    ${amenities.length ? `<p>Amenities: ${amenities.join(', ')}</p>` : ''}
                 `;
 
                 const commentsSection = document.getElementById(`comments-section-${target}`);
@@ -40,9 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById(`visit-date-${target}`).value = '';
                 if (rating) rating.checked = false;
 
+                // Clear cleanliness and amenities after submission
+                const cleanlinessInputs = card.querySelectorAll(`input[name="cleanliness-${target}"]`);
+                cleanlinessInputs.forEach(input => input.checked = false);
+                const amenitiesInputs = card.querySelectorAll('.amenities-section input[type="checkbox"]');
+                amenitiesInputs.forEach(input => input.checked = false);
+
+                // Save comment to localStorage
                 let allComments = JSON.parse(localStorage.getItem('comments')) || {};
                 if (!allComments[target]) allComments[target] = [];
-                allComments[target].push({ username, starRating, visitDate, commentText });
+
+                const commentObj = { username, starRating, visitDate, commentText, cleanlinessRating, amenities };
+                allComments[target].push(commentObj);
                 localStorage.setItem('comments', JSON.stringify(allComments));
             } else {
                 Swal.fire({
@@ -57,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Load comments from localStorage
     const allComments = JSON.parse(localStorage.getItem('comments')) || {};
 
     Object.keys(allComments).forEach(target => {
@@ -69,13 +90,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p><strong>${comment.username}</strong> rated this ${comment.starRating}</p>
                     <p><em>Visited on: ${comment.visitDate}</em></p>
                     <p>${comment.commentText}</p>
+                    ${comment.cleanlinessRating ? `<p>Cleanliness: ${comment.cleanlinessRating} ⭐</p>` : ''}
+                    ${comment.amenities?.length ? `<p>Amenities: ${comment.amenities.join(', ')}</p>` : ''}
                 `;
                 commentsSection.appendChild(newComment);
             });
         }
     });
 });
-
 
 function closeAllPopups() {
     document.querySelectorAll('.openPopUp').forEach(popup => {
@@ -98,27 +120,28 @@ function showPhoneAlert(event) {
     event.preventDefault();
 
     Swal.fire({
-      title: 'Contact Us via Phone',
-      html: 'We are available to assist you!<br><strong>+63 123 456 7890</strong>',
-      icon: 'info',
-      iconColor: '#3BB44B',
-      confirmButtonText: 'Got it!',
-      confirmButtonColor: '#96ceb4',
+        title: 'Contact Us via Phone',
+        html: 'We are available to assist you!<br><strong>+63 123 456 7890</strong>',
+        icon: 'info',
+        iconColor: '#3BB44B',
+        confirmButtonText: 'Got it!',
+        confirmButtonColor: '#96ceb4',
     });
 }
 
-//para hindi tumalon tumalon yung iba//
-const allSliders = document.querySelectorAll
-('.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko, .slider-Palm');
+// Slider functionality
+const allSliders = document.querySelectorAll(
+    '.slider-daku, .slider-naked, .slider-hagukan, .slider-taktak, .slider-guyam, .slider-Sugba, .slider-Alegria, .slider-General, .slider-Magpupungko, .slider-Palm'
+);
 
 allSliders.forEach(slider => {
-  slider.querySelectorAll('a').forEach(dot => {
-    dot.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetImg = document.getElementById(targetId);
-      const dakuImages = this.closest('.card-Daku').querySelector('.daku-images');
-      dakuImages.scrollTo({ left: targetImg.offsetLeft, behavior: 'smooth' });
+    slider.querySelectorAll('a').forEach(dot => {
+        dot.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetImg = document.getElementById(targetId);
+            const dakuImages = this.closest('.card-Daku').querySelector('.daku-images');
+            dakuImages.scrollTo({ left: targetImg.offsetLeft, behavior: 'smooth' });
+        });
     });
-  });
 });
